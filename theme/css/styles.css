@@ -18,6 +18,7 @@ body {
     display : block ;
 }
 
+
 .profile {
     float: left;
 }
@@ -37,12 +38,20 @@ footer#contentinfo {
     bottom: 10px;
     font-size: 2em;
     padding-left: 20px;
-    color: black ;
+    color: black;
     font-family: 'Libre Baskerville';
 }
 
-a:link    { color : black ; text-decoration: none; }
-a:visited { color : black; text-decoration: none;  }
+.entrytitle a {
+    color: black; text-decoration: none;
+}
+
+p a, li a {
+    color: #4A4740; text-decoration: underline;
+}
+
+a  { color : #2E2E2E ;  text-decoration: none; }
+/* { color : #4A4740; text-decoration: none;  } */
 
 a:hover { 
     color : orange; !important
@@ -61,10 +70,17 @@ a:hover {
 }
 
 pre {
+    font-family: 'Source Code Pro';
+    font-size: 0.85em;
     margin : 2em 1em 2em 0em ;
     border: 1px solid grey;
     border-radius: 5px;
     padding: 1em 1em 1em 1em;
+}
+
+code {
+    font-family: 'Source Code Pro';
+    font-size: 0.85em;
 }
 
 #menu li {
