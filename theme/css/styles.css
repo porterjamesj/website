@@ -32,6 +32,10 @@ footer#contentinfo {
     color: grey;
 }
 
+a {
+    color : #2E2E2E ;  text-decoration: none; 
+}
+
 .sitetitle a {
     width: 600px;
     left: 10px;
@@ -46,12 +50,9 @@ footer#contentinfo {
     color: black; text-decoration: none;
 }
 
-p a, li a {
+.entry-content a {
     color: #4A4740; text-decoration: underline;
 }
-
-a  { color : #2E2E2E ;  text-decoration: none; }
-/* { color : #4A4740; text-decoration: none;  } */
 
 a:hover { 
     color : orange; !important
