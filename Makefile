@@ -18,7 +18,7 @@ SSH_TARGET_DIR=/var/www
 
 DROPBOX_DIR=~/Dropbox/Public/
 
-GITREMOTE=origin
+GITBRANCH=master
 COMMITMSG="update blog"
 
 help:
@@ -73,6 +73,6 @@ ftp_upload: publish
 	lftp ftp://$(FTP_USER)@$(FTP_HOST) -e "mirror -R $(OUTPUTDIR) $(FTP_TARGET_DIR) ; quit"
 
 github: publish
-	ghp-import -m $(COMMITMSG) -p -b $(GITREMOTE) $(OUTPUTDIR)
+	ghp-import -m $(COMMITMSG) -p -b $(GITBRANCH) $(OUTPUTDIR)
 
 .PHONY: html help clean regenerate serve devserver publish ssh_upload rsync_upload dropbox_upload ftp_upload github
