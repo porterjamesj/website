@@ -1,5 +1,7 @@
 @import url("pygments.css");
 
+/* Large scale stuff. */
+
 html {
     position: relative;
     min-height: 100%;
@@ -10,57 +12,18 @@ body {
     font-family : 'Open Sans';
     font-size : 100% ;
     background-color : rgb(250,250,250) ;
-    color : #111 ;
-    min-width : 400px ;
-    min-height : 200px ;
     padding : 1em ;
     margin :  2em 0 60px 2em;
-    display : block ;
+    width: 740px;
 }
 
+/* Profile picture. */
 
 .profile {
     float: left;
 }
 
-footer#contentinfo {
-    position: absolute;
-    bottom: 0;
-    height: 60px;
-    width: 100%;
-    font-size: 0.7em;
-    color: grey;
-}
-
-a {
-    color : #2E2E2E ;  text-decoration: none; 
-}
-
-.sitetitle a {
-    width: 600px;
-    left: 10px;
-    bottom: 10px;
-    font-size: 2em;
-    padding-left: 20px;
-    color: black;
-    font-family: 'Libre Baskerville';
-}
-
-.entrytitle a {
-    color: black; text-decoration: none;
-}
-
-.entry-content a {
-    color: #4A4740; text-decoration: underline;
-}
-
-a:hover { 
-    color : orange; !important
-    -moz-transition: 0.2s;
-    -webkit-transition: 0.2s;
-    -o-transition: 0.2s;
-    transition: 0.2s; 
-}
+/* Titles. */
 
 .sitesubtitle {
     position: relative;
@@ -69,6 +32,45 @@ a:hover {
     font-size: 1em;
     margin-bottom: 0;
 }
+
+/* Links. */
+
+a {
+    color : #2E2E2E ;
+    text-decoration: underline;
+}
+
+.sitetitle a {
+    width: 600px;
+    font-size: 2em;
+    padding-left: 20px;
+    color: black;
+    font-family: 'Libre Baskerville';
+    text-decoration: none;
+}
+
+.entry-title a {
+    color: black;
+    text-decoration: none;
+}
+
+.entry-content a {
+    color: #4A4740;
+}
+
+nav a {
+    text-decoration: none;
+}
+
+a:hover {
+    color : orange; !important
+    -moz-transition: 0.2s;
+    -webkit-transition: 0.2s;
+    -o-transition: 0.2s;
+    transition: 0.2s;
+}
+
+/* Code stuff. */
 
 pre {
     font-family: 'Source Code Pro';
@@ -84,17 +86,30 @@ code {
     font-size: 0.85em;
 }
 
-#menu li {
+/* Nav. */
+
+nav {
+    text-align: left;
+    font-size: 1.3em;
+    padding-bottom: 1em;
+}
+
+ul, ol {
+    padding: 0;
+    margin: 0;
+}
+
+nav li {
     display : inline-block ;
     margin-right: 10px;
 }
+
+/* Mainpage  */
 
 #post-list {
     margin-bottom : 1em ;
     margin-top : 1em ;
 }
-
-nav ul,ol {padding: 0em;}
 
 .post-info {
     border-top: 50px;
@@ -103,16 +118,7 @@ nav ul,ol {padding: 0em;}
     color: #666666;
 }
 
-nav {
-    text-align: left;
-    font-size: 1.3em;
-    padding-bottom: 1em;
-}
-
-nav ul {
-    padding-top:10px;
-    margin: 0;
-}
+/* Actual post stuff. */
 
 .entry-title {
     margin: 0px;
@@ -121,4 +127,15 @@ nav ul {
 
 .entry-content {
     max-width: 700px;
+}
+
+/* Footer. */
+
+footer#contentinfo {
+    position: absolute;
+    bottom: 0;
+    height: 60px;
+    width: 1000px;
+    font-size: 0.7em;
+    color: grey;
 }

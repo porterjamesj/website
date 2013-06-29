@@ -20,9 +20,11 @@
   </head>
 
   <body id="index" class="home">
-    <a href={{ PROFILE_IMAGE_URL }}>
-      <img  class = "profile" width = "100" height = "100"  src ={{ PROFILE_IMAGE_URL }}>
-    </a>
+    {% if PROFILE_IMAGE_URL %}
+      <a href={{ PROFILE_IMAGE_URL }}>
+        <img  class = "profile" width = "100" height = "100"  src ={{ PROFILE_IMAGE_URL }}>
+      </a>
+    {% endif %}
     <header id="banner" class="body">
       <h1 class="sitetitle"><a href="{{ SITEURL }}">{{ SITENAME }}</a></h1>
       <h3 class ="sitesubtitle">{{ SITESUBTITLE }}</h3>
