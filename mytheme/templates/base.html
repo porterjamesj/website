@@ -47,6 +47,12 @@
         {% if SO_ADDRESS %}
 	  <li><a class="icon-stackoverflow" href="{{ SO_ADDRESS }}"></a><li>
         {% endif %}
+        {% if TWITTER_ADDRESS %}
+	  <li><a class="icon-twitter" href="{{ TWITTER_ADDRESS }}"></a><li>
+        {% endif %}
+        {% if FB_ADDRESS %}
+	  <li><a class="icon-facebook" href="{{ FB_ADDRESS }}"></a><li>
+        {% endif %}
         {% if FEED_RSS %}
 	  <li><a class="icon-rss" href="/{{ FEED_RSS }}"></a><li>
         {% endif %}
