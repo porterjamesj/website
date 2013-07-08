@@ -9,7 +9,7 @@ SITEURL = 'http://jamesjporter.me'
 ARTICLE_URL = '{date:%Y}/{date:%m}/{date:%d}/{slug}.html'
 ARTICLE_SAVE_AS = '{date:%Y}/{date:%m}/{date:%d}/{slug}.html'
 
-PROFILE_IMAGE_URL = 'https://secure.gravatar.com/avatar/31c16c481409b0922890da5266fabdeb.png?s=100'
+PROFILE_IMAGE_URL = 'https://secure.gravatar.com/avatar/31c16c481409b0922890da5266fabdeb.png?s=300'
 
 TYPOGRIFY = True
 
@@ -36,3 +36,8 @@ SO_ADDRESS = 'http://stackoverflow.com/users/1663558/james-porter'
 # feed
 FEED_RSS = 'feeds/rss.xml'
 FEED_MAX_ITEMS = 10
+
+SHOW_ARTICLE_AUTHOR = False
+
+LICENSE_NAME = "CC BY-SA"
+LICENSE_URL = "https://creativecommons.org/licenses/by-sa/3.0/"
