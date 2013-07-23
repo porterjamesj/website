@@ -3,7 +3,7 @@
 
 SITENAME = u'James J Porter'
 AUTHOR = u'James Porter'
-SITESUBTITLE = '\"Turns out I am a simple man, at best.\"'
+SITESUBTITLE = '\"TURNS OUT I AM A SIMPLE MAN, AT BEST.\"'
 SITEURL = 'http://jamesjporter.me'
 
 ARTICLE_URL = '{date:%Y}/{date:%m}/{date:%d}/{slug}.html'
@@ -13,11 +13,11 @@ PROFILE_IMAGE_URL = 'https://secure.gravatar.com/avatar/31c16c481409b0922890da52
 
 TYPOGRIFY = True
 
-THEME = 'mytheme'
+THEME = '/Users/james/projects/crowsfoot'
 
-MENUITEMS = [('blog','/'),('cv','/static/misc/cv.pdf')]
+MENUITEMS = [('blog', '/'),('cv', '/static/misc/cv.pdf')]
 
-STATIC_PATHS =['misc']
+STATIC_PATHS =['misc', 'img']
 
 TIMEZONE = 'America/Chicago'
 
@@ -25,7 +25,7 @@ DEFAULT_LANG = u'en'
 
 DEFAULT_PAGINATION = None
 
-FILES_TO_COPY = (('extra/CNAME','CNAME'),)
+FILES_TO_COPY = (('extra/CNAME', 'CNAME'),)
 
 # addresses
 
