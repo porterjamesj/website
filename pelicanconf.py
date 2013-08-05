@@ -3,7 +3,7 @@
 
 SITENAME = u'James J Porter'
 AUTHOR = u'James Porter'
-SITESUBTITLE = '\"TURNS OUT I AM A SIMPLE MAN, AT BEST.\"'
+SITESUBTITLE = '\"Turns out I am a simple man, at best.\"'
 SITEURL = 'http://jamesjporter.me'
 
 ARTICLE_URL = '{date:%Y}/{date:%m}/{date:%d}/{slug}.html'
