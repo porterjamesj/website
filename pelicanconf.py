@@ -32,6 +32,7 @@ FILES_TO_COPY = (('extra/CNAME', 'CNAME'),)
 EMAIL_ADDRESS = 'porterjamesj@gmail.com'
 GITHUB_ADDRESS = 'http://github.com/porterjamesj'
 SO_ADDRESS = 'http://stackoverflow.com/users/1663558/james-porter'
+TWITTER_ADDRESS = 'http://twitter.com/porterjamesj'
 
 # feed
 FEED_RSS = 'feeds/rss.xml'
