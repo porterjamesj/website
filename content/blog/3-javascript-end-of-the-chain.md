@@ -1,10 +1,9 @@
-Title: Javascript: End of the Chain
-Date: 2013-07-19
+Title: JavaScript: End of the Chain
+Date: 2013-08-06
 Slug: javascript-end-of-the-chain
 Summary: How does property lookup bottom out?
-status: draft
 
-Since coming to Hacker School I've learned Javascript. One of the
+Since coming to Hacker School I've learned JavaScript. One of the
 first things you're told about the language is that it uses prototypal
 inheritance, which is actually a lot simpler than classical
 inheritance and is pretty easily understood through a few
@@ -40,13 +39,13 @@ let's create a sample person.
     "Hi, I'm James!"
 
 OK, what actually happened there? When we say `var james = new
-Person("James",21)`, we new up an object, `james`. The `Person`
+Person("James",21)`, we create a new object, `james`. The `Person`
 function is then run with `james` as its context (so `this` refers to
 `james`), and `Person.prototype` is assigned to
 `james.__proto__`. This last bit is what's critical for understanding
 the prototype chain and how property lookup works. Every object has a
 `__proto__`[^1], which can be thought of as a pointer to the prototype
-of the object's constructor.  When the Javascript runtime goes to do a
+of the object's constructor.  When the JavaScript runtime goes to do a
 property lookup, it first checks if the object itself has a property
 with the requested name. If the property is not found, whatever is
 pointed to by the object's `__proto__` is checked for the property. If
@@ -152,9 +151,9 @@ First let's look at the ur-object. Again quoting from the spec:
 
 Wait, what's "the _[[Prototype]]_ internal property"? It turns out
 that this is just the "pointer" that the runtime uses to walk up the
-prototype chain during property lookup; the thing that implementers
-have chosen to expose as `__proto__`. Knowing this, we can fill in another
-part of our chart:
+prototype chain during property lookup; the thing that some
+implementers have chosen to expose as `__proto__`. Knowing this, we
+can fill in another part of our chart:
 
 ![prototype chart 2](/static/img/prototypes/prototype_chart2.jpg)
 
@@ -210,36 +209,33 @@ are just that: `undefined`. This completes our chart:
 
 ![prototype_chart4.jpg](/static/img/prototypes/prototype_chart4.jpg)
 
-Phew, that was exhausting. OK, now let's use this chart to figure out how
-the prototype chain bottoms out by revisiting our initial example of a
-`Person` constructor. `Person` is a function, which means that its
-constructor is `Function`. When something is constructed, its `__proto__`
-is set to the `prototype` of its constructor, so:
+Phew, that was exhausting. OK, now let's use this chart to figure out
+how the prototype chain bottoms out by revisiting our initial example
+of a `Person`. What's actually happening when we ask for
+`james.nope` and get back `undefined`? First we check if `james` has a `nope`
+property. Nope. Then we look at `james.__proto__`, which is
+`Person.prototype`. Nope. Now we look as `james.__proto__.__proto__`,
+which is `Person.prototype.__proto__`.  `Person.prototype` is just an
+object like any other. It was constructed by the object constructor,
+so its `prototype` is `Object.prototype`, the ur-object. Let's be sure
+this is the case:
 
     :::javascript
-    > Person.__proto__ === Function.prototype
+    > james.__proto__.__proto__ === Object.prototype
     true
 
-Cool. So what's actually happening when we ask for `james.nope`? First
-we check if `james` has a `nope` property. Nope. Then we look at
-`james.__proto__`, which is `Function.prototype`, which is the
-ur-function. Nope. Now we look as `james.__proto__.__proto__`, which
-is `Function.prototype.__proto__` which is the
-ur-object. Nope. Finally, we look at
-`james.__proto__.__proto__.__proto__`, which is the ur-object's
-`__proto__`, which is `null`. Here the chain bottoms out and we return
-`undefined`.
+Cool. `Object.prototype` doesn't have a `nope` property, so we move on
+to look at `james.__proto__.__proto__.__proto__`, which is the
+ur-object's `__proto__`, which is `null`. Here the chain bottoms out
+and we return `undefined`.
 
 If the above accurately describes what happens, we should be able to
-prevent the bottom out by assigning to either `Function.prototype`
-(the ur-function) or `Object.prototype` (the ur-object).
+prevent the bottom out by assigning to `Object.prototype` (the
+ur-object).
 
     :::javascript
-    > Function.prototype.yup = "Here I am!"
-    > Person.yup
-    "Here I am!"
-    > Object.prototype.yep = "Me too!"
-    > Person.yep
+    > Object.prototype.yep = "Here I am!"
+    > james.yep
     "Me too!"
 
 Yes!
@@ -271,8 +267,8 @@ chain in orange and `Object`'s `prototype` property in blue:
 ![Function instanceof Object](/static/img/prototypes/function_instanceof_object.jpg)
 
 We see that the `Function`'s prototype chain terminates with
-`Object.prototype`, which causes `Object instanceof Function` to be
-true.  This makes sense, since Javascript functions are objects (they
+`Object.prototype`, which causes `Function instanceof Object` to be
+true. This makes sense, since JavaScript functions are objects (they
 can have properties assigned to them, etc.).
 
 Now let's look at a similar diagram for `Object instanceof Function`:
@@ -283,11 +279,11 @@ Now let's look at a similar diagram for `Object instanceof Function`:
 `Object instanceof Function` is true. This makes sense too, since `Object` is
 a function, namely the constructor function for objects.
 
-Similar logic applies to `Function instance of Function`:
+Similar logic applies to `Function instanceof Function`:
 
 ![Function instance of Function](/static/img/prototypes/function_instanceof_function.jpg)
 
-This leaves us with `Object instance of Object`:
+This leaves us with `Object instanceof Object`:
 
 ![Object instance of Object](/static/img/prototypes/object_instanceof_object.jpg)
 
@@ -298,24 +294,27 @@ So there you have it: a bunch of decisions that seem to make sense
 when considered individually lead to behaviors that are bizarre and
 confusing without careful examination. Hopefully this exploration
 helped you better understand how prototypes, property lookup, and
-object construction work, it certianly helped me.
+object construction work, it certainly helped me.
 
 ----
 
 Postscript: The content of this post was distilled from a presentation
 I gave at [Hacker School](https://www.hackerschool.com/) which I
 jokingly titled
-[WAT II: Revenge of Javascript](/static/misc/prototype_slides.pdf) in
+[WAT II: Revenge of JavaScript](/static/misc/prototype_slides.pdf) in
 homage to Gary Bernhardt's WAT talk. If you find this sort of
 spelunking interesting, you should consider
 [applying](https://www.hackerschool.com/apply).
 
 
 
-[^1]: Note that `__proto__` is not part of the spec. The spec
-      refers to an "internal _[[Prototype]]_ property", which
+[^1]: Note that `__proto__` is not part of the spec. The spec refers
+      to an "internal _[[Prototype]]_ property", which some
       implementers have chosen to expose via `__proto__` because it
-      useful for learning and debugging.
+      useful for learning and debugging. I use it here because the latest
+      versions of all the major web browsers and node have adopted this
+      convention, but be aware that `__proto__` is _not_ in any
+      way portable or to be relied upon in real code.
 
 [^2]: i.e. `x` is `y`'s constructor if `y.__proto__ === x.prototype`, since
       one of the things that happens during construction is that the new object's
