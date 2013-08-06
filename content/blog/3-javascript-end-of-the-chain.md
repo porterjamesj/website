@@ -109,7 +109,7 @@ As well as:
 >    where **`Object`** is the standard builtin constructor with that name.
 
 Aha, so `Object` is the object constructor. It is a function that is
-implcitly invoked when a new object literal is created. The spec says
+implicitly invoked when a new object literal is created. The spec says
 something similar about `Function`.  It is the function constructor,
 and is implcitly invoked when a new function is created. What else
 can we learn about these things?
