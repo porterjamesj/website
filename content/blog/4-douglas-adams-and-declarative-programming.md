@@ -45,7 +45,7 @@ declarative approaches to programming that I was exposed to at Hacker
 School over the summer. [Carin Meier](https://twitter.com/carinmeier)
 gave an awesome talk about controlling Parrot Drones and Roombas by
 programming beliefs and goals[^1],
-[Lindsey Kuper](http://www.cs.indiana.edu/~lkuper/) brought us copies
+[Lindsey Kuper](http://composition.al/) brought us copies
 of
 [*The Reasoned Schemer*](https://mitpress.mit.edu/books/reasoned-schemer),
 her and
