@@ -1,0 +1,54 @@
+#title {
+    font-family: Arial;
+    width: 300px;
+    margin: auto;
+    text-align: center;
+}
+
+.banner {
+    font-family: Arial;
+    margin: auto;
+    text-align: center;
+    padding: 50px;
+}
+
+table {
+    margin: auto;
+    font-family: Arial;
+    font-size: 16;
+    font-weight: bold;
+    border-collapse: collapse;
+}
+
+td  {
+    border: solid 2px black;
+    height: 36px;
+    width: 36px;
+    text-align: center;
+    cursor: default;
+}
+
+/* Make table not have outer borders. */
+table tr:first-child td {
+  border-top: 0;
+}
+table tr:last-child td {
+  border-bottom: 0;
+}
+table tr td:first-child,
+table tr th:first-child {
+  border-left: 0;
+}
+table tr td:last-child,
+table tr th:last-child {
+  border-right: 0;
+}
+
+/* Diffrent colors for differnet players */
+.O {
+    color: blue;
+}
+
+.X {
+    color: red;
+}
