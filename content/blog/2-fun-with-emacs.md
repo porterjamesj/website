@@ -146,7 +146,7 @@ The closure is now bound to the symbol `c`, and we can funcall it:
 We can also modify it, e.g.:
 
 	:::scheme
-    (setcdr (caadr cl) 5)
+    (setcdr (caadr c) 5)
 
 We set the `cdr` of the `car` of the `car` of the `cdr` of `c`
 to 5. This changes `c` to:
@@ -162,3 +162,11 @@ And now:
 
 I personally find this totally hilarious, and I hope its at least
 somewhat illuminating with respect to what a closure is as well.
+
+----
+
+**Addendum (May 15th, 2014)**: As
+[Nic Ferrier pointed out on twitter](https://twitter.com/nicferrier/status/453273161812148224),
+this all only works interactively and not when byte-compiling. The
+exposure of closures illustrated above is considered an implementation
+detail by the Emacs developers.
