@@ -1,7 +1,7 @@
 Title: Testing Emacs Packages: surprisingly non-awful
 Date: 2014-05-15
 Slug: testing-elisp
-Summary: I wrote some tests for my emacs package
+Summary: I wrote some tests for my Emacs package
 
 Last summer I found myself dissatisfied with the existing solutions
 for managing Python [virtualenvs](https://github.com/pypa/virtualenv)
@@ -15,7 +15,7 @@ has been deprecated and mine has become a reasonably popular
 replacement. I figured if other people are actually using it, I should
 probably start taking things a bit more seriously and write some tests
 so I don't accidentally break everyone's workflow with a careless
-update. My previous brushes with Emacs lisp development had led me to
+update. My previous brushes with Emacs Lisp development had led me to
 believe the experience was going to be extremely painful but happily this
 turned out not to be the case.
 
@@ -26,7 +26,7 @@ along with [Cask](http://cask.github.io/) and
 [ert-runner](https://github.com/rejeep/ert-runner.el) to easily run
 tests from the command line in a headless Emacs instance. Here I'll
 describe what the experience was like and how I used some of the nicer
-parts of Emacs lisp to make it more pleasant.
+parts of Emacs Lisp to make it more pleasant.
 
 ----
 
@@ -196,4 +196,4 @@ and get some relatively nice test output:
      Ran 8 tests, 8 results as expected (2014-05-15 13:17:06-0500)
 
 Cool! The moral of the story is, don't be afraid of testing your
-Emacs lisp code, it isn't that bad!
+Emacs Lisp code, it isn't that bad!
