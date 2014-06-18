@@ -17,7 +17,7 @@ THEME = '/Users/james/projects/crowsfoot'
 
 MENUITEMS = [('blog', '/'),('cv', '/static/misc/cv.pdf')]
 
-STATIC_PATHS =['misc', 'img']
+STATIC_PATHS =['misc', 'img', 'julia']
 
 TIMEZONE = 'America/Chicago'
 
