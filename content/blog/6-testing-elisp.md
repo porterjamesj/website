@@ -67,7 +67,7 @@ capabilities. I wrote a `with-temp-env` macro to use in my tests:
 
     :::scheme
     (defmacro with-temp-env (name &rest forms)
-      (let ((venv-location temporary-file-directory))
+      `(let ((venv-location temporary-file-directory))
         (venv-mkvirtualenv ,name)
         ,@forms
         (venv-rmvirtualenv ,name)))
@@ -94,8 +94,8 @@ to adjust my `with-temp-env` macro to the following:
 
     :::scheme
     (defmacro with-temp-env (name &rest forms)
-      (let ((venv-location temporary-file-directory))
-        `(unwind-protect
+      `(let ((venv-location temporary-file-directory))
+         (unwind-protect
              (progn
                (venv-mkvirtualenv ,name)
                ,@forms)
