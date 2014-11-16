@@ -1,10 +1,14 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*- #
 
+from __future__ import unicode_literals
+
 SITENAME = u'James J Porter'
 AUTHOR = u'James Porter'
 SITESUBTITLE = '\"Turns out I am a simple man, at best.\"'
 SITEURL = 'http://jamesjporter.me'
+
+PATH = 'content'  # OH MY GOD WHY
 
 ARTICLE_URL = '{date:%Y}/{date:%m}/{date:%d}/{slug}.html'
 ARTICLE_SAVE_AS = '{date:%Y}/{date:%m}/{date:%d}/{slug}.html'
@@ -15,9 +19,11 @@ TYPOGRIFY = True
 
 THEME = '/Users/james/projects/crowsfoot'
 
-MENUITEMS = [('blog', '/'),('cv', '/static/misc/cv.pdf')]
+ARTICLE_PATHS = ['blog']
 
-STATIC_PATHS =['misc', 'img', 'julia']
+MENUITEMS = [('blog', '/'), ('cv', '/misc/cv.pdf')]
+
+STATIC_PATHS = ['misc', 'img', 'julia', 'CNAME']
 
 TIMEZONE = 'America/Chicago'
 
@@ -25,7 +31,9 @@ DEFAULT_LANG = u'en'
 
 DEFAULT_PAGINATION = None
 
-FILES_TO_COPY = (('extra/CNAME', 'CNAME'),)
+EXTRA_PATH_METADATA = {'extra/CNAME': {'path': 'CNAME'}}
+
+RELATIVE_URLS = True
 
 # addresses
 

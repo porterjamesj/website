@@ -54,7 +54,7 @@ it's still not found there, the process repeats
 the prototype chain bottoms out. In our example above, the process can be
 visualized as something like the following:
 
-![prototype chain example](/static/img/prototypes/prototype_chain_example.jpg)
+![prototype chain example](/img/prototypes/prototype_chain_example.jpg)
 
 First, `james` itself is checked for a property `sayName`. No such
 property is found, so `james.__proto__` (i.e. `Person.prototype`) is
@@ -83,7 +83,7 @@ the following:
     > Object instanceof Function
     true
 
-[Wat](/static/img/prototypes/wat1.jpg). This made just about zero
+[Wat](/img/prototypes/wat1.jpg). This made just about zero
 sense.  I was quite confused and so I spent a morning digging through
 the spec and figuring out what was what. Let's walk through what I
 learned with the goal of understanding two things:
@@ -129,7 +129,7 @@ Additionally:
 OK, now we're getting somewhere. Let's make a chart to keep track of this
 stuff:
 
-![prototype chart 1](/static/img/prototypes/prototype_chart1.jpg)
+![prototype chart 1](/img/prototypes/prototype_chart1.jpg)
 
 `Function` and `Object` are the constructors for functions and objects
 respectively, and they each have a prototype, which is sort of a weird
@@ -155,7 +155,7 @@ prototype chain during property lookup; the thing that some
 implementers have chosen to expose as `__proto__`. Knowing this, we
 can fill in another part of our chart:
 
-![prototype chart 2](/static/img/prototypes/prototype_chart2.jpg)
+![prototype chart 2](/img/prototypes/prototype_chart2.jpg)
 
 Aha! _This_ is where the prototype chain bottoms out! Everytime the
 runtime fails to find a property, its because it eventually got all
@@ -180,7 +180,7 @@ also,
 
 Which makes our chart look like this:
 
-![prototype_chart3.jpg](/static/img/prototypes/prototype_chart3.jpg)
+![prototype_chart3.jpg](/img/prototypes/prototype_chart3.jpg)
 
 This makes sense: `Function` and `Object` are both constructor
 functions, so their prototypes are the ur-function. But notice that
@@ -207,7 +207,7 @@ This leaves only the `prototype`s of the ur-function and ur-object
 undefined. It turns out the spec has nothing to say about these, so they
 are just that: `undefined`. This completes our chart:
 
-![prototype_chart4.jpg](/static/img/prototypes/prototype_chart4.jpg)
+![prototype_chart4.jpg](/img/prototypes/prototype_chart4.jpg)
 
 Phew, that was exhausting. OK, now let's use this chart to figure out
 how the prototype chain bottoms out by revisiting our initial example
@@ -264,7 +264,7 @@ OK, got it. Now let's look at each of the four cases above in turn.
 First `Function instanceof Object`. I've highlighted `Function`'s prototype
 chain in orange and `Object`'s `prototype` property in blue:
 
-![Function instanceof Object](/static/img/prototypes/function_instanceof_object.jpg)
+![Function instanceof Object](/img/prototypes/function_instanceof_object.jpg)
 
 We see that the `Function`'s prototype chain terminates with
 `Object.prototype`, which causes `Function instanceof Object` to be
@@ -273,7 +273,7 @@ can have properties assigned to them, etc.).
 
 Now let's look at a similar diagram for `Object instanceof Function`:
 
-![Object instanceof Function](/static/img/prototypes/object_instanceof_function.jpg)
+![Object instanceof Function](/img/prototypes/object_instanceof_function.jpg)
 
 `Object.__proto__` is the ur-function, `Function.prototype`, which means
 `Object instanceof Function` is true. This makes sense too, since `Object` is
@@ -281,11 +281,11 @@ a function, namely the constructor function for objects.
 
 Similar logic applies to `Function instanceof Function`:
 
-![Function instance of Function](/static/img/prototypes/function_instanceof_function.jpg)
+![Function instance of Function](/img/prototypes/function_instanceof_function.jpg)
 
 This leaves us with `Object instanceof Object`:
 
-![Object instance of Object](/static/img/prototypes/object_instanceof_object.jpg)
+![Object instance of Object](/img/prototypes/object_instanceof_object.jpg)
 
 `Object` is a constructor function, and all functions are objects, hence
 `Object instanceof Function` is true.
@@ -301,7 +301,7 @@ object construction work, it certainly helped me.
 Postscript: The content of this post was distilled from a presentation
 I gave at [Hacker School](https://www.hackerschool.com/) which I
 jokingly titled
-[WAT II: Revenge of JavaScript](/static/misc/prototype_slides.pdf) in
+[WAT II: Revenge of JavaScript](/misc/prototype_slides.pdf) in
 homage to Gary Bernhardt's WAT talk. If you find this sort of
 spelunking interesting, you should consider
 [applying](https://www.hackerschool.com/apply).
