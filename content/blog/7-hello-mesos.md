@@ -76,7 +76,7 @@ write a Mesos framework. Googling for "mesos hello world" yields
 but I don't know Scala, I've heard Mesos has a Python API, and I
 really like using Python when I'm learning how to do something
 new. Looking for Python examples yields
-[this](https://github.com/ceteri/exelixi), but for some reason it's
+[this](https://github.com/ceteri/exelixi), but for some reason its
 author includes extraneous discussion of genetic programming, monoids,
 HDFS, route planning, and a bazillion other things that only serve to
 obscure the main point.
@@ -279,7 +279,7 @@ return the protobuf. OK, let's jump back to `resourceOffers`:
     :::python
     task.command.value = "echo hello world"
 
-now that we've created a generic task protobuf, we fill in it's
+now that we've created a generic task protobuf, we fill in its
 `command` field with what we actually want the task to do, in this
 case simply `echo hello world`.
 
