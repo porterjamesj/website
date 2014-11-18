@@ -23,7 +23,7 @@ ARTICLE_PATHS = ['blog']
 
 MENUITEMS = [('blog', '/'), ('cv', '/misc/cv.pdf')]
 
-STATIC_PATHS = ['misc', 'img', 'julia', 'CNAME']
+STATIC_PATHS = ['misc', 'img', 'julia', 'extra/CNAME']
 
 TIMEZONE = 'America/Chicago'
 
