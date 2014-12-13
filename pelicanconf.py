@@ -6,7 +6,7 @@ from __future__ import unicode_literals
 SITENAME = u'James J Porter'
 AUTHOR = u'James Porter'
 SITESUBTITLE = '\"Turns out I am a simple man, at best.\"'
-SITEURL = 'http://jamesjporter.me'
+SITEURL = 'http://jamesporter.me'
 
 PATH = 'content'  # OH MY GOD WHY
 
