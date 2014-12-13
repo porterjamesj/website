@@ -395,14 +395,14 @@ others who were confused.
       order to avoid confusion I defer and reluctantly describe things
       this way.
 
-[^3]: as far as where the driver comes from in the first place, we'll
+[^3]: As far as where the driver comes from in the first place, we'll
       get there, be patient.
 
 
 [^4]: By the way, you can read all of the Mesos protobuf definitions
       [here](https://github.com/apache/mesos/blob/master/include/mesos/mesos.proto).
       This can be pretty useful for figuring out what your options are
-      when communicating use them, as well as just how the system
+      when communicating using them, as well as just how the system
       works in general. Some of the comments are very handy, it's a
       shame they're buried here rather than displayed prominently in
       the documentation.
