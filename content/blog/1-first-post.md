@@ -14,3 +14,8 @@ I have a few ideas for what I might want to do/learn for the next three months; 
 5. [Raspberry Pi](http://www.raspberrypi.org/) hacking? I bought one of these things forever ago and then got really busy and never had time to play with it; I'd love to fool around a bit.
 
 This is, admitedly, a fairly wide variety and large amount of stuff. I'll likely narrow my focus in the coming weeks and I'm looking forward to learning new things and sharing with others.
+
+
+**Addendum (April 10th, 2015)**: Note that the organization formerly
+known as Hacker School is now called the
+[Recurse Center](http://www.recurse.com).

@@ -319,3 +319,8 @@ spelunking interesting, you should consider
 [^2]: i.e. `x` is `y`'s constructor if `y.__proto__ === x.prototype`, since
       one of the things that happens during construction is that the new object's
       `__proto__` is set to its constructors `prototype`.
+
+
+**Addendum (April 10th, 2015)**: Note that the organization formerly
+known as Hacker School is now called the
+[Recurse Center](http://www.recurse.com).
