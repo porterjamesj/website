@@ -1,20 +1,11 @@
 Title: about
 Slug: about
 
-I'm currently a Software Engineer at the University of Chicago
-[Center for Data Intensive Science](http://cdis.uchicago.edu/),
-working on the
-[NCI Genomic Data Commons](http://www.cancer.gov/newscenter/newsfromnci/2014/GenomicDataCommonsNewsNote)
-project. I recently graduated from the University of Chicago, where I
-studied biology and computer science.
-
-I was an intern at [Stripe](https://stripe.com/), where I worked on
-the financial operations team, for the summer of
-2014. While in school I worked on the
-[Open Science Data Cloud](https://www.opensciencedatacloud.org/). I
-spent the summer of 2013 at the
-[Recurse Center](http://www.recurse.com).  Before that I worked in
-a
+I graduated in 2014 from the University of Chicago, where I studied
+Biology and Computer Science. While in school I worked part time in a
 [fruit fly genetics laboratory](http://benmay.uchicago.edu/faculty/rebay)
-doing wetlab and computational research on the mechanisms of
-transcriptional repression.
+and on cloud computing infrastructure for bioinformatics. I also
+attended the [Recurse Center](http://www.recurse.com). After
+graduating I interned at [Stripe](https://stripe.com/) for a summer,
+then returned to UChicago, where I worked on the National Cancer
+Institute [Genomic Data Commons](https://gdc.nci.nih.gov).

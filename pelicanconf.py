@@ -17,7 +17,7 @@ PROFILE_IMAGE_URL = 'https://secure.gravatar.com/avatar/31c16c481409b0922890da52
 
 TYPOGRIFY = True
 
-THEME = '/Users/james/projects/crowsfoot'
+THEME = '../crowsfoot'
 
 ARTICLE_PATHS = ['blog']
 
