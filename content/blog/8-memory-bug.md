@@ -42,18 +42,17 @@ illustrated above, the API supported using the
 stream only a portion of a requested object.
 
 At some point we noticed memory usage on the boxes that ran this code
-sky-rocketing, to the point that they would exhaust all available
-memory, crash, and need to be restarted quite frequently.
+sky-rocketing, to the point that they would frequently exhaust all available
+memory, crash, and need to be restarted.
 
 The only thing that had changed recently was that we had started
 testing a command line download client written against this API, which
-used
-[HTTP `Range` requests](https://en.wikipedia.org/wiki/Byte_serving) to
-download small chunks of a single object in parallel. We figured that
-*had* to have something to do with it, and indeed we initially
-couldn't reproduce the bug except via our parallel `Range` request-ing
-client. I spent a long while on a wild goose chase through the `Range`
-request handling code in the API before we got our first real clue.
+used `Range` requests to download small chunks of a single object in
+parallel. We figured that *had* to have something to do with it, and
+indeed we initially couldn't reproduce the bug except via our parallel
+`Range` request-ing client. I spent a long while on a wild goose chase
+through the `Range` request handling code in the API before we got our
+first real clue.
 
 By judicious insertion of calls to
 [pdb](https://docs.python.org/2/library/pdb.html) (my go-to Python
@@ -83,8 +82,8 @@ single file descriptor happening after the client closed its
 connection. I used `lsof` to examine the server process's open file
 descriptors and sure enough the one it was receiving data from was its
 open connection to S3. It appeared that the API was continuing to read
-data from S3 into memory (to the point of exhausting servers multiple
-gigabytes of memory) after the requests completed.
+data from S3 into memory (to the point of exhausting servers with
+multiple gigabytes of memory) after the requests completed.
 
 To review what we know so far:
 
@@ -254,21 +253,21 @@ line. In our case, if Python had a place where the "file-like object"
 interface was declared and it was documented there that the `close`
 method should have `O(1)` space complexity, then the `boto.Key`
 implementation would very clearly be at fault. As it stands though,
-"file-like object" is a loose set of conventions that that community
-agrees upon (or in this case, doesn't).
+"file-like object" is just a loose set of conventions that that
+community agrees upon (or in this case, doesn't).
 
-It also occurs to me that it's possible this bug exists in real-world
-codebases whose maintainers aren't even aware of it. Since S3 is
-primarily used for "small" objects that easily fit in memory, this bug
-could easily go completely unnoticed, wasting memory and CPU time
-whenever a request is close prematurely. The only reason it was so
-obvious here is due to the large size of the `Key`s being streamed.
+It also occurs to me that it's possible this bug exists in codebases
+whose maintainers aren't even aware of it. Since S3 is primarily used
+for "small" objects that easily fit in memory, this bug could easily
+go completely unnoticed, wasting memory and CPU time whenever a
+request is close prematurely. The only reason it was so obvious here
+is due to the large size of the `Key`s being streamed.
 
 Lastly and most importantly, this bug illustrates that even if you use
 proven, high quality libraries, you will eventually run into problems
 that require you to dive into and debug their code. This doesn't mean
 that you should renounce libraries or only agree to use them after
-vetting every line of them—after all modern software systems are
+vetting every line of them—after all, modern software systems are
 largely about standing on the shoulders of giants. In most projects
 you'll only write a tiny fraction of the lines of code you use[^6]. It
 does mean, however, that you should own your chosen libraries as a
