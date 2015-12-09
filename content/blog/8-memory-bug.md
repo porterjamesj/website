@@ -6,10 +6,10 @@ Status: draft
 
 This is the story of a vexing bug I solved at a previous job which
 taught me a valuable debugging lesson. The application in question was
-an HTTP API whose primary function was to proxy data stored in S3 to
-clients. It used [Flask](http://flask.pocoo.org/) and
+an HTTP API whose primary function was to act as a proxy for data
+stored in S3. It used [Flask](http://flask.pocoo.org/) and
 [Boto](https://boto.readthedocs.org/en/latest/) to achieve this. The
-core of it was the moral equivalent of the following:
+core of it was something like this:
 
 ```python
 @app.route("/data/<id>")  # `app` is a Flask application object
@@ -23,12 +23,15 @@ def download(id):
     headers = {}
     if request.headers.get("Range"):
         headers["Range"] = request.headers["Range"]
+        code = 206
+    else:
+        code = 200
     obj = buck.get_key(id, headers=headers)
-    return Response(obj, 200)
+    return Response(obj, code)
 ```
 
 This of course elides huge amounts of detail but it gets the big
-picture across. We get a request to download some data, connect to
+picture across. We get a request to download some data, we connect to
 S3 and get the correct Boto
 [`Key`](https://boto.readthedocs.org/en/2.6.0/ref/s3.html#boto.s3.key.Key),
 and then return a streaming Flask
@@ -51,8 +54,8 @@ used `Range` requests to download small chunks of a single object in
 parallel. We figured that *had* to have something to do with it, and
 indeed we initially couldn't reproduce the bug except via our parallel
 `Range` request-ing client. I spent a long while on a wild goose chase
-through the `Range` request handling code in the API before we got our
-first real clue.
+through the `Range` handling code in the API before we got our first
+real clue.
 
 By judicious insertion of calls to
 [pdb](https://docs.python.org/2/library/pdb.html) (my go-to Python
@@ -60,11 +63,11 @@ debugging technique), we were eventually able to pinpoint a single
 request made by the download client that triggered the bug in the
 API. When starting to download an object, the client would, before
 making any `Range` requests, first connect to the server and make an
-unadorned `GET` request in order to gather some information (e.g. file
-name, size) from the response headers. It would then close the
-connection before streaming any of the response body (this was
-effectively `HEAD`). It was this preliminary request that triggered
-the bug—`Range` support had been a red herring.
+unadorned `GET` in order to gather some information (e.g. file name,
+size) from the response headers. It would then close the connection
+before streaming any of the response body (this was effectively a
+`HEAD` request). It was this preliminary request that triggered the
+bug—`Range` support had been a red herring.
 
 Moreover, the bug was triggered only *after* the request had
 completed. If we delayed the client's closing of the connection by
@@ -75,20 +78,20 @@ code couldn't be at fault[^1], and it left us with no obvious place to
 insert pdb calls in the API code to debug further.
 
 When debuggers fail me, I usually reach for `strace`[^2], and this
-time was no different. I `strace`d the API server process while making
-requests then disconnecting before they could complete. This revealed
-lots of [`recvfrom`](http://linux.die.net/man/2/recvfrom) calls to a
-single file descriptor happening after the client closed its
-connection. I used `lsof` to examine the server process's open file
-descriptors and sure enough the one it was receiving data from was its
-open connection to S3. It appeared that the API was continuing to read
-data from S3 into memory (to the point of exhausting servers with
+time was no different. I `strace`d the API server prociess, then made
+requests to it, disconnecting them before they could complete. This
+revealed lots of [`recvfrom`](http://linux.die.net/man/2/recvfrom)
+calls to a single file descriptor happening after the client closed
+its connection. I used `lsof` to examine the server process's open
+file descriptors and sure enough the one it was receiving data from
+was its connection to S3. It appeared that the API was continuing to
+read data from S3 into memory (to the point of exhausting servers with
 multiple gigabytes of memory) after the requests completed.
 
 To review what we know so far:
 
-1. We are proxying data from S3 via an intervening webserver that uses
-   Flask and Boto.
+1. We are streaming data from S3 via an intervening webserver that
+   uses Flask and Boto.
 2. When a client disconnects from the server prematurely (i.e. without
    actually reading the whole request body), the server continues to
    read (excessive amounts of) data from S3 into memory.
@@ -188,13 +191,16 @@ def close(self, fast=False):
 After reading this, understanding finally dawned on me. `self.resp` is
 the
 [httplib response object](https://docs.python.org/2/library/httplib.html#httplib.HTTPResponse)
-that boto uses to read the `Key`'s data from S3. When `.close` is
+that Boto uses to read the `Key`'s data from S3. When `.close` is
 called on the `Key`, `self.resp.read` will also be called by
 default. This is analogous to calling `.read` on a Python `file`
-object: *all of the unread data* will be pulled into
-memory. Calling `.close` on the Flask `Response` (which presumably
-happens when the client disconnects) causes this to happen, triggering
-a memory explosion when the `Key` is a large object.
+object: *all of the unread data* will be pulled into memory. Calling
+`.close` on the Flask `Response` (which presumably happens when the
+client disconnects) causes this to happen, triggering a memory
+explosion when the `Key` is a large object. I'm not sure why this is
+the default behavior, altough the docstring suggests that it's so the
+key can be reopened later and the data read without making another
+HTTP request.
 
 This theory also explains why a client disconnecting without reading
 the entire object first is what triggers the bug. If all the data from
