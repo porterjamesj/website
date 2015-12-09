@@ -1,8 +1,7 @@
 Title: The Case of the Mysterious Memory Consumption
-Date: 2015-12-07
+Date: 2015-12-09
 Slug: mysterious-memory-consumption
 Summary: The story of a tricky bug
-Status: draft
 
 This is the story of a vexing bug I solved at a previous job which
 taught me a valuable debugging lesson. The application in question was
@@ -78,8 +77,8 @@ code couldn't be at fault[^1], and it left us with no obvious place to
 insert pdb calls in the API code to debug further.
 
 When debuggers fail me, I usually reach for `strace`[^2], and this
-time was no different. I `strace`d the API server prociess, then made
-requests to it, disconnecting them before they could complete. This
+time was no different. I `strace`d the API server process then made
+requests to it, disconnecting each request before it completed. This
 revealed lots of [`recvfrom`](http://linux.die.net/man/2/recvfrom)
 calls to a single file descriptor happening after the client closed
 its connection. I used `lsof` to examine the server process's open
@@ -264,10 +263,10 @@ community agrees upon (or in this case, doesn't).
 
 It also occurs to me that it's possible this bug exists in codebases
 whose maintainers aren't even aware of it. Since S3 is primarily used
-for "small" objects that easily fit in memory, this bug could easily
-go completely unnoticed, wasting memory and CPU time whenever a
-request is close prematurely. The only reason it was so obvious here
-is due to the large size of the `Key`s being streamed.
+for "small" objects that fit in memory, this bug could easily go
+completely unnoticed, wasting memory and CPU time whenever a request
+is close prematurely. The only reason it was so obvious here is due to
+the large size of the `Key`s being streamed.
 
 Lastly and most importantly, this bug illustrates that even if you use
 proven, high quality libraries, you will eventually run into problems
