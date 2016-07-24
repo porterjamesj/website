@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h2 class="posttitle">
+  <a href="/{{ article.url }}" rel="bookmark" title="Permalink to {{ article.title|striptags }}">
+    {{ article.title }}
+  </a>
+</h2>
+
+<div class="postinfo">
+  <p class="published" title="{{ article.date.isoformat() }}">
+    {{ article.locale_date }}
+  </p>
+</div>
+
+<div class="article">
+  {{ article.content }}
+</div>
+
+
+{% endblock %}

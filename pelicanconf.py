@@ -3,50 +3,43 @@
 
 from __future__ import unicode_literals
 
-SITENAME = u'James J Porter'
+SITENAME = u'James Porter'
 AUTHOR = u'James Porter'
-SITESUBTITLE = '\"Turns out I am a simple man, at best.\"'
 SITEURL = 'http://jamesporter.me'
 
 PATH = 'content'  # OH MY GOD WHY
 
 ARTICLE_URL = '{date:%Y}/{date:%m}/{date:%d}/{slug}.html'
-ARTICLE_SAVE_AS = '{date:%Y}/{date:%m}/{date:%d}/{slug}.html'
-
-PROFILE_IMAGE_URL = 'https://secure.gravatar.com/avatar/31c16c481409b0922890da5266fabdeb.png?s=300'
 
 TYPOGRIFY = True
 
-THEME = '../crowsfoot'
+THEME = 'theme'
 
 ARTICLE_PATHS = ['blog']
 
-MENUITEMS = [('blog', '/'), ('cv', '/misc/cv.pdf')]
+MENUITEMS = [
+    ('about', '/pages/about.html'),
+    ('blog', '/'),
+    ('cv', '/misc/cv.pdf'),
+    ('github', 'http://github.com/porterjamesj'),
+    ('twitter', 'http://twitter.com/porterjamesj'),
+    ('email', 'james@jamesporter.me'),
+]
 
 STATIC_PATHS = ['misc', 'img', 'julia', 'extra/CNAME']
+EXTRA_PATH_METADATA = {'extra/CNAME': {'path': 'CNAME'}}
 
-TIMEZONE = 'America/Chicago'
+TIMEZONE = 'America/New_York'
 
 DEFAULT_LANG = u'en'
 
 DEFAULT_PAGINATION = None
 
-EXTRA_PATH_METADATA = {'extra/CNAME': {'path': 'CNAME'}}
-
 RELATIVE_URLS = True
-
-# addresses
-
-EMAIL_ADDRESS = 'james@jamesporter.me'
-GITHUB_ADDRESS = 'http://github.com/porterjamesj'
-SO_ADDRESS = 'http://stackoverflow.com/users/1663558/james-porter'
-TWITTER_ADDRESS = 'http://twitter.com/porterjamesj'
 
 # feed
 FEED_RSS = 'feeds/rss.xml'
 FEED_MAX_ITEMS = 10
-
-SHOW_ARTICLE_AUTHOR = False
 
 LICENSE_NAME = "CC BY-SA"
 LICENSE_URL = "https://creativecommons.org/licenses/by-sa/3.0/"

@@ -1,0 +1,67 @@
+@import url(reset.css);
+@import url(pygments.css);
+
+/* Many of these styles are cribbed from David Nolen
+(https://swannodette.github.io/assets/themes/tom/css/screen.css) */
+
+.site {
+    width: 586px;
+    text-align: justify;
+    margin: 3em auto 2em auto;
+    line-height: 1.5em;
+}
+
+.article p {
+    margin-top: 1em;
+}
+
+.article pre {
+    font-family: 'Inconsolata', monospace;
+    line-height: 1em;
+    border-top: 1px solid #bbb;
+    border-bottom: 1px solid #bbb;
+    padding: 20px 0;
+    margin: 15px 0;
+}
+
+.article blockquote {
+    font-size: 0.9em;
+    font-style: italic;
+    border-left: 3px solid #ccc;
+    margin-left: 30px;
+    padding-left: 10px;
+}
+
+.article img, .article video {
+    display: block;
+    max-width: 586px;
+    height: auto;
+}
+
+.article ul, .article ol {
+    margin-top: 0.75em;
+    margin-left: 1.35em;
+}
+
+sup, sub {
+    vertical-align: 0;
+    position: relative;
+}
+
+sup {
+    bottom: 1ex;
+    font-size: 0.6em;
+}
+
+sub {
+    top: 1ex;
+    font-size: 0.6em;
+}
+
+
+footer {
+    border-top: 1px solid #bbb;
+    margin-top: 3em;
+    font-size: 0.7em;
+    color: grey;
+}

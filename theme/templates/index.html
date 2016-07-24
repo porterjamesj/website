@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<ol id="postlist">
+  {% for article in articles_page.object_list %}
+  <h3><a href="{{ SITEURL }}/{{ article.url }}" title="Permalink to {{ article.title|striptags }}">{{ article.title }}</a></h3>
+
+    <div class="postinfo">
+      <p class="published" title="{{ article.date.isoformat() }}"> {{ article.locale_date }} </p>
+    </div>
+
+  </li>
+  {% endfor %}
+</ol>
+
+{% endblock content %}
