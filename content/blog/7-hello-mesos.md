@@ -328,6 +328,7 @@ After instantiating the driver, we then call `driver.run()` to start the framewo
 I ran this code using `python hello_mesos.py` on a small Mesos cluster
 with a single master and a single slave. What results is:
 
+    :::text
     I1116 15:54:31.813361 27339 sched.cpp:139] Version: 0.20.0
     2014-11-16 15:54:31,813:27339(0x7fe781a9d700):ZOO_INFO@log_env@712: Client environment:zookeeper.version=zookeeper C client 3.4.5
     2014-11-16 15:54:31,815:27339(0x7fe781a9d700):ZOO_INFO@log_env@716: Client environment:host.name=mesos-master.novalocal

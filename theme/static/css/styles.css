@@ -11,6 +11,39 @@
     line-height: 1.5em;
 }
 
+/* a  { */
+/*     color: #107f1d; */
+/* } */
+
+/* a:hover { */
+/*     color: #00c116; */
+/* } */
+
+#content {
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
+}
+
+#content #postlist  {
+    line-height: 1em;
+    margin-bottom: 0px;
+}
+
+.post {
+    margin-bottom: 1em;
+}
+
+.postinfo {
+    font-family: arial; sans;
+    font-size: 0.7em;
+    color: gray;
+}
+
+.posttitle {
+    font-size: 1.5em;
+    margin-top: 1em;
+}
+
 .article p {
     margin-top: 1em;
 }
@@ -61,7 +94,6 @@ sub {
 
 footer {
     border-top: 1px solid #bbb;
-    margin-top: 3em;
     font-size: 0.7em;
     color: grey;
 }

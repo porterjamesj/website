@@ -29,9 +29,11 @@
 
       <footer>
         <p>
-          © {{ AUTHOR }}, license <a href="{{ LICENSE_URL }}"> {{LICENSE_NAME }}</a> unless otherwise noted.
+          © {{ NOW | strftime("%Y")}} {{ AUTHOR }}, license <a href="{{ LICENSE_URL }}"> {{LICENSE_NAME }}</a> unless otherwise noted.
         </p>
+        <div class="rc-scout"></div>
       </footer>
     </div>
+    <script src="https://www.recurse-scout.com/loader.js?t=9ecdc2995d5539483a7b5ed39e4d750f"></script>
   </body>
 </html>
