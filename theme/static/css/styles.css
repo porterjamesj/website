@@ -11,13 +11,16 @@
     line-height: 1.5em;
 }
 
-/* a  { */
-/*     color: #107f1d; */
-/* } */
+.site header a {
+    margin-right: 10px;
+    text-decoration: none;
+    color: grey;
+    font-size: 1.2em;
+}
 
-/* a:hover { */
-/*     color: #00c116; */
-/* } */
+.site header a:hover {
+    color: black;
+}
 
 #content {
     margin-top: 1.5em;
@@ -31,6 +34,10 @@
 
 .post {
     margin-bottom: 1em;
+}
+
+.post h3 {
+    font-weight: normal;
 }
 
 .postinfo {
@@ -79,18 +86,16 @@
 sup, sub {
     vertical-align: 0;
     position: relative;
+    font-size: 0.6em;
 }
 
 sup {
     bottom: 1ex;
-    font-size: 0.6em;
 }
 
 sub {
     top: 1ex;
-    font-size: 0.6em;
 }
-
 
 footer {
     border-top: 1px solid #bbb;
