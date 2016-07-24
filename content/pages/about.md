@@ -1,15 +1,18 @@
 Title: about
 Slug: about
 
-I graduated in 2014 from the University of Chicago, where I studied
-Biology and Computer Science. While in school I worked part time in a
-[fruit fly genetics laboratory](http://benmay.uchicago.edu/faculty/rebay)
-and on cloud computing infrastructure for bioinformatics. After
-graduating I interned at [Stripe](https://stripe.com/) for a summer,
-then returned to UChicago, where I worked on the National Cancer
-Institute [Genomic Data Commons](https://gdc.nci.nih.gov).
+This is the personal website of James J Porter.
 
-I'm currently a facilitator at the
-[Recurse Center](https://www.recurse.com/), to which you should
-[apply](https://www.recurse.com/apply) if you'd like to become a
-dramatically better programmer and have a lot of fun doing so.
+I work as a facilitator at the [Recurse Center](https://www.recurse.com/) in New York.
+
+Stuff I have done in the past, in roughly reverse-chronological order:
+
+- worked on the National Cancer Institute
+  [Genomic Data Commons](https://gdc.nci.nih.gov/) as part of the University of Chicago
+  [Center for Data Intensive Science](http://cdis.uchicago.edu/)
+- interned at [Stripe](https://stripe.com/) in the summer of 2014
+- graduated from the University of Chicago
+- helped organize [JuliaCon 2014](http://juliacon.org/2014/) (which was the first JuliaCon)
+- worked on the [Open Science Data Cloud](http://opensciencedatacloud.org) my last year of school
+- spent the summer of 2013 at the [Recurse Center](http://www.recurse.com)
+- used to do [fruit fly genetics](http://benmay.uchicago.edu/faculty/rebay) before that
