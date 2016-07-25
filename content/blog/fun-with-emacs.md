@@ -83,9 +83,9 @@ lie. They don't really go looking through the text of your code trying
 to find definitions, what actually happens is that when `fun1`
 evaluates, it doesn't just return a bare anonymous function. Instead,
 the function is returned along with some information about its lexical
-environment. This infrmation is called a _closure_, and usually
+environment. This information is called a _closure_, and usually
 consists of the values that any free variables had at the time the
-function was definied. When python or javascript needs to know the
+function was defined. When python or javascript needs to know the
 value of `x` during evaluation, they go look up its definition in the
 closure. You can't actually examine closures in the language itself;
 they're specially protected and hidden away in the implementation. But
@@ -100,7 +100,7 @@ We get back:
     (lambda (y) (* x y))
 
 which is a function definition, pretty much what we expected. Notice
-that this expression evluated on its own (which is effectively what we
+that this expression evaluated on its own (which is effectively what we
 were doing when we did the `funcall` above) has no way of figuring out
 what `x` is (i.e. no closure containing a definition of `x`). Where
 Emacs Lisp gets weird is that it is possible to have lexical scoping,
@@ -128,7 +128,7 @@ structures in the language itself, which is really pretty bizarre. If
 we funcall this with 3 as an argument, we get 36, just like we did in
 python or javascript. Internally, these languages are doing the same
 thing, we as programmers are just not allowed to see it. Emacs Lisp is
-adorably trusting; however, which means we can do stupidly silly
+adorable trusting; however, which means we can do stupidly silly
 things. The closure is just a list, so we can use it as we would any
 other:
 
