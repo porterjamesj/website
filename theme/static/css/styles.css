@@ -4,11 +4,17 @@
 /* Many of these styles are cribbed from David Nolen
 (https://swannodette.github.io/assets/themes/tom/css/screen.css) */
 
+body {
+    text-align: center;
+    line-height: 1.4em;
+    width: 80%;
+    margin: 0 auto;
+}
+
 .site {
-    width: 586px;
+    max-width: 586px;
     text-align: justify;
     margin: 3em auto 2em auto;
-    line-height: 1.5em;
 }
 
 .site header a {
@@ -38,6 +44,7 @@
 
 .post h3 {
     font-weight: normal;
+    text-align: left;
 }
 
 .postinfo {
