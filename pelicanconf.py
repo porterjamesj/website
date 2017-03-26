@@ -8,6 +8,8 @@ SITENAME = u'James Porter'
 AUTHOR = u'James Porter'
 SITEURL = 'http://jamesporter.me'
 
+DIRECT_TEMPLATES = ['index']
+
 PATH = 'content'  # OH MY GOD WHY
 
 ARTICLE_URL = '{date:%Y}/{date:%m}/{date:%d}/{slug}.html'
@@ -24,7 +26,6 @@ MENUITEMS = [
     ('about', '/pages/about.html'),
     ('cv', '/misc/cv.pdf'),
     ('github', 'http://github.com/porterjamesj'),
-    ('twitter', 'http://twitter.com/porterjamesj'),
     ('email', 'mailto:james@jamesporter.me'),
 ]
 
