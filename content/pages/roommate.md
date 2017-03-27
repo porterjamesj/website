@@ -15,7 +15,8 @@ Heights / UWS apartment.
     Side, but you can easily walk to all three.
   - 2 bedroom. You have the smaller room, I the larger.
   - Your rent is $1300 a month (I pay slightly more due to having a
-    larger room).
+    larger room). This includes all bills except internet and
+    electric, which are both around $50 per month.
   - Lease starting June 1st[^1].
 
 *Pros*
@@ -47,7 +48,8 @@ Heights / UWS apartment.
     does have a reasonably sized closet.
   - 5th floor walkup. It's good exercise!
   - Not close to much of anything hip/cool/nightlife (bars or the
-    like).
+    like). There are a couple student bars (Lion's Head and 1020) that
+    aren't bad.
   - Not a lot of storage. There are closets in each bedroom, but none
     in the common spaces. We make do between a lot of kitchen
     cabinet space, hooks, and various shelving units.
