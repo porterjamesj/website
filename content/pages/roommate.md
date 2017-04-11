@@ -17,7 +17,7 @@ Heights / UWS apartment.
   - Your rent is $1300 a month (I pay slightly more due to having a
     larger room). This includes all bills except internet and
     electric, which are both around $50 per month.
-  - Lease starting June 1st[^1].
+  - Lease starting June 1st.
 
 *Pros*
 
@@ -115,9 +115,3 @@ sublet.
 
 If you're interested or have questions, email me at
 [roommate@jamesporter.me](mailto:roommate@jamesporter.me). Thanks!
-
-
-
-[^1]: probably. My current roommate is trying to extend our curent
-lease by a month or two, but I think this is unlikely to work
-out. I'll update this page as I get more info.
