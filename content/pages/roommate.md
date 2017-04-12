@@ -114,4 +114,4 @@ I'm also looking for someone who wants to sign a full year lease, not
 sublet.
 
 If you're interested or have questions, email me at
-[roommate@jamesporter.me](mailto:roommate@jamesporter.me). Thanks!
+[james@jamesporter.me](mailto:james@jamesporter.me). Thanks!
