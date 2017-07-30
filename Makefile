@@ -43,10 +43,16 @@ help:
 html: clean $(OUTPUTDIR)/index.html
 	@echo 'Done'
 
+$(OUTPUTDIR):
+	mkdir $(OUTPUTDIR)
+
+$(CACHEDIR):
+	mkdir $(CACHEDIR)
+
 $(OUTPUTDIR)/%.html:
 	$(PELICAN) $(INPUTDIR) -o $(OUTPUTDIR) -s $(CONFFILE) $(PELICANOPTS)
 
-clean:
+clean: $(OUTPUTDIR) $(CACHEDIR)
 	find $(OUTPUTDIR) -mindepth 1 -delete && find $(CACHEDIR) -mindepth 1 -delete
 
 regenerate: clean
