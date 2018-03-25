@@ -91,7 +91,7 @@ Here's a list of facts that might be pros or cons for you depending:
     zone either.
   - I do eat meat and I try to cook a few times a week.
   - My girlfriend will be moving to Baltimore to start med school
-    shortly after this lease starts, so she'll be visiting
+    shortly after this lease starts, so she'll probably be visiting
     and staying with me on some weekends; I'll also be away for the
     weekend visiting her pretty frequently.
   - I also occasionally have friends visit for the weekend and sleep
