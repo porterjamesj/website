@@ -29,7 +29,7 @@ MENUITEMS = [
     ('email', 'mailto:james@jamesporter.me'),
 ]
 
-STATIC_PATHS = ['misc', 'img', 'julia', 'extra/CNAME']
+STATIC_PATHS = ['misc', 'img', 'julia', 'extra/CNAME', 'assets']
 EXTRA_PATH_METADATA = {'extra/CNAME': {'path': 'CNAME'}}
 
 TIMEZONE = 'America/New_York'
