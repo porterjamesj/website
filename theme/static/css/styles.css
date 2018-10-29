@@ -58,8 +58,10 @@ body {
 }
 
 video {
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
+    display: block;
+    margin: 0 auto;
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
 }
 
 .post h3 {
@@ -103,6 +105,8 @@ video {
     display: block;
     max-width: 586px;
     height: auto;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .article ul, .article ol {
