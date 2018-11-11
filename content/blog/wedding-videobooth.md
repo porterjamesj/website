@@ -14,11 +14,11 @@ beforehand, we decided to make them a surprise in the form of an
 interactive computer art installation to be deployed at their
 wedding. The guests used it to create some amazing things:
 
-<video width="800" height="500" autoplay loop src="/assets/videobooth/josh_emily_heart_short.mp4"></video>
+<video width="800" height="500" autoplay loop playsinline muted src="/assets/videobooth/josh_emily_heart_short.mp4"></video>
 
-<video width="800" height="500" autoplay loop src="/assets/videobooth/riva_dance_short.mp4"></video>
+<video width="800" height="500" autoplay loop playsinline muted src="/assets/videobooth/riva_dance_short.mp4"></video>
 
-<video width="800" height="500" autoplay loop src="/assets/videobooth/nick_star_short.mp4"></video>
+<video width="800" height="500" autoplay loop playsinline muted src="/assets/videobooth/nick_star_short.mp4"></video>
 
 This post is about what we did to make it, some of the technical and
 aesthetic problems we ran into along the way, and how we solved them.
@@ -67,19 +67,20 @@ had chosen something like [Processing](https://processing.org/).
 ## Color tracking
 
 As a prerequisite for doing any of this, we needed a way to track the
-positions of colored objects in a video stream. We poked around for a
-while and found [tracking.js](https://trackingjs.com/), a library of
-JavaScript computer vision algorithms. After a bit of trial and error
-we managed to use it's color tracking facilities to get a very basic
-demo working:
+positions of colored objects (called "blobs" in computer vision
+terminology) in a video stream. We poked around for a while and found
+[tracking.js](https://trackingjs.com/), a library of JavaScript
+computer vision algorithms. After a bit of trial and error we managed
+to use it's color tracking facilities to get a very basic demo
+working:
 
-<video autoplay loop
+<video autoplay loop playsinline muted
 src="/assets/videobooth/video.mp4"></video>
 
 This was pretty much just the tracking.js
 [color tracking example](https://trackingjs.com/examples/color_camera.html)
-with the parameters tweaked so it tracks orange rather
-cyan/magenta/yellow, but it was a start.
+with the parameters tweaked so it tracks orange blobs rather
+cyan/magenta/yellow ones, but it was a start.
 
 ## Making it beautiful
 
@@ -130,7 +131,7 @@ eye when we started this project.
 One of the big hurdles remaining was figuring out what we were going
 to use as the colored objects to be tracked in the final setup. Up
 until this point, we'd been testing with ceiling lights and various
-shiny objects in out apartments, but that wasn't going to cut it for
+shiny objects in our apartments, but that wasn't going to cut it for
 the final version. We wanted whatever we settled on to have a few
 characteristics:
 
@@ -148,20 +149,20 @@ characteristics:
 
 These requirements suggested using light-producing objects, like
 glowsticks, LEDs, or lightbulbs, rather than something like a ball
-painted in a bright color. An light-producing object works more
+painted in a bright color. A light-producing object works more
 consistently in different light conditions, since it doesn't need to
-reflect light from it's environment to look colored. It's also easy to
-turn on and off. An LED or lightbulb can just be powered on and off,
-where as something that doesn't light itself up has to be occluded
-somehow, which is much tricker.
+reflect light from it's environment to look colored. An LED or
+lightbulb can just be powered on and off, where as something that
+doesn't light itself up has to be occluded somehow in order to stop
+drawing, which is much tricker.
 
 After a few false starts with glowsticks and smaller LEDs, we found
 that colored lightbulbs worked quite well:
 
-<video autoplay loop
+<video autoplay loop playsinline muted
 src="/assets/videobooth/james_first_heart.mp4"></video>
 
-<video autoplay loop
+<video autoplay loop playsinline muted
 src="/assets/videobooth/james_writing_john.mp4"></video>
 
 Getting to this point was really exciting! It felt like we were
@@ -187,20 +188,22 @@ distinguish from each other. Our plan for telling the colors apart
 involved the subtle "corona" of light that surrounds colored bulbs in
 the webcam. Looking at the videos above, you can see that the while
 the bulb itself looks white, the background pixels immediately
-surrounding the bulb look pretty red. So our algorithm for
-distinguishing them was something like:
+surrounding the bulb look pretty red. So the initial algorithm we
+wrote for distinguishing them was:
 
-1. Configure tracking.js to find all white blobs in the frame.
+1. Configure tracking.js to find all white blobs in each frame of
+   video.
 2. For each blob, add up the R, G, and B values of all the pixels in
-   it, ignoring all of the white pixels, so we just consider the
-   bulb's immediate surroundings, and not the bulb itself.
-3. Label the blue bulb as the blob in which blue is the most
-   over-represented relative to green and red, the green bulb as the
-   one in which green is the most overrepresented, etc.
+   it, ignoring all of the white pixels (so we're only considering the
+   bulb's immediate surroundings, and not the bulb itself).
+3. Compare those totals for each color to each other and label the
+   blue bulb as the blob in which blue is the most over-represented
+   relative to green and red, the green bulb as the one in which green
+   is the most overrepresented, etc.
 
 This did not work out as planned:
 
-<video autoplay loop
+<video autoplay loop playsinline muted
 src="/assets/videobooth/james_blue_green_not_working.mp4"></video>
 
 The problem was that the bulbs were too bright, which made them harder
@@ -210,7 +213,7 @@ green bulbs apart, and kept switching it's assignment of blue between
 the two bulbs. The fact that the bulbs were too bright also caused
 other problems:
 
-<video autoplay loop
+<video autoplay loop playsinline muted
 src="/assets/videobooth/james_face_confusion.mp4"></video>
 
 Here you can see the bulb illuminating James' face so much that the
@@ -225,22 +228,39 @@ The solution we eventually settled on was so dirt simple it seemed
 obvious in retrospect: put socks on the lightbulbs to make them
 dimmer!
 
-<video autoplay loop
+<video autoplay loop playsinline muted
 src="/assets/videobooth/james_socks_on_bulbs.mp4"></video>
 
-Much better. We still needed to do a bit of adjustment to the
-algorithm. The color profiles of the green and blue bulbs were similar
-enough that choosing the "most green" blob as the green bulb and "most
-blue" blob as the blue one wasn't super successful. We ended up having
-to choose some arbitrary, experimentally determined "threshold" values
-of blue and green that each bulbs tended to fall within, and identify
-them based on these. We also had to add a bit more filtering to avoid
-choosing other objects that were just being illuminated by the bulbs,
-rather than the bulbs themselves. This took the form of filtering out
-any blobs that were "too rectangular" based on the ratio of their
-widths to heights, since the bulbs tend to appear pretty square no
-matter how you hold them, and illuminated faces, curtains, etc. tended
-to have one side longer than the other.
+Much better!
+
+We still needed to do a bit of adjustment to the
+algorithm. Unfortunately, the colors profiles of the bulbs didn't like
+up as neatly as we'd hoped with the RGB values the webcam
+measured. The simple strategy of identifying the blob in which a given
+color was the was the most over-represented as the bulb of that color
+was pretty unreliable—e.g. sometimes the green bulb would actually have more
+blue than any of the other blobs.
+
+What we ended up doing instead was just measuring the typical
+over-represetation ratios of three colors in each bulb, and
+hard-coding these "threshold" values into our system. So the algorithm
+for identifying the blue bulb now looked something more like:
+
+1. Configure tracking.js to find white blobs
+2. In each blob, remove the white pixels, and sum up the R, G, and B
+   values.
+3. Compute the ratio of red to green and blue (i.e. the "red
+   over-representation")
+
+We ended up having to choose some arbitrary, experimentally determined
+"threshold" values of blue and green that each bulbs tended to fall
+within, and identify them based on these. We also had to add a bit
+more filtering to avoid choosing other objects that were just being
+illuminated by the bulbs, rather than the bulbs themselves. This took
+the form of filtering out any blobs that were "too rectangular" based
+on the ratio of their widths to heights, since the bulbs tend to
+appear pretty square no matter how you hold them, and illuminated
+faces, curtains, etc. tended to have one side longer than the other.
 
 One problem we still had was that the over-representations of the
 three colors fluctuated pretty substantially from frame to frame. If a
@@ -259,7 +279,7 @@ to use the average R,G, and B totals from the last 50 frames, rather
 than just the current frame, which made things a lot less jittery. We
 were now able to track all three blobs pretty reliably!
 
-<video autoplay loop
+<video autoplay loop playsinline muted
 src="/assets/videobooth/james_all_three.mp4"></video>
 
 ## Getting even smarter using statistics
