@@ -173,111 +173,122 @@ time.
 ## From one color to three
 
 The videos above were done with one red lightbulb from a local
-hardware store. In spite of this, the color tracking algorithm is
-actually looking for a *white* blob, since lightbulbs are so bright
-that they look white in the webcam, regardless of what color they're
-painted.
+hardware store. We initially tried to detect it by configuring
+tracking.js to find red blobs, but this didn't work. It turns out that
+colored bulbs bright enough that a webcam just sees them as white, we
+had to configure tracking.js to find white blobs.
 
-This meant our next challenge was to be able to distinguish lightbulbs
-of different colors from each other, so guests would be able to draw
-in multiple colors.
+Unfortunately, we wanted guests to be able to draw with multiple
+colors, so just finding white blobs with tracking.js wouldn't work,
+since it doesn't distinguish between different colored bulbs.
 
-We ended up getting red, green, and blue LED bulbs, on the theory that
-they would be the easiest for the computer vision algorithm to
-distinguish from each other. Our plan for telling the colors apart
-involved the subtle "corona" of light that surrounds colored bulbs in
-the webcam. Looking at the videos above, you can see that the while
-the bulb itself looks white, the background pixels immediately
-surrounding the bulb look pretty red. So the initial algorithm we
-wrote for distinguishing them was:
+This meant our next challenge was to be able to distinguish bulbs
+of different colors from each other.
+
+We ended up getting red, green, and blue LED bulbs. Our plan for
+telling the three colors apart involved the subtle "corona" of light
+that surrounds colored bulbs in the webcam. Looking at the videos
+above, you can see that the while the bulb itself looks white, the
+background pixels immediately surrounding it look pretty red. So the
+initial algorithm we wrote for distinguishing them was:
 
 1. Configure tracking.js to find all white blobs in each frame of
    video.
-2. For each blob, add up the R, G, and B values of all the pixels in
-   it, ignoring all of the white pixels (so we're only considering the
-   bulb's immediate surroundings, and not the bulb itself).
-3. Compare those totals for each color to each other and label the
-   blue bulb as the blob in which blue is the most over-represented
-   relative to green and red, the green bulb as the one in which green
-   is the most overrepresented, etc.
+2. For each blob:
+    1. Add up the R, G, and B values of all the pixels in it, ignoring
+       all of the white pixels (so we're only considering the bulb's
+       immediate surroundings, and not the bulb itself).
+    2. Take the total for each color and compute how "over-represented"
+      it is by subtracting the totals for the other two colors.
+3. Label the green bulb as the blob in which green is the most
+   over-represented, the red bulb as the one in which red is the most
+   over-represented, etc.
 
 This did not work out as planned:
 
 <video autoplay loop playsinline muted
 src="/assets/videobooth/james_blue_green_not_working.mp4"></video>
 
-The problem was that the bulbs were too bright, which made them harder
-to tell apart. Distinguishing red from blue or green worked OK, but as
-you can see the algorithm had a very hard time telling the blue and
-green bulbs apart, and kept switching it's assignment of blue between
-the two bulbs. The fact that the bulbs were too bright also caused
-other problems:
+The problem was that the bulbs were too bright, so they illuminated
+each other, which made them harder to tell apart. The brightness also
+caused other problems:
 
 <video autoplay loop playsinline muted
 src="/assets/videobooth/james_face_confusion.mp4"></video>
 
-Here you can see the bulb illuminating James' face so much that the
-algorithm thinks his face is a bulb.
+James' face is so illuminated that the algorithm thinks it's a bulb.
 
 This seemed like a big challenge at first, and we struggled for a
 while to come up with tweaks we could make to the algorithm, or some
 sort of clever transformation of the pixel data we could use to tell
 the colors apart.
 
-The solution we eventually settled on was so dirt simple it seemed
-obvious in retrospect: put socks on the lightbulbs to make them
-dimmer!
+Eventually, we took a step back and realized we had been too focused
+on finding a software solution to the problem. Rather than forcing our
+our program to deal with the too-bright bulbs, we could just make them
+dimmer. The solution we eventually settled for doing this on was so
+dirt simple it seemed obvious in retrospect: cover them with socks!
 
 <video autoplay loop playsinline muted
 src="/assets/videobooth/james_socks_on_bulbs.mp4"></video>
 
-Much better!
+Much better! The light still shines through, but the socks make it dim
+enough that the algorithm doesn't get confused by the bulbs
+illuminating each other and their surroundings.
 
-We still needed to do a bit of adjustment to the
-algorithm. Unfortunately, the colors profiles of the bulbs didn't like
-up as neatly as we'd hoped with the RGB values the webcam
-measured. The simple strategy of identifying the blob in which a given
-color was the was the most over-represented as the bulb of that color
-was pretty unreliable—e.g. sometimes the green bulb would actually have more
-blue than any of the other blobs.
+Unfortunately, this didn't solve all our problems, and we still needed
+to do a bit of adjustment to the algorithm. The color profiles of the
+bulbs didn't line up as neatly as we'd hoped with the RGB values the
+webcam measured. The simple strategy of identifying, e.g. the green
+bulb as the blob in which green was the most over-represented was
+pretty unreliable—sometimes the blue bulb actually had the highest
+over-representation of green. Similar problems happened with all three
+colors.
 
-What we ended up doing instead was just measuring the typical
-over-represetation ratios of three colors in each bulb, and
-hard-coding these "threshold" values into our system. So the algorithm
-for identifying the blue bulb now looked something more like:
+What we ended up doing instead was manually measuring the typical
+range of color over-represetations in each bulb, and hard-coding these
+ranges into our system. So the algorithm for identifying, e.g. the
+green bulb now looked something more like:
 
-1. Configure tracking.js to find white blobs
-2. In each blob, remove the white pixels, and sum up the R, G, and B
-   values.
-3. Compute the ratio of red to green and blue (i.e. the "red
-   over-representation")
+1. Configure tracking.js to find white blobs.
+2. For each blob:
+    1. Remove the white pixels and sum up the R, G, and B
+       values.
+    2. Compute the over-representation of each color.
+    3. For each color, check if it's over-representation falls within
+       the hard-coded typical range for the green bulb.
+    4. If all colors are within those typical ranges, identify this
+       blob as the green bulb.
 
-We ended up having to choose some arbitrary, experimentally determined
-"threshold" values of blue and green that each bulbs tended to fall
-within, and identify them based on these. We also had to add a bit
-more filtering to avoid choosing other objects that were just being
-illuminated by the bulbs, rather than the bulbs themselves. This took
-the form of filtering out any blobs that were "too rectangular" based
-on the ratio of their widths to heights, since the bulbs tend to
-appear pretty square no matter how you hold them, and illuminated
-faces, curtains, etc. tended to have one side longer than the other.
+We also had to filter based on shape to avoid choosing other objects
+that were just being illuminated by the bulbs (faces, curtains, etc.),
+rather than the bulbs themselves. We removed from consideration any
+blobs that were "too rectangular" based on the ratio of their widths
+to heights, since the bulbs tended to appear pretty square no matter
+how you hold them, and illuminated faces, curtains, etc. tended to
+have one side longer than the other.
 
-One problem we still had was that the over-representations of the
-three colors fluctuated pretty substantially from frame to frame. If a
-single frame had the blue bulb looking a bit less blue than another
-blob, the algorithm would reassign it's location, resulting in weird,
-jittery drawing paths. The problem was that the algorithm had not
-conception of history. If it could look at the frames immediately
-before the current one and average them together, it would be pretty
-obvious which bulb was the bulb one.
+One problem we still had was that the measured colors of the bulbs
+fluctuated pretty substantially from frame to frame. If a single frame
+had the green bulb looking a bit less green than another blob, the
+algorithm would reassign it's location, resulting in weird, jittery
+drawing paths, and lines jumping across the screen.
 
-We ended up implementing the "blob persistence" algorithm described in
-[this Dan Shiffman
+To solve this problem, we ended up implementing "blob persistence" as
+described in [this Dan Shiffman
 video](https://www.youtube.com/watch?v=r0lvsMPGEoY&t=0s&index=7&list=PLRqwX-V7Uu6aG2RJHErXKSWFDXU4qo_ro)[^2],
-which was surprisingly straightforward. We then tweaked the algorithm
-to use the average R,G, and B totals from the last 50 frames, rather
-than just the current frame, which made things a lot less jittery. We
-were now able to track all three blobs pretty reliably!
+which was surprisingly straightforward. This let us keep track of the
+"history" of a blob, so that our bulb identification algorithm could
+consider not just what a blob looks like in this frame of video, but
+it what it looked like in previous frames also.
+
+We tweaked our bulb identification algorithm to use a running average
+of the red, green, and blue over-representations from the last 50
+frames, rather than only considering the current frame. This meant
+that if a bulb's color fluctuated a bit for a frame or two, it
+wouldn't throw everything off, since the running average wouldn't be
+affected much. This made things a lot less jittery.  We were now able
+to track all three colors pretty reliably.
 
 <video autoplay loop playsinline muted
 src="/assets/videobooth/james_all_three.mp4"></video>
@@ -286,31 +297,32 @@ src="/assets/videobooth/james_all_three.mp4"></video>
 
 One major problem we still had was that our algorithm was very
 sensitive to ambient light conditions. As the environment got darker
-or lighter, the R, G, and B values that the webcam measured for the
-bulbs change fairly dramatically, which meant we had to do a lot of
-fiddling with the detection thresholds hard-coded in the algorithm to
-make things work reliably whenever the lighting changed. Our code was
-getting fairly gnarly at this point, so making these adjustments was
-time-consuming and error-prone.
+or lighter, the color values that the webcam measured for each bulb
+changed substantially. This meant that whenever the lighting changed,
+the algorithm would stop working. In order to fix it, we would have to
+fiddle with the "typical" color over-representation ranges that we'd
+hard-coded for each bulb (since these ranges were only "typical" in
+very specific light conditions). Our code was getting gnarly at this
+point, so making these adjustments was time-consuming.
 
-We were worried that we simply wouldn't have time to make these
-adjustments on-site at the wedding venue during the final setup. We
-were both in the wedding party, so we knew we'd have a lot of other
-responsibilities and therefore not a lot of time. We also knew we'd
-have a lot of other work to do just to set the booth up, between
-plugging in power strips and extension cords, connecting the computer
-to the monitor and projector we were using as displays, putting up
-signs so guests would understand what to do, etc.
+There was no way to know what the lighting conditions at the venue
+would be like in advance, so if we didn't come up with a better
+system, we'd have to do this tweaking at the wedding venue while
+setting the booth up. We were worried that we simply wouldn't have
+time to do this. We were both in the wedding party, so we knew we'd
+have a lot of other responsibilities and not a lot of time. We also
+knew we'd have a lot of other work to do just to set the booth up,
+between plugging in power strips and extension cords, connecting the
+computer to the monitor and projector we were using as displays,
+putting up signs so guests would understand what to do, etc.
 
-Our code was definitely going to have to adapt to the light
-conditions at the venue when we got there, since we had no way of
-knowing what they'd be beforehand. What we needed was a way to make
-this process much faster than tweaking some parameters in our code by
-trial and error.
 
-What figured we could probably automate the process of figuring out
-the R, G, and B values that each bulb tended to fall within by adding
-a "calibration" mode. The way this would work:
+What we needed was a much faster method for our algorithm to adapt to
+different light conditions.
+
+We figured we could probably automate the process of tweaking the
+color ranges for each bulb by adding a "calibration" mode. We imagined
+this would work something like:
 
 1. We'd hold up the blue bulb and tell the software "this blob is the
    blue bulb, use it to calibrate the detection algorithm".
