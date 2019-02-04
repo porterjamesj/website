@@ -26,53 +26,53 @@ aesthetic problems we ran into along the way, and how we solved them.
 
 ## Getting started
 
-We first thought about the important characteristics of the final
-product, and brainstorming some ideas. Our goal was to make something
-that, in addition to being a fun interactive toy for guests at the
-wedding, would also produce artifacts that could be compiled into a
-"guestbook" of sorts for Emily and John.
+We started by thinking about the important characteristics of the
+final product and brainstorming some ideas. Our goal was to make
+something that, in addition to being a fun interactive toy for guests
+at the wedding, would also produce digital artifacts that could be compiled
+into a "video guestbook" of sorts for Emily and John.
 
 We settled on the idea of guests moving colored lights through the air
 like wands to draw interesting visual effects on a screen in front of
-them, by means of a computer vision algorithm tracking the lights and
-rendering effects based on their positions. You'd walk into the booth,
-type a message to Emily and John to be included with your video, and
-then have 30 seconds to record a video of yourself making something
-beautiful, funny, or interesting using the light wands.
+them. You'd walk into the booth, type a message to Emily and John to
+be included with your video, and then have 30 seconds to record a
+video of yourself making something beautiful, funny, or interesting
+using the light wands. The drawing would work by a computer vision
+algorithm tracking the lights and rendering effects based on their
+positions.
 
 ## Settling on a development environment
 
-Now that we had a rough idea, we had to actually start coding up some
-prototypes. Both of us struggle with getting over the initial
-"activation energy" hump in starting projects like this, but find it
-much easier to keep going once we've started.
+Now that we had an idea, it was time to start implementing prototypes,
+but first we had to choose a platform to work on top of. We had a lot
+of choices—the web, [Processing](https://processing.org/),
+[SDL](https://www.libsdl.org/), something else? We decided on the web,
+since we were confident in our ability to use it for some of the
+ancillary but nonetheless important parts of the project (creating a
+user interface for typing messages, capturing and saving videos) using
+it. It's flexible, powerful, has lots of libraries, and we were both
+already pretty familiar with web development and the relevant APIs
+(JavaScript Canvas, the `video` element, etc.).
 
-To help with this, we ended up choosing [Glitch](https://glitch.com/)
-as our development environment, which was an amazing choice. Glitch
-makes the initial phases of working on a web project with someone else
-*incredibly easy*. Collaboration? Just type in the shared editor and
-everyone else's view updates in real-time. Deployment? Already done,
-just go to `my-project-name.glitch.me` and see the code you just typed
-running live. We didn't believe the hype about Glitch before this
-project, but now we get it[^1].
-
-We also chose Glitch because it's web-based. Because the web is such a
-flexible, powerful development platform, and because we're both
-familiar with it, we were more confident in our ability to quickly do
-some of the ancillary but important parts of the project (user
-interface for typing messages, capturing and saving videos) than if we
-had chosen something like [Processing](https://processing.org/).
-
+Both of us struggle with getting over the initial "activation energy"
+of starting a project like this, but find it much easier to keep going
+once we've started. To help with this, we ended up choosing
+[Glitch](https://glitch.com/) as our development environment, which
+was an amazing choice. Glitch makes the initial phases of working on a
+web project with someone else *incredibly easy*. Collaboration? Just
+type in the shared editor and everyone else's view updates in
+real-time. Deployment? Already done, just go to
+`my-project-name.glitch.me` and see your code running live. We didn't
+believe the hype about Glitch before this project, but it worked
+really well for us[^1].
 
 ## Color tracking
 
-As a prerequisite for doing any of this, we needed a way to track the
-positions of colored objects (called "blobs" in computer vision
-terminology) in a video stream. We poked around for a while and found
-[tracking.js](https://trackingjs.com/), a library of JavaScript
-computer vision algorithms. After a bit of trial and error we managed
-to use it's color tracking facilities to get a very basic demo
-working:
+We needed a way to track the positions of colored objects (called
+"blobs" in computer vision terminology) in a video stream. We poked
+around for a while and found [tracking.js](https://trackingjs.com/), a
+library of JavaScript computer vision algorithms. After a bit of trial
+and error we managed to get a very basic demo working:
 
 <video autoplay loop playsinline muted
 src="/assets/videobooth/video.mp4"></video>
@@ -84,14 +84,14 @@ cyan/magenta/yellow ones, but it was a start.
 
 ## Making it beautiful
 
-Now we needed to draw something more appealing than a bounding box in
-response to the user's movements. We decided to use
-[p5.js](https://p5js.org/) for drawing, since we were both somewhat
-familiar with it. We added p5 to our codebase and tweaked the color
-tracking code to use `canvas` and `video` elements generated by p5,
-and to be driven by p5's render loop. We started off by drawing a
-basic flower pattern using ellipses. We don't have video of this stage
-unfortunately, but here are some photos:
+Now we needed to draw something more appealing than a bounding box
+around the blobs. We decided to use [p5.js](https://p5js.org/) for
+drawing, since we were both somewhat familiar with it. We added p5 to
+our codebase and tweaked the color tracking code to use `canvas` and
+`video` elements generated by p5, and to be driven by p5's render
+loop. We started off by drawing a basic flower pattern using
+ellipses. We don't have video of this stage unfortunately, but here
+are some photos:
 
 ![James with flower](/assets/videobooth/james_with_yellow_flower.png)
 ![Rachel with flower](/assets/videobooth/rachel_with_yellow_flower.png)
@@ -102,20 +102,14 @@ tracking.js and start working towards something better.
 
 In searching for inspiration, Golan Levin's
 [Yellowtail](http://flong.com/projects/yellowtail/), which is one of
-the examples included with Processing, caught our eye. We thought the
-strokes it generates might look nice if we could adapt them to follow
-the path of the tracked blobs on the camera, rather than the path of
-the mouse.
-
-We were able to find
-[a Yellowtail implementation using p5](https://n1ckfg.github.io/yellowtails/p5js/)
-and the
-[source code for it](https://github.com/n1ckfg/yellowtails). We
-decided to try and integrate this code into our project, adapting the
-callbacks for things like clicks and mouse movement to instead by
-triggered by the blobs detected by the color tracker. This proved to
-be pretty challenging and have a lot of pitfalls and visually
-interesting bugs, for example:
+the examples included with Processing, caught our eye. We were able to
+find [a Yellowtail implementation using
+p5](https://n1ckfg.github.io/yellowtails/p5js/) and the [source code
+for it](https://github.com/n1ckfg/yellowtails). We decided to try and
+integrate this code into our project, adapting the callbacks for
+things like clicks and mouse movement to instead by triggered by the
+color tracker blobs. This proved to be pretty challenging and lead to
+a lot of pitfalls and visually interesting bugs, for example:
 
 ![James demoing bug](/assets/videobooth/james_flower_glitch.png)
 
@@ -129,29 +123,29 @@ eye when we started this project.
 ## Hardware choices
 
 One of the big hurdles remaining was figuring out what we were going
-to use as the colored objects to be tracked in the final setup. Up
-until this point, we'd been testing with ceiling lights and various
+to use as the colored objects that the wedding guests would draw
+with. Until now, we'd been testing with ceiling lights and various
 shiny objects in our apartments, but that wasn't going to cut it for
-the final version. We wanted whatever we settled on to have a few
+the wedding. We wanted whatever we settled on to have a few
 characteristics:
 
 1. Minimal false positives, i.e. someone's clothes or body won't be
-   mistaken for it, resulting in spurious drawings.
+   mistaken for it, resulting in spurious drawing.
 2. Works well in a variety of light conditions. This was important
-   since we weren't exactly sure what the ambient light would be like
-   at the wedding venue when we set everything up.
+   since we weren't sure what the ambient light would be like
+   at the wedding venue.
 3. Can be "turned on and off" by changing it's color/light emission
    somehow. This just makes drawing/writing a lot easier, since never
    being able to "turn off" the color would be like drawing with a
    pencil you couldn't pick up off the page.
-4. Comes in multiple colors, so we can draw a few distinct colored
-   lines/effects on the screen.
+4. Comes in multiple colors, allowing for multiple distinct colored
+   lines or effects.
 
 These requirements suggested using light-producing objects, like
 glowsticks, LEDs, or lightbulbs, rather than something like a ball
 painted in a bright color. A light-producing object works more
-consistently in different light conditions, since it doesn't need to
-reflect light from it's environment to look colored. An LED or
+consistently in different ambient light conditions, since it doesn't
+need to reflect light from it's environment to look colored. An LED or
 lightbulb can just be powered on and off, where as something that
 doesn't light itself up has to be occluded somehow in order to stop
 drawing, which is much tricker.
@@ -172,46 +166,45 @@ time.
 
 ## From one color to three
 
-The videos above were done with one red lightbulb from a local
-hardware store. We initially tried to detect it by configuring
-tracking.js to find red blobs, but this didn't work. It turns out that
-colored bulbs bright enough that a webcam just sees them as white, we
-had to configure tracking.js to find white blobs.
+The videos above used a red lightbulb. To detect it, we first tried
+configuring tracking.js to just find red blobs, but this didn't
+work. Colored bulbs are bright enough that a webcam just sees them as
+white, so we had to configure tracking.js to find white blobs instead.
 
-Unfortunately, we wanted guests to be able to draw with multiple
-colors, so just finding white blobs with tracking.js wouldn't work,
-since it doesn't distinguish between different colored bulbs.
-
-This meant our next challenge was to be able to distinguish bulbs
-of different colors from each other.
+We wanted guests to be able to draw with multiple bulbs of different
+colors, so just finding white blobs wouldn't work for the final
+product, since it would prevent us from distinguishing e.g. a red blob
+from a blue one. Our next challenge was figuring out how to do this.
 
 We ended up getting red, green, and blue LED bulbs. Our plan for
 telling the three colors apart involved the subtle "corona" of light
 that surrounds colored bulbs in the webcam. Looking at the videos
-above, you can see that the while the bulb itself looks white, the
-background pixels immediately surrounding it look pretty red. So the
-initial algorithm we wrote for distinguishing them was:
+above, you can see that the while the body of the bulb looks white,
+the background pixels surrounding it look pretty red. We took
+advantage of this in our initial algorithm for telling the three
+bulbs apart:
 
 1. Configure tracking.js to find all white blobs in each frame of
    video.
 2. For each blob:
     1. Add up the R, G, and B values of all the pixels in it, ignoring
        all of the white pixels (so we're only considering the bulb's
-       immediate surroundings, and not the bulb itself).
-    2. Take the total for each color and compute how "over-represented"
-      it is by subtracting the totals for the other two colors.
+       surroundings, and not the bulb itself).
+    2. Compute how "over-represented" each color is by subtracting
+       the total values for the other two colors from the total of the
+       color in question.
 3. Label the green bulb as the blob in which green is the most
    over-represented, the red bulb as the one in which red is the most
    over-represented, etc.
 
-This did not work out as planned:
+This did not work very well:
 
 <video autoplay loop playsinline muted
 src="/assets/videobooth/james_blue_green_not_working.mp4"></video>
 
 The problem was that the bulbs were too bright, so they illuminated
-each other, which made them harder to tell apart. The brightness also
-caused other problems:
+each other, which made them harder to tell apart. The brightness of
+the bulbs also caused other problems:
 
 <video autoplay loop playsinline muted
 src="/assets/videobooth/james_face_confusion.mp4"></video>
@@ -226,35 +219,35 @@ the colors apart.
 Eventually, we took a step back and realized we had been too focused
 on finding a software solution to the problem. Rather than forcing our
 our program to deal with the too-bright bulbs, we could just make them
-dimmer. The solution we eventually settled for doing this on was so
-dirt simple it seemed obvious in retrospect: cover them with socks!
+dimmer. The solution we eventually settled for doing this on was dirt
+simple: cover the bulbs with socks!
 
 <video autoplay loop playsinline muted
 src="/assets/videobooth/james_socks_on_bulbs.mp4"></video>
 
-Much better! The light still shines through, but the socks make it dim
-enough that the algorithm doesn't get confused by the bulbs
-illuminating each other and their surroundings.
+Much better! The socks make the bulbs dim enough that they don't
+illuminate each other and their surroundings enough to confuse our
+algorithm.
 
-Unfortunately, this didn't solve all our problems, and we still needed
-to do a bit of adjustment to the algorithm. The color profiles of the
-bulbs didn't line up as neatly as we'd hoped with the RGB values the
-webcam measured. The simple strategy of identifying, e.g. the green
-bulb as the blob in which green was the most over-represented was
-pretty unreliable—sometimes the blue bulb actually had the highest
-over-representation of green. Similar problems happened with all three
-colors.
+Unfortunately, this didn't solve all our problems. The color profiles
+of the bulbs didn't line up as neatly as we'd hoped with the RGB
+values the webcam measured. The simple strategy of identifying,
+e.g. the blob in which green was the most over-represented as the
+green bulb was pretty unreliable—sometimes the blue bulb actually had
+the highest over-representation of green. Similar problems happened
+with all three colors.
 
 What we ended up doing instead was manually measuring the typical
-range of color over-represetations in each bulb, and hard-coding these
-ranges into our system. So the algorithm for identifying, e.g. the
-green bulb now looked something more like:
+range over-represetations of each color in each bulb and hard-coding
+these ranges into our code. So the algorithm for identifying,
+e.g. the green bulb now looked like:
 
 1. Configure tracking.js to find white blobs.
 2. For each blob:
     1. Remove the white pixels and sum up the R, G, and B
        values.
-    2. Compute the over-representation of each color.
+    2. Compute the over-representation of each color (as described
+       above in the initial algorithm).
     3. For each color, check if it's over-representation falls within
        the hard-coded typical range for the green bulb.
     4. If all colors are within those typical ranges, identify this
@@ -263,16 +256,16 @@ green bulb now looked something more like:
 We also had to filter based on shape to avoid choosing other objects
 that were just being illuminated by the bulbs (faces, curtains, etc.),
 rather than the bulbs themselves. We removed from consideration any
-blobs that were "too rectangular" based on the ratio of their widths
-to heights, since the bulbs tended to appear pretty square no matter
-how you hold them, and illuminated faces, curtains, etc. tended to
-have one side longer than the other.
+blobs whose width was too different from their height, since the bulbs
+tended to look pretty square from any angle, whereas illuminated
+faces, curtains, etc. tended to have one side longer than the other.
 
-One problem we still had was that the measured colors of the bulbs
-fluctuated pretty substantially from frame to frame. If a single frame
-had the green bulb looking a bit less green than another blob, the
-algorithm would reassign it's location, resulting in weird, jittery
-drawing paths, and lines jumping across the screen.
+One problem we still had was momentary fluctuations in the bulb's
+color profiles. If something else in the scene, like a shirt or a
+face, looked more green than the green bulb for even a single frame,
+the algorithm would get confused about the green bulb's location,
+resulting in weird, jittery drawing paths, and lines jumping across
+the screen.
 
 To solve this problem, we ended up implementing "blob persistence" as
 described in [this Dan Shiffman
@@ -280,57 +273,51 @@ video](https://www.youtube.com/watch?v=r0lvsMPGEoY&t=0s&index=7&list=PLRqwX-V7Uu
 which was surprisingly straightforward. This let us keep track of the
 "history" of a blob, so that our bulb identification algorithm could
 consider not just what a blob looks like in this frame of video, but
-it what it looked like in previous frames also.
+what it looked like in previous frames also.
 
-We tweaked our bulb identification algorithm to use a running average
-of the red, green, and blue over-representations from the last 50
-frames, rather than only considering the current frame. This meant
-that if a bulb's color fluctuated a bit for a frame or two, it
-wouldn't throw everything off, since the running average wouldn't be
-affected much. This made things a lot less jittery.  We were now able
-to track all three colors pretty reliably.
+We tweaked our code to use a running average of the red, green, and
+blue over-representations from the last 50 frames, rather than only
+considering the current frame. This meant that if a bulb's color
+fluctuated a bit for a frame or two, it wouldn't throw everything off,
+since the running average wouldn't be affected much. This made things
+a lot less jittery.  We were now able to track all three colors pretty
+reliably:
 
 <video autoplay loop playsinline muted
 src="/assets/videobooth/james_all_three.mp4"></video>
 
 ## Getting even smarter using statistics
 
-One major problem we still had was that our algorithm was very
-sensitive to ambient light conditions. As the environment got darker
-or lighter, the color values that the webcam measured for each bulb
-changed substantially. This meant that whenever the lighting changed,
-the algorithm would stop working. In order to fix it, we would have to
-fiddle with the "typical" color over-representation ranges that we'd
-hard-coded for each bulb (since these ranges were only "typical" in
-very specific light conditions). Our code was getting gnarly at this
-point, so making these adjustments was time-consuming.
+Our algorithm was still very sensitive to ambient light conditions. As the
+environment got darker or lighter, the color values that the webcam
+measured for each bulb changed substantially. This meant that whenever
+the lighting changed, the algorithm would stop working, "typical"
+color over-representation ranges that we'd hard-coded for each bulb
+were only "typical" in very specific light conditions. In order to get
+things working again, we would have to manually fiddle with these
+ranges, which was time consuming since our code was getting pretty
+gnarly at this point.
 
-There was no way to know what the lighting conditions at the venue
-would be like in advance, so if we didn't come up with a better
-system, we'd have to do this tweaking at the wedding venue while
-setting the booth up. We were worried that we simply wouldn't have
-time to do this. We were both in the wedding party, so we knew we'd
-have a lot of other responsibilities and not a lot of time. We also
-knew we'd have a lot of other work to do just to set the booth up,
-between plugging in power strips and extension cords, connecting the
-computer to the monitor and projector we were using as displays,
-putting up signs so guests would understand what to do, etc.
+There was no way to know what the lighting conditions at the wedding
+venue would be like in advance, so if we didn't come up with a better
+system, we'd have to do this tweaking while setting the booth up. We
+were worried that we simply wouldn't have time to do this, given all
+the hectic nature of weddings (we were both in the party).
 
+What we needed was a way for our algorithm to adapt to
+different light conditions automatically, without us having to spend
+time manually adjusting it.
 
-What we needed was a much faster method for our algorithm to adapt to
-different light conditions.
+We thought about adding a "calibration" mode to enable this, which we
+would run as we set the booth up. It would work something like:
 
-We figured we could probably automate the process of tweaking the
-color ranges for each bulb by adding a "calibration" mode. We imagined
-this would work something like:
-
-1. We'd hold up the blue bulb and tell the software "this blob is the
-   blue bulb, use it to calibrate the detection algorithm".
-2. We'd move the bulb around a bit while the software records the RGB
-   values of the pixels in that blob.
-3. The software would measure typical RGB values from those frames,
-   and feed them to the bulb detection algorithm to use for
-   identifying the blue bulb.
+1. We'd hold up the blue bulb and click on it to tell the system
+   "this blob is the blue bulb, use it to calibrate the detection
+   algorithm".
+2. We'd move the bulb around a bit while the software would record the
+   RGB values of the pixels in the bulb, and measure the bulb's typical
+   over-representation for each color.
+3. Those typical over-representations would be remembered
 4. Repeat for the other two colors.
 
 This seemed like it could work, but it also seemed fairly ad-hoc. This
