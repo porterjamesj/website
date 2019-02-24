@@ -199,10 +199,10 @@ Much better! The socks make the bulbs dim enough that they don't
 illuminate each other and their surroundings enough to confuse our
 algorithm.
 
-Unfortunately, this didn't solve all our problems. The color profiles
-of the bulbs didn't line up as neatly as we'd hoped with the RGB
-values the webcam measured. The simple strategy of identifying,
-e.g. the greenest blob as the green bulb was pretty
+Unfortunately, this didn't solve all our problems. The colors of the
+bulbs didn't line up as neatly as we'd hoped with the actual red,
+green, and blue values the webcam measured. The simple strategy of
+identifying, e.g. the greenest blob as the green bulb was pretty
 unreliable—sometimes the blue bulb actually had the most
 green. Similar problems happened with all three colors.
 
@@ -217,8 +217,8 @@ like:
        values.
     3. For each color, check if it's total value falls within
        the hard-coded typical range for the green bulb.
-    4. If each colors is within it's typical range, identify this blob
-       as the green bulb.
+    4. If all three colors are within those typical ranges, identify
+       this blob as the green bulb.
 
 We also had to filter based on shape to avoid choosing other objects
 that were just being illuminated by the bulbs (faces, curtains, etc.),
@@ -229,14 +229,14 @@ faces, curtains, etc. tended to have one side longer than the other.
 
 One problem we still had was momentary fluctuations in the bulbs'
 color profiles. If something else in the scene, like a shirt or a
-face, looked more green than the green bulb for even a single frame,
-the algorithm would get confused about the green bulb's location,
-resulting in weird, jittery drawing paths, and lines jumping across
-the screen.
+face, had a color profile that matched one of the bulbs for even a
+single frame, the algorithm would get confused about the green bulb's
+location, resulting in weird, jittery drawing paths, and lines jumping
+across the screen.
 
 To solve this problem, we ended up implementing "blob persistence" as
 described in [this Dan Shiffman
-video](https://www.youtube.com/watch?v=r0lvsMPGEoY&t=0s&index=7&list=PLRqwX-V7Uu6aG2RJHErXKSWFDXU4qo_ro)[^2],
+video](https://www.youtube.com/watch?v=r0lvsMPGEoY&t=0s&index=7&list=PLRqwX-V7Uu6aG2RJHErXKSWFDXU4qo_ro)[^1],
 which was surprisingly straightforward. This let us keep track of the
 "history" of a blob, so that our bulb identification algorithm could
 consider not just what a blob looks like in this frame of video, but
@@ -260,10 +260,10 @@ the environment got darker or lighter, the color values that the
 webcam measured for each bulb changed substantially. This meant that
 whenever the lighting changed, the algorithm would stop working, since
 the "typical" color profiles that we'd hard-coded for each bulb were
-only "typical" in very specific light conditions. In order to get
-things working again, we would have to manually change the code to
-adapt to the new light conditions, which was time consuming since our
-code was getting pretty gnarly at this point.
+only typical in very specific light conditions. In order to get things
+working again, we would have to manually change the code to adapt to
+the new light conditions, which was time consuming since our code was
+getting pretty gnarly at this point.
 
 There was no way to know what the light conditions at the wedding
 venue would be like in advance, so if we didn't come up with a better
@@ -278,7 +278,7 @@ time manually adjusting it.
 We decided to try adding a way to "calibrate" the algorithm before
 starting it running:
 
-1. While setting the botth up, we'd hold up the blue bulb and click on
+1. While setting the booth up, we'd hold up the blue bulb and click on
    it to tell the system "this blob is the blue bulb, use it to
    calibrate the detection algorithm".
 2. We'd move the bulb around a bit while the software would record the
@@ -304,52 +304,67 @@ measured color values to the sampled data for the bulb.
 
 We eventually realized that what we were wanted to do, in statistical
 terms, was determine the probability that two samples were drawn from
-the same underlying distribution. In our case, the underlying
-distribution is the red, green, and blue values that the webcam tends
+the same underlying population. In our case, the underlying
+population is the red, green, and blue values that the webcam tends
 to measure for a given bulb. One of the samples is the red, green, and
 blue values measured during calibration of that bulb, and the other
 sample the is red, green, and blue values from the frames we observe
 for an as-yet unidentified blob being processed by our algorithm. If,
 we can determine the probability that the unidentified blob sample is
-from the same underlying distribution as each of the calibration
+from the same underlying population as each of the calibration
 samples for the three bulbs, we know the unidentified blob's
 probability of being each bulb!
 
-It turns out there is a statistical test that does exactly this: the
+It turns out there is a statistical test that does basically this: the
 two-sample [Kolmogorov–Smirnov
-test](https://en.wikipedia.org/wiki/Kolmogorov%E2%80%93Smirnov_test).
+test](https://en.wikipedia.org/wiki/Kolmogorov%E2%80%93Smirnov_test). The
+"K-S test", as it's known, compares two samples and gives you
+something called a ["D
+statistic"](https://en.wikipedia.org/wiki/Kolmogorov%E2%80%93Smirnov_test#Kolmogorov%E2%80%93Smirnov_statistic),
+which isn't exactly the probability we're looking for, but the closer
+the D statistic is to zero, the more likely it is that the samples
+come from the same population, which is close enough.
 
 At this point, we were excited about the idea because it seemed like
 such an elegant, principled solution to the problem, but skeptical,
 since in programming it so often turns out that the elegant,
 principled solution doesn't work in practice, due to performance, the
 particulars of your problem not fitting into an algorithm in the way
-you thought they would, etc. We decided to go for it anyway and see
-what happened.
+you thought they would, etc.
 
 We were able to find a preexisting JavaScript implementation of the
-Kolmogorov–Smirnov test in the [Jerzy
-library](https://github.com/pieterprovoost/jerzy) by Pieter Provoost,
-which we hacked into our project. We ended up having to do a few dirty
-tricks to get this to work
+K-S test in the [Jerzy
+library](https://github.com/pieterprovoost/jerzy), which we hacked
+into our project. Now, in order to check if a blob is e.g. the green
+bulb, rather than checking if the measured red, green, and blue values
+for the blob fell within the calibrated ranges for the green bulb, we
+instead performed three K-S tests (one for each color) of the sampled
+values from the previous 50 frames of the blob against the values
+measured for the green bulb. We then added up the D statistics for
+each of the three colors and identified a blob as the green bulb only
+if the total was less than a manually determined threshold value.
 
-no multiparameter version,we have multiple parameters (red, gree,
-blue, squareness, etc.)
+Just summing up the D statistics from three different K-S tests like
+this is totally statistically unjustified[^2], but it worked well
+enough in practice.
 
-there's a research paper but decided that implementing a novel
-algorithm from scratch was a bit out of scope
+Using the K-S test instead of just checking minimum and maximums for
+the color ranges gave us a dramatic improvement in results.
 
-just added up [D
-values](https://en.wikipedia.org/wiki/Kolmogorov%E2%80%93Smirnov_test#Kolmogorov%E2%80%93Smirnov_statistic),
-which I'm sure is wildly statistically unjustified, but ended up
-working pretty well in practice
-
-
-
+didnt get confused between bulbs as much, rarely identified non-bulb
+objects as bulbs
 
 ## Performance optimizations
 
+Cost was performance
 
+K-S test involves some math, not as simple as just checking if three
+numbers are in three ranges.
+
+
+- algorithmic improvements to Jerzey
+- downscaling the video feed to run the algorithms on it and then
+  scaling back up to
 
 
 ## The final product
@@ -357,10 +372,9 @@ working pretty well in practice
 
 
 
-[^1]: That said, Glitch isn't perfect. We certainly ran into some
-difficulties with it later on, as you'll see if you keep reading.
-
-[^2]: Many of Dan's [computer vision
+[^1]: Many of Dan's [computer vision
 tutorials](https://www.youtube.com/playlist?list=PLRqwX-V7Uu6aG2RJHErXKSWFDXU4qo_ro)
 were really helpful for understanding what we were doing throughout
 this whole project.
+[^2]: Stuff about there being a multiparamtere version but this being
+    too daunghint to implement for this project
