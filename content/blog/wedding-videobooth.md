@@ -130,9 +130,6 @@ that colored lightbulbs worked quite well:
 <video autoplay loop playsinline muted
 src="/assets/videobooth/james_first_heart.mp4"></video>
 
-<video autoplay loop playsinline muted
-src="/assets/videobooth/james_writing_john.mp4"></video>
-
 Getting to this point was really exciting! It felt like we were
 getting close to something we'd be happy with displaying at the
 wedding. As they say though, the last 10% of the work often takes 90%
