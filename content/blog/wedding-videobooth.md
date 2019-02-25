@@ -390,10 +390,39 @@ src="/assets/videobooth/james_funny_bug.mp4"></video>
 After frantically rushing to finish all of the above before the
 wedding, we deployed it in a mad rush during the cocktail, but the
 booth was ready for the dinner and dancing afterwards. Here are a few
-of our favorite things the guests made.
+of our favorite things the guests made:
 
+Writing in English and Chinese:
 
+<video autoplay loop playsinline muted
+src="/assets/videobooth/ilona_leslie_writing.mp4"></video>
 
+<video autoplay loop playsinline muted
+src="/assets/videobooth/james_shanti_chinese_writing.mp4"></video>
+
+Drawings of all sorts:
+
+<video autoplay loop playsinline muted
+src="/assets/videobooth/nick_paige_cat.mp4"></video>
+
+<video autoplay loop playsinline muted
+src="/assets/videobooth/josh_emily_lightbulbs.mp4"></video>
+
+Including a map of some of the major lines of the New York City subway
+system:
+
+<video autoplay loop playsinline muted
+src="/assets/videobooth/rob_alicia_subway.mp4"></video>
+
+A math puzzle:
+
+<video autoplay loop playsinline muted
+src="/assets/videobooth/tim_rob_alicia_math_puzzle.mp4"></video>
+
+And occasionally just pure chaos:
+
+<video autoplay loop playsinline muted
+src="/assets/videobooth/jordan_and_co_mass_chaos.mp4"></video>
 
 
 ## Reflections
@@ -405,6 +434,14 @@ of our favorite things the guests made.
 ### Your laptop *is* production
 
 
+## On a more personal note
+
+It was a lot of work and stressful at times, but we couldn't be
+happier with how this project turned out. We're happy we could give
+everyone at the wedding a way to be creative in expressing their love,
+while making what we hope will be a cherished memory for our newlywed
+friends. We love you John and Emily! Thanks for giving us the
+opportunity to make this.
 
 
 [^1]: Many of Dan's [computer vision
@@ -412,9 +449,9 @@ of our favorite things the guests made.
       were really helpful for understanding what we were doing
       throughout this whole project.
 [^2]: The tranditional Kolmogorov-Smirnov test is one-dimentional, so
-    it only makes sense for one color at a time, there's no way to
-    make it take into account all three. We did find a
-    [paper](https://www.sciencedirect.com/science/article/pii/S0167715297000205?via%3Dihub)
-    that describes a multidimensional version, but we decided
-    implementing statistics research was way too much effort for this
-    project.
+      it only makes sense for one color at a time, there's no way to
+      make it take into account all three. We did find a
+      [paper](https://www.sciencedirect.com/science/article/pii/S0167715297000205?via%3Dihub)
+      that describes a multidimensional version, but we decided
+      implementing statistics research was way too much effort for
+      this project.
