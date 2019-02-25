@@ -13,11 +13,11 @@ October. A few months beforehand, we decided to make them a surprise
 in the form of an interactive computer art installation to be deployed
 at their wedding. The guests used it to create some amazing things:
 
-<video width="800" height="500" autoplay loop playsinline muted src="/assets/videobooth/josh_emily_heart_short.mp4"></video>
+<video autoplay loop playsinline muted src="/assets/videobooth/josh_emily_heart_short.mp4"></video>
 
-<video width="800" height="500" autoplay loop playsinline muted src="/assets/videobooth/riva_dance_short.mp4"></video>
+<video autoplay loop playsinline muted src="/assets/videobooth/riva_dance_short.mp4"></video>
 
-<video width="800" height="500" autoplay loop playsinline muted src="/assets/videobooth/nick_star_short.mp4"></video>
+<video autoplay loop playsinline muted src="/assets/videobooth/nick_star_short.mp4"></video>
 
 This post is about what we did to make it, some of the technical and
 aesthetic problems we ran into along the way, and how we solved them.
@@ -261,9 +261,8 @@ webcam measured for each bulb changed substantially. This meant that
 whenever the lighting changed, the algorithm would stop working, since
 the "typical" color profiles that we'd hard-coded for each bulb were
 only typical in very specific light conditions. In order to get things
-working again, we would have to manually change the code to adapt to
-the new light conditions, which was time consuming since our code was
-getting pretty gnarly at this point.
+working again, we would have to figure out the new typical color
+ranges by trial and error, and manually change the code accordingly.
 
 There was no way to know what the light conditions at the wedding
 venue would be like in advance, so if we didn't come up with a better
@@ -285,7 +284,7 @@ starting it running:
    maximum and minimum observed total values of red, green, and blue.
 3. Repeat for the other two colors.
 4. While the booth was running, any detected blob whose total color
-   values fell within the recorded values for a bulb would be
+   values fell within the recorded ranges for a bulb would be
    identified as that bulb.
 
 This seemed like it could work, but it also felt brittle and
@@ -319,11 +318,10 @@ It turns out there is a statistical test that does basically this: the
 two-sample [Kolmogorov–Smirnov
 test](https://en.wikipedia.org/wiki/Kolmogorov%E2%80%93Smirnov_test). The
 "K-S test", as it's known, compares two samples and gives you
-something called a ["D
-statistic"](https://en.wikipedia.org/wiki/Kolmogorov%E2%80%93Smirnov_test#Kolmogorov%E2%80%93Smirnov_statistic),
-which isn't exactly the probability we're looking for, but the closer
-the D statistic is to zero, the more likely it is that the samples
-come from the same population, which is close enough.
+something called a "D statistic" which isn't technically the
+probability that the two samples are from the same population, but the
+closer it is to zero the more likely it is that they are, which is
+good enough for our purposes.
 
 At this point, we were excited about the idea because it seemed like
 such an elegant, principled solution to the problem, but skeptical,
@@ -335,11 +333,11 @@ you thought they would, etc.
 We were able to find a preexisting JavaScript implementation of the
 K-S test in the [Jerzy
 library](https://github.com/pieterprovoost/jerzy), which we hacked
-into our project. Now, in order to check if a blob is e.g. the green
+into our project. Now in order to check if a blob was e.g. the green
 bulb, rather than checking if the measured red, green, and blue values
 for the blob fell within the calibrated ranges for the green bulb, we
-instead performed three K-S tests (one for each color) of the sampled
-values from the previous 50 frames of the blob against the values
+instead performed three K-S tests (one for each color) between the sampled
+values from the previous 50 frames of the blob and the values
 measured for the green bulb. We then added up the D statistics for
 each of the three colors and identified a blob as the green bulb only
 if the total was less than a manually determined threshold value.
@@ -348,33 +346,75 @@ Just summing up the D statistics from three different K-S tests like
 this is totally statistically unjustified[^2], but it worked well
 enough in practice.
 
-Using the K-S test instead of just checking minimum and maximums for
-the color ranges gave us a dramatic improvement in results.
-
-didnt get confused between bulbs as much, rarely identified non-bulb
-objects as bulbs
+Using the K-S test instead of just minimum and maximum values for
+each color gave us a dramatic improvement in results. The
+algorithm reliably distinguished the three bulbs from each other and
+other objects in the video and could be quickly calibrated to adapt to
+different light conditions.
 
 ## Performance optimizations
 
-Cost was performance
+However, this success came at the cost of performance. Computing K-S
+tests was much more computationally intensive than just comparing
+numbers. We optimized the K-S test code we copy-pasted using
+algorithmic improvements (it had a lot of [accidentally
+quadratic](https://accidentallyquadratic.tumblr.com/) code that we
+were able to make linear) and caching, which made things manageable
+until we tried to scale up our video player. Until now we'd been
+testing with a small (640 by 480 pixels) video feed. However, in the
+final product, we wanted the video to be full screen on a large
+monitor. When we tried this, the performance of all our computer
+vision code plummeted, as did the framerate of the rendered video.
 
-K-S test involves some math, not as simple as just checking if three
-numbers are in three ranges.
+Digging in with the browser profiler revealed that the majority of the
+time was spent inside tracking.js, so making further optimizations to
+our code wouldn't do much. Instead, we'd have to somehow reduce the
+work that tracking.js was doing. Not knowing where else to turn, we
+started searching for things like "tracking js improve
+performance". Surprisingly, this worked. It let us to [this
+comment](https://github.com/eduardolundgren/tracking.js/issues/96)
+from tracking.js creator Eduardo Lundgren, which suggests downscaling
+high-res input video before passing it to tracking.js to be processed,
+and then taking the output positions, bounding boxes, etc., and
+upscaling them before rendering them. We implemented this pretty
+quickly, and it worked well! Although it had it's fair share of
+amusing bugs along the way, e.g. bounding boxes flying off the screen
+due to math errors:
 
-
-- algorithmic improvements to Jerzey
-- downscaling the video feed to run the algorithms on it and then
-  scaling back up to
+<video autoplay loop playsinline muted
+src="/assets/videobooth/james_funny_bug.mp4"></video>
 
 
 ## The final product
+
+After frantically rushing to finish all of the above before the
+wedding, we deployed it in a mad rush during the cocktail, but the
+booth was ready for the dinner and dancing afterwards. Here are a few
+of our favorite things the guests made.
+
+
+
+
+
+## Reflections
+
+### Glitch and collaboration
+
+### Code with an expiration date
+
+### Your laptop *is* production
 
 
 
 
 [^1]: Many of Dan's [computer vision
-tutorials](https://www.youtube.com/playlist?list=PLRqwX-V7Uu6aG2RJHErXKSWFDXU4qo_ro)
-were really helpful for understanding what we were doing throughout
-this whole project.
-[^2]: Stuff about there being a multiparamtere version but this being
-    too daunghint to implement for this project
+      tutorials](https://www.youtube.com/playlist?list=PLRqwX-V7Uu6aG2RJHErXKSWFDXU4qo_ro)
+      were really helpful for understanding what we were doing
+      throughout this whole project.
+[^2]: The tranditional Kolmogorov-Smirnov test is one-dimentional, so
+    it only makes sense for one color at a time, there's no way to
+    make it take into account all three. We did find a
+    [paper](https://www.sciencedirect.com/science/article/pii/S0167715297000205?via%3Dihub)
+    that describes a multidimensional version, but we decided
+    implementing statistics research was way too much effort for this
+    project.
