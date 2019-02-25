@@ -4,6 +4,19 @@ Slug: wedding-videobooth
 Summary: Some technical and aesthetic notes about building a surprise for the wedding of some friends
 Status: draft
 
+<!-- This is a hack to prevent video elements from making the page -->
+<!-- jump in Firefox. -->
+
+<script async defer>
+document.addEventListener('DOMContentLoaded', () => {
+  console.log(document.querySelectorAll('video'))
+  document.querySelectorAll('video').forEach((elem) => { elem.addEventListener('loadeddata',
+     (e) => e.target.style.minHeight = `${e.target.clientHeight}px`);
+   });
+ });
+</script>
+
+
 *This post was written jointly with
 [Rachel Hwang](http://rahwang.strikingly.com/), who worked on this
 project with me.*
