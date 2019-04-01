@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
 *This post was written jointly with
 [Rachel Hwang](http://rahwang.strikingly.com/), who worked on this
 project with me.*
-f
+
 Our friends Emily and [John](http://www.daz.zone/) got married last
 October. A few months beforehand, we decided to make them a surprise
 in the form of an interactive computer art installation to be deployed
