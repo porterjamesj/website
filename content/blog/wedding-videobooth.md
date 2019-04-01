@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
 *This post was written jointly with
 [Rachel Hwang](http://rahwang.strikingly.com/), who worked on this
 project with me.*
-
+f
 Our friends Emily and [John](http://www.daz.zone/) got married last
 October. A few months beforehand, we decided to make them a surprise
 in the form of an interactive computer art installation to be deployed
@@ -402,13 +402,10 @@ wedding, we deployed it in a mad rush during the cocktail, but the
 booth was ready for the dinner and dancing afterwards. Here are a few
 of our favorite things the guests made:
 
-Writing in English and Chinese:
+Writing:
 
 <video autoplay loop playsinline muted
 src="/assets/videobooth/ilona_leslie_writing.mp4"></video>
-
-<video autoplay loop playsinline muted
-src="/assets/videobooth/james_shanti_chinese_writing.mp4"></video>
 
 Drawings of all sorts:
 
@@ -424,24 +421,24 @@ system:
 <video autoplay loop playsinline muted
 src="/assets/videobooth/rob_alicia_subway.mp4"></video>
 
-A math puzzle:
+or even a math puzzle:
 
 <video autoplay loop playsinline muted
 src="/assets/videobooth/tim_rob_alicia_math_puzzle.mp4"></video>
-
-And occasionally just pure chaos:
-
-<video autoplay loop playsinline muted
-src="/assets/videobooth/jordan_and_co_mass_chaos.mp4"></video>
-
 
 ## Reflections
 
 ### Glitch and collaboration
 
+TODO
+
 ### Code with an expiration date
 
-### Your laptop *is* production
+TODO
+
+### Your laptop is production
+
+TODO
 
 
 ## On a more personal note
