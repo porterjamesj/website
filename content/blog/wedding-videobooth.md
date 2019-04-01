@@ -402,10 +402,13 @@ wedding, we deployed it in a mad rush during the cocktail, but the
 booth was ready for the dinner and dancing afterwards. Here are a few
 of our favorite things the guests made:
 
-Writing:
+Writing in English and Chinese:
 
 <video autoplay loop playsinline muted
 src="/assets/videobooth/ilona_leslie_writing.mp4"></video>
+
+<video autoplay loop playsinline muted
+src="/assets/videobooth/james_shanti.mp4"></video>
 
 Drawings of all sorts:
 
