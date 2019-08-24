@@ -2,7 +2,7 @@ appdirs==1.4.3
 blinker==1.3
 docutils==0.12
 epc==0.0.5
-feedgenerator==1.7
+feedgenerator==1.9
 flake8==2.2.5
 ghp-import==0.4.1
 jedi===0.8.1-final0
@@ -12,7 +12,7 @@ MarkupSafe==0.23
 mccabe==0.2.1
 nose==1.3.4
 packaging==16.8
-pelican==3.5.0
+pelican==4.1.1
 pep8==1.5.7
 pyflakes==0.8.1
 Pygments==2.0.1
