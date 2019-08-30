@@ -1,8 +1,7 @@
-Title: Creating a magical videobooth for our friends' wedding
-Date: 2018-10-14
+Title: Creating a magical videobooth for a wedding
+Date: 2019-08-30
 Slug: wedding-videobooth
 Summary: Some technical and aesthetic notes about building a surprise for the wedding of some friends
-Status: draft
 
 <!-- This is a hack to prevent video elements from making the page -->
 <!-- jump in Firefox. -->
@@ -17,14 +16,13 @@ document.addEventListener('DOMContentLoaded', () => {
 </script>
 
 
-*This post was written jointly with
-[Rachel Hwang](http://rahwang.strikingly.com/), who worked on this
-project with me.*
+*This project was a collaboration with my friend [Rachel
+Hwang](http://rahwang.strikingly.com/).*
 
 Our friends Emily and [John](http://www.daz.zone/) got married last
-October. A few months beforehand, we decided to make them a surprise
-in the form of an interactive computer art installation to be deployed
-at their wedding. The guests used it to create some amazing things:
+year, and we decided to make them a surprise in the form of an
+interactive computer art installation for their wedding. The guests
+used it to create some amazing things:
 
 <video autoplay loop playsinline muted src="/assets/videobooth/josh_emily_heart_short.mp4"></video>
 
@@ -45,29 +43,27 @@ at the wedding, would also produce digital artifacts that could be compiled
 into a "video guestbook" of sorts for Emily and John.
 
 We settled on the idea of guests moving colored lights through the air
-like wands to draw interesting visual effects on a screen in front of
-them. You'd walk into the booth, type a message to Emily and John to
-be included with your video, and then have 30 seconds to record a
-video of yourself making something beautiful, funny, or interesting
-using the light wands. The drawing would work via a computer vision
-algorithm tracking the lights and rendering effects based on their
-positions.
+like wands to draw interesting visual effects on a screen. You'd walk
+into the booth and then have 30 seconds to record a video of yourself
+making something beautiful, funny, or interesting using the light
+wands. The drawing would work via a computer vision algorithm tracking
+the lights and rendering effects based on their positions.
 
 ## Color tracking
 
-We needed a way to track the positions of colored objects (called
-"blobs" in computer vision terminology) in a video stream. We poked
-around for a while and found [tracking.js](https://trackingjs.com/), a
-library of JavaScript computer vision algorithms. After a bit of trial
-and error we managed to get a very basic demo working:
+To get started, we needed a way to track the positions of colored
+objects (called "blobs" in computer vision terminology) in a video
+stream. We found [tracking.js](https://trackingjs.com/), a library of
+JavaScript computer vision algorithms. After a bit of trial and error
+we managed to get a very basic demo working:
 
 <video autoplay loop playsinline muted
 src="/assets/videobooth/video.mp4"></video>
 
-This was pretty much just the tracking.js
-[color tracking example](https://trackingjs.com/examples/color_camera.html)
-with the parameters tweaked so it tracks orange blobs rather
-cyan/magenta/yellow ones, but it was a start.
+This was pretty much just the tracking.js [color tracking
+example](https://trackingjs.com/examples/color_camera.html) with the
+parameters tweaked so it tracks orange blobs rather than the default
+of cyan/magenta/yellow blobs, but it was a start.
 
 ## Making it beautiful
 
@@ -109,22 +105,21 @@ eye when we started this project.
 
 ## Hardware choices
 
-One of the big hurdles remaining was figuring out what we were going
-to use as the colored objects that the wedding guests would draw
-with. Until now, we'd been testing with ceiling lights and various
-shiny objects in our apartments, but that wasn't going to cut it for
-the wedding. We wanted whatever we settled on to have a few
-characteristics:
+One of the big hurdles remaining was determing exactly what colored
+objects the wedding guests would draw with. Until now, we'd been
+testing with ceiling lights and various shiny objects in our
+apartments, but that wasn't going to cut it for the wedding. We wanted
+whatever we settled on to have a few characteristics:
 
 1. Minimal false positives, i.e. someone's clothes or body won't be
    mistaken for it, resulting in spurious drawing.
 2. Works well in a variety of light conditions. This was important
    since we weren't sure what the ambient light would be like
    at the wedding venue.
-3. Can be "turned on and off" by changing it's color/light emission
-   somehow. This just makes drawing/writing a lot easier, since never
-   being able to "turn off" the color would be like drawing with a
-   pencil you couldn't pick up off the page.
+3. Can be easily "turned on and off" by changing it's color/light
+   emission somehow. This makes drawing/writing a lot easier,
+   since never being able to "turn off" the color would be like
+   drawing with a pencil you couldn't pick up off the page.
 4. Comes in multiple colors, allowing for multiple distinct colored
    lines or effects.
 
@@ -135,10 +130,10 @@ consistently in different ambient light conditions, since it doesn't
 need to reflect light from it's environment to look colored. An LED or
 lightbulb can just be powered on and off, where as something that
 doesn't light itself up has to be occluded somehow in order to stop
-drawing, which is much tricker.
+drawing, which is much trickier.
 
-After a few false starts with glowsticks and smaller LEDs, we found
-that colored lightbulbs worked quite well:
+After a few false starts with glowsticks and small LEDs, we found that
+colored lightbulbs worked quite well:
 
 <video autoplay loop playsinline muted
 src="/assets/videobooth/james_first_heart.mp4"></video>
@@ -150,23 +145,23 @@ of the time.
 
 ## From one color to three
 
-The videos above used only a red lightbulb. To detect it, we first
-tried configuring tracking.js to just find red blobs, but this didn't
-work. Colored bulbs are bright enough that a webcam just sees them as
-white, so we had to configure tracking.js to find white blobs instead.
+So far we'd only been testing with a single color of lightbulb at a
+time, detecting it by configuring tracking.js to look for white
+blobs. This works well regardless of the bulb color, since a colored
+bulb is bright enough that it just looks white to a webcam.
 
-We wanted guests to be able to draw with multiple bulbs of different
-colors, so just finding white blobs wouldn't work for the final
-product, since it would prevent us from distinguishing e.g. a red bulb
-from a blue one. Our next challenge was figuring out how to do this.
+However, we wanted guests to be able to draw with multiple bulbs of
+different colors at the same time, so just finding white blobs
+wouldn't work for the final product, since it would prevent us from
+distinguishing e.g. a red bulb from a blue one. Our next challenge was
+figuring out how to do this.
 
-We ended up getting red, green, and blue LED bulbs. Our plan for
-telling the three colors apart involved the subtle "corona" of light
-that surrounds colored bulbs in the webcam. Looking at the videos
-above, you can see that the while the body of the bulb looks white,
-the background pixels surrounding it look pretty red. We took
-advantage of this in our initial algorithm for telling the three
-bulbs apart:
+We had red, green, and blue bulbs. Our plan for telling the three
+colors apart involved the subtle "corona" of light that surrounds
+colored bulbs in the webcam. Looking at the videos above, you can see
+that the while the body of the bulb looks white, the background pixels
+surrounding it look pretty red. We took advantage of this in our
+initial algorithm for telling the three bulbs apart:
 
 1. Configure tracking.js to find all white blobs in each frame of
    video.
@@ -189,7 +184,7 @@ the bulbs also caused other problems:
 <video autoplay loop playsinline muted
 src="/assets/videobooth/james_face_confusion.mp4"></video>
 
-James' face is so illuminated that the algorithm thinks it's a bulb.
+The face is so illuminated that the algorithm thinks it's a bulb.
 
 This seemed like a big challenge at first, and we struggled for a
 while to come up with tweaks we could make to the algorithm, or some
@@ -197,10 +192,10 @@ sort of clever transformation of the pixel data we could use to tell
 the colors apart.
 
 Eventually, we took a step back and realized we had been too focused
-on finding a software solution to the problem. Rather than forcing our
-our program to deal with the too-bright bulbs, we could just make them
-dimmer. The solution we eventually settled for doing this on was dirt
-simple: cover the bulbs with socks!
+on solving the problem with software. Rather than forcing our program
+to deal with the too-bright bulbs, we could just make them dimmer. The
+solution we eventually settled on was dirt simple: cover the bulbs
+with socks!
 
 <video autoplay loop playsinline muted
 src="/assets/videobooth/james_socks_on_bulbs.mp4"></video>
@@ -213,8 +208,8 @@ Unfortunately, this didn't solve all our problems. The colors of the
 bulbs didn't line up as neatly as we'd hoped with the actual red,
 green, and blue values the webcam measured. The simple strategy of
 identifying, e.g. the greenest blob as the green bulb was pretty
-unreliable—sometimes the blue bulb actually had the most
-green. Similar problems happened with all three colors.
+unreliable—sometimes the blue bulb actually had the highest total
+green value. Similar problems happened with all three colors.
 
 What we ended up doing instead was manually measuring the typical
 color profiles of in each bulb and hard-coding these ranges into our
@@ -252,18 +247,18 @@ which was surprisingly straightforward. This let us keep track of the
 consider not just what a blob looks like in this frame of video, but
 what it looked like in previous frames also.
 
-We tweaked our code to use a running average of the red, green, and
-blue totals for each blob over the last 50 frames, rather than only
-considering the current frame. This meant that if a bulb's color
-fluctuated a bit for a frame or two, it wouldn't throw everything off,
-since the running average wouldn't be affected much. This made things
-a lot less jittery.  We were now able to track all three colors pretty
-reliably:
+We then used this to tweak our code so it used a running average of
+the red, green, and blue totals for each blob over the last 50 frames,
+rather than only considering the current frame. This meant that if a
+bulb's color fluctuated a bit for a frame or two, it wouldn't throw
+everything off, since the running average wouldn't be affected
+much. This made things a lot less jittery.  We were now able to track
+all three colors pretty reliably:
 
 <video autoplay loop playsinline muted
 src="/assets/videobooth/james_all_three.mp4"></video>
 
-## Getting even smarter using statistics
+## Handing ambient light problems using statistics
 
 Our algorithm was still very sensitive to ambient light conditions. As
 the environment got darker or lighter, the color values that the
@@ -278,21 +273,22 @@ There was no way to know what the light conditions at the wedding
 venue would be like in advance, so if we didn't come up with a better
 system, we'd have to do this tweaking while setting the booth up. We
 were worried that we simply wouldn't have time for this, given all the
-hectic nature of weddings.
+hectic nature of weddings and our other responsibilities as
+groomspeople.
 
 What we needed was a way for our algorithm to adapt to
 different light conditions automatically, without us having to spend
 time manually adjusting it.
 
-We decided to try adding a way to "calibrate" the algorithm before
-starting it running:
+We decided to try adding a way to "calibrate" the algorithm at the
+beginning:
 
 1. While setting the booth up, we'd hold up the blue bulb and click on
    it to tell the system "this blob is the blue bulb, use it to
    calibrate the detection algorithm".
 2. We'd move the bulb around a bit while the software would record the
    maximum and minimum observed total values of red, green, and blue.
-3. Repeat for the other two colors.
+3. Repeat for the other two bulbs.
 4. While the booth was running, any detected blob whose total color
    values fell within the recorded ranges for a bulb would be
    identified as that bulb.
@@ -313,61 +309,42 @@ measured color values to the sampled data for the bulb.
 
 We eventually realized that what we were wanted to do, in statistical
 terms, was determine the probability that two samples were drawn from
-the same underlying population. In our case, the underlying
-population is the red, green, and blue values that the webcam tends
-to measure for a given bulb. One of the samples is the red, green, and
-blue values measured during calibration of that bulb, and the other
-sample the is red, green, and blue values from the frames we observe
-for an as-yet unidentified blob being processed by our algorithm. If,
-we can determine the probability that the unidentified blob sample is
-from the same underlying population as each of the calibration
-samples for the three bulbs, we know the unidentified blob's
-probability of being each bulb!
-
-It turns out there is a statistical test that does basically this: the
-two-sample [Kolmogorov–Smirnov
-test](https://en.wikipedia.org/wiki/Kolmogorov%E2%80%93Smirnov_test). The
-"K-S test", as it's known, compares two samples and gives you
-something called a "D statistic" which isn't technically the
-probability that the two samples are from the same population, but the
-closer it is to zero the more likely it is that they are, which is
-good enough for our purposes.
+the same underlying population. In our case, the one sample is the RGB
+profile measured during calibration of a bulb, and the other sample is
+the RGB profile of an unidentified blob being processed by our
+algorithm. If the two samples were drawn from the same population,
+then the unidentified blob is probably the bulb! It turns out there is
+a statistical test that does basically this: the two-sample
+[Kolmogorov–Smirnov
+test](https://en.wikipedia.org/wiki/Kolmogorov%E2%80%93Smirnov_test),
+or "K-S test" for short[^2].
 
 At this point, we were excited about the idea because it seemed like
 such an elegant, principled solution to the problem, but skeptical,
 since in programming it so often turns out that the elegant,
-principled solution doesn't work in practice, due to performance, the
-particulars of your problem not fitting into an algorithm in the way
-you thought they would, etc.
+principled solution doesn't work in practice, due to performance
+issues, the particulars of your problem not fitting into an algorithm
+in the way you thought they would, etc.
 
-We were able to find a preexisting JavaScript implementation of the
-K-S test in the [Jerzy
-library](https://github.com/pieterprovoost/jerzy), which we hacked
-into our project. Now in order to check if a blob was e.g. the green
-bulb, rather than checking if the measured red, green, and blue values
-for the blob fell within the calibrated ranges for the green bulb, we
-instead performed three K-S tests (one for each color) between the sampled
-values from the previous 50 frames of the blob and the values
-measured for the green bulb. We then added up the D statistics for
-each of the three colors and identified a blob as the green bulb only
-if the total was less than a manually determined threshold value.
-
-Just summing up the D statistics from three different K-S tests like
-this is totally statistically unjustified[^2], but it worked well
-enough in practice.
-
-Using the K-S test instead of just minimum and maximum values for
-each color gave us a dramatic improvement in results. The
+We were able to find a JavaScript implementation of the K-S test in
+the [Jerzy library](https://github.com/pieterprovoost/jerzy), which we
+hacked into our project. Now in order to test if a blob was e.g. the
+green bulb, rather than checking if the measured red, green, and blue
+values for the blob fell within a range, we instead performed three
+K-S tests (one for each color) between the sampled values from the
+previous 50 frames of the blob and the values measured for the green
+bulb[^3]. Using the K-S test instead of just minimum and maximum
+values for each color gave us a dramatic improvement in results. The
 algorithm reliably distinguished the three bulbs from each other and
 other objects in the video and could be quickly calibrated to adapt to
 different light conditions.
 
 ## Performance optimizations
 
-However, this success came at the cost of performance. Computing K-S
-tests was much more computationally intensive than just comparing
-numbers. We optimized the K-S test code we copy-pasted using
-algorithmic improvements (it had a lot of [accidentally
+However, this success came at the cost of performance. Computing three
+K-S tests is a bit computationally intensive to do every frame. We
+optimized the K-S test code we copy-pasted using algorithmic
+improvements (it had a lot of [accidentally
 quadratic](https://accidentallyquadratic.tumblr.com/) code that we
 were able to make linear) and caching, which made things manageable
 until we tried to scale up our video player. Until now we'd been
@@ -381,15 +358,15 @@ time was spent inside tracking.js, so making further optimizations to
 our code wouldn't do much. Instead, we'd have to somehow reduce the
 work that tracking.js was doing. Not knowing where else to turn, we
 started searching for things like "tracking js improve
-performance". Surprisingly, this worked. It let us to [this
+performance". Surprisingly, this worked! It let us to [this
 comment](https://github.com/eduardolundgren/tracking.js/issues/96)
 from tracking.js creator Eduardo Lundgren, which suggests downscaling
 high-res input video before passing it to tracking.js to be processed,
 and then taking the output positions, bounding boxes, etc., and
-upscaling them before rendering them. We implemented this pretty
-quickly, and it worked well! Although it had it's fair share of
-amusing bugs along the way, e.g. bounding boxes flying off the screen
-due to math errors:
+scaling them back up to the original video dimensions before rendering
+them. We implemented this pretty quickly, and it worked really well!
+Although it had its fair share of amusing bugs along the way,
+e.g. bounding boxes flying off the screen due to math errors:
 
 <video autoplay loop playsinline muted
 src="/assets/videobooth/james_funny_bug.mp4"></video>
@@ -398,7 +375,7 @@ src="/assets/videobooth/james_funny_bug.mp4"></video>
 ## The final product
 
 After frantically rushing to finish all of the above before the
-wedding, we deployed it in a mad rush during the cocktail, but the
+wedding and deploying it in a mad rush during the cocktail hour, the
 booth was ready for the dinner and dancing afterwards. Here are a few
 of our favorite things the guests made:
 
@@ -429,36 +406,28 @@ or even a math puzzle:
 <video autoplay loop playsinline muted
 src="/assets/videobooth/tim_rob_alicia_math_puzzle.mp4"></video>
 
-## Reflections
 
-### Glitch and collaboration
-
-TODO
-
-### Code with an expiration date
-
-TODO
-
-### Your laptop is production
-
-TODO
-
-
-## On a more personal note
-
-It was a lot of work and stressful at times, but we couldn't be
-happier with how this project turned out. We're happy we could give
-everyone at the wedding a way to be creative in expressing their love,
-while making what we hope will be a cherished memory for our newlywed
+It was a lot of work and stressful at times, but we're really happy
+with how this project turned out. We're glad we could give everyone at
+the wedding a way to be creative in expressing their love and well
+wishes, while making what we hope will be a cherished memory for our
 friends. We love you John and Emily! Thanks for giving us the
 opportunity to make this.
+
+If you're curious, you can see the code for this project
+[here](https://glitch.com/edit/#!/jemily-wedding-photobooth) (although
+it's pretty gnarly due to the tight deadline!).
 
 
 [^1]: Many of Dan's [computer vision
       tutorials](https://www.youtube.com/playlist?list=PLRqwX-V7Uu6aG2RJHErXKSWFDXU4qo_ro)
       were really helpful for understanding what we were doing
       throughout this whole project.
-[^2]: The tranditional Kolmogorov-Smirnov test is one-dimentional, so
+[^2]: Technically, the test gives you something called a "D statistic"
+      which isn't the probability that the two samples are from the
+      same population, but the closer it is to zero the more likely it
+      is that they are, which is good enough for our purposes.
+[^3]: The tranditional Kolmogorov-Smirnov test is one-dimentional, so
       it only makes sense for one color at a time, there's no way to
       make it take into account all three. We did find a
       [paper](https://www.sciencedirect.com/science/article/pii/S0167715297000205?via%3Dihub)
