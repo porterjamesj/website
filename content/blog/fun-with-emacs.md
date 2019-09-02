@@ -7,7 +7,7 @@ I recently learned about some interesting wrinkles in Emacs Lisp that
 make it useful for learning about closures. First let's talk about
 closures in more reasonable languages.
 
-What do the the following code snippets do?
+What do the following code snippets do?
 
 Python:
 
@@ -18,7 +18,7 @@ Python:
 
 	fun1()(3)
 
-Javascript:
+JavaScript:
 
 	:::javascript
 	var fun1 = function() {
@@ -48,7 +48,7 @@ free variable in the innermost function call because it was not passed
 as an argument and has no local definition. How is the value of a
 free variable resolved then? In lexically scoped languages, the
 language looks for definitions of free variables in the immediate
-_lexical environment_, whereas in dynamically scoped langauges, the
+_lexical environment_, whereas in dynamically scoped languages, the
 language looks for definitions of free variables in the immediate
 _evaluating environment_.
 
@@ -77,7 +77,7 @@ the global scope, in which there is no definition of `x`, hence
 
 This seems weird by modern lights, because most languages we write
 code in regularly are lexically scoped. Emacs Lisp gets ever weirder
-though. Remember when I said that python and javascript "go look for a
+though. Remember when I said that python and JavaScript "go look for a
 definition in the enclosing lexical scope"? That was sort of a
 lie. They don't really go looking through the text of your code trying
 to find definitions, what actually happens is that when `fun1`
@@ -85,7 +85,7 @@ evaluates, it doesn't just return a bare anonymous function. Instead,
 the function is returned along with some information about its lexical
 environment. This information is called a _closure_, and usually
 consists of the values that any free variables had at the time the
-function was defined. When python or javascript needs to know the
+function was defined. When python or JavaScript needs to know the
 value of `x` during evaluation, they go look up its definition in the
 closure. You can't actually examine closures in the language itself;
 they're specially protected and hidden away in the implementation. But
@@ -126,7 +126,7 @@ creation, it doesn't hide closures away from you the way more modern
 languages do; they are right there, available to be inspected as data
 structures in the language itself, which is really pretty bizarre. If
 we funcall this with 3 as an argument, we get 36, just like we did in
-python or javascript. Internally, these languages are doing the same
+python or JavaScript. Internally, these languages are doing the same
 thing, we as programmers are just not allowed to see it. Emacs Lisp is
 adorable trusting; however, which means we can do stupidly silly
 things. The closure is just a list, so we can use it as we would any

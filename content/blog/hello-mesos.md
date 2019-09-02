@@ -40,7 +40,7 @@ view explanations of the mechanics of Mesos. The
 [architecture guide](http://mesos.apache.org/documentation/latest/mesos-architecture/)
 on the official site is
 OK. [This talk](https://www.youtube.com/watch?v=gVGZHzRjvo0) from
-David Greenberg is a really good explaination of the basic
+David Greenberg is a really good explanation of the basic
 concepts. The
 [Mesos Paper](http://people.csail.mit.edu/matei/papers/2011/nsdi_mesos.pdf)
 is also quite readable and does a good job justifying the system's
