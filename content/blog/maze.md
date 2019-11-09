@@ -1,8 +1,7 @@
 Title: MAZE: Solving "the World's Most Challenging Puzzle" with Python
-Date: 2019-09-01
+Date: 2019-11-09
 Slug: maze
 Summary: Applying graph analysis to a beloved book from childhood
-Status: draft
 
 When I was a kid I had a unique and interesting book called *[MAZE:
 Solve the World's Most Challenging
@@ -23,7 +22,7 @@ rooms/pages. For example, here's room 1, the entrance to the maze:
 To take the door to room 20, you simply turn to page 20, which will
 also have numbered doors in it. By doing this repeatedly, you
 "navigate" through the maze. To get a feel for what it's like, you can
-"play" the maze online
+explore an online version of the book
 [here](http://www.intotheabyss.net/room-1/#post-4).
 
 The goal is to find your way from room 1 to the room at the center of
@@ -65,17 +64,18 @@ possible path, and as you can see in the picture, room 45 is nowhere
 to be found.
 
 I was flummoxed. A natural next step would have been to turn to
-computers—graph search algorithms could tell me very quickly if I was
-right. But I felt that his would be cheating somehow, like it would
-rob the book of some of it's magic. My friend
+computers, since a graph search algorithm could tell me very quickly
+if I was right. But I felt that his would be cheating somehow—like it
+would rob the book of some of it's magic. My friend
 [Rachel](http://rahwang.mystrikingly.com/) eventually convinced me
-that was a silly way to look at it, and she was right! I decided to
-write some programs to help me out.
+that was silly, and she was right! I decided to write some programs to
+help me out.
 
 The first thing I did was to go through the book one page at a time
 and transcribe all the connections between rooms into a graph written
-in the DOT graph description language. It looked something like
-this[^1]:
+in the [DOT graph description
+language](https://en.wikipedia.org/wiki/DOT_(graph_description_language)). It
+looked something like this[^1]:
 
 ```dot
 digraph maze{
@@ -89,7 +89,7 @@ digraph maze{
 ```
 
 DOT files can be parsed by all sorts of graph processing and
-visualization tools, so representing the maze this way this is a good
+visualization tools, so representing the maze this way is a good
 starting point. `digraph` means that the edges in this graph have a
 direction (i.e. just because you can go from room X to room Y doesn't
 mean you can go from Y back to X). The line `1 -> 20;` means that you
@@ -108,7 +108,7 @@ of three rooms that form tight loops with each other (e.g. 7-36-16, or
 38-22-43).
 
 Next, I wanted to confirm my suspicion that room 45 is not reachable
-from room 1 in the maze as written. To do this, I used
+from room 1. To do this, I used
 [NetworkX](https://networkx.github.io/):
 
 
@@ -123,9 +123,9 @@ nx.shortest_path(g, "1", "45")
 This throws an error: `NetworkXNoPath: No path between 1 and 45.` So
 indeed, no such path exists! What could be going on?
 
-It dawned on me that there had to be some sort of "hidden door"
-somewhere in the maze, connecting two rooms that don't at first appear
-to be connected, and discoverable only by careful examination of the
+It dawned on me that there must be a "hidden door" somewhere in the
+maze, connecting two rooms that don't at first appear to be connected,
+and discoverable only by careful examination of the
 illustrations. This was already really cool and made the book feel
 more magical! I'd never suspected that it had something like this in
 it, and I never would have figured it out if a graph search algorithm
@@ -161,9 +161,9 @@ path back, and it's nine steps long:
 
  1. Consider all possible edges that could be added to the graph,
     and which lead to room 17, 23, 28, or 45.
- 2. For each such edge, add it to the graph, then find the shortest
-    path from room 1 to 45 (if such a path exists). If the path is of
-    length seven, this edge could represent the hidden door.
+ 2. For each such edge, add it to the graph, then try to find the
+    shortest path from room 1 to 45. If there is such a path and it's
+    seven steps long, this edge could represent the hidden door.
 
 In Python code, this looks like:
 
@@ -209,7 +209,7 @@ upside down, and used it as a candelabra!
 In hindsight, there are lots of clues in this room that point to
 this. For instance, one of the characters is upside down, indicating
 we're looking for something upside down. Also, the sign reading
-"Directions: Up And On" could indicate that we need to turn somethinga
+"Directions: Up And On" could indicate that we need to turn something
 right-side up in order to move on.
 
 Adding this edge to the graph gives us the complete path through the
@@ -223,7 +223,8 @@ maze:
 ```
 
 There and back again in sixteen steps! You can follow this path
-yourself in the book or [online](http://www.intotheabyss.net/room-1/)
+yourself in the book or
+[online](http://www.intotheabyss.net/room-1/#post-4)
 to verify that it's correct.
 
 ---
@@ -237,10 +238,9 @@ program to help me.
 Anyway, the title of this post is sort of clickbait. I did use Python
 to find the path through the maze, but that's far from "the world's
 hardest puzzle".  When the book was first published in 1985, the
-hidden door and the path through the maze were discovered very
-quickly. The "world's hardest puzzle" part is finding and answering
-the riddle hidden in the illustrations, which still to this day no one
-has done!
+hidden door and the path through the maze were discovered quickly. The
+"world's hardest puzzle" part is finding and answering the riddle
+hidden in the illustrations, which still to this day no one has done!
 
 If you want to learn more about the book and see all the work that its
 small but dedicated community of fans has put into solving it, check
@@ -251,8 +251,8 @@ MAZE, and people still post on it regularly with new ideas and
 theories about how to decipher the book's mysteries.
 
 You can find a Jupyter notebook containing the code from this post, as
-well as the DOT file representing the maze [on my
-GitHub](https://github.com/porterjamesj/maze).
+well as the DOT file representing the maze
+[here](https://github.com/porterjamesj/maze).
 
 
 [^1]: You can download the full DOT file, representing the entire
