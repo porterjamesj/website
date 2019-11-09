@@ -73,7 +73,8 @@ write some programs to help me out.
 
 The first thing I did was to go through the book one page at a time
 and transcribe all the connections between rooms into a graph written
-in the DOT graph description language. It looked like this:
+in the DOT graph description language. It looked something like
+this[^1]:
 
 ```dot
 digraph maze{
@@ -90,8 +91,8 @@ DOT files can be parsed by all sorts of graph processing and
 visualization tools, so representing the maze this way this is a good
 starting point. `digraph` means that the edges in this graph have a
 direction (i.e. just because you can go from room X to room Y doesn't
-mean you can go from Y back to X). `1 -> 20;`, means that you can
-reach room 20 from room 1, and so on.
+mean you can go from Y back to X). The line `1 -> 20;` means that you
+can reach room 20 from room 1, and so on.
 
 Next, I used `graphviz` to draw a picture of the graph:
 
@@ -125,9 +126,9 @@ It dawned on me that there had to be some sort of "hidden door"
 somewhere in the maze, connecting two rooms that don't at first appear
 to be connected, and discoverable only by careful examination of the
 illustrations. This was already really cool and made the book feel
-more magical! I'd never suspected that it had something
-like this in it, and I never would have figured it out if I hadn't had
-a graph search algorithm convince me it must be true.
+more magical! I'd never suspected that it had something like this in
+it, and I never would have figured it out if a graph search algorithm
+hadn't convinced me it must be true.
 
 Next, I wrote a small program that helped me find the hidden
 door. **Spoiler warning: stop reading here if you'd like to try to
@@ -146,13 +147,13 @@ path back, and it's nine steps long:
 ['45', '23', '8', '12', '39', '4', '15', '37', '20', '1']
 ```
 
- This means the path there is seven steps long[^1].
+ This means the path there is seven steps long[^2].
 
  We can also see from looking at the DOT file (or just flipping
  through the pages of the book) that there are only three rooms that
  have doors leading to room 45: 17, 23, and 28. This means the hidden
  door must either lead into one of these rooms, or lead into room 45
- directly[^2].
+ directly[^3].
 
  All of this suggests an algorithm for finding the hidden
  door:
@@ -180,7 +181,7 @@ for e in nx.non_edges(g):
     g.remove_edge(*e)
 ```
 
-Running it prints:
+Running it prints all the candidate edges:
 
 ```
 ('2', '45')
@@ -193,22 +194,22 @@ Running it prints:
 NetworkX represents edges as tuples, so `('2', '45')` means an edge
 from node 2 to node 45 (i.e. a door from room 2 to room 45).
 
-This is a small enough list of candidate edges that we can just look
-at the illustrations of rooms 2, 8, and 29, by hand to see which one
-might have the hidden door in it! Rooms 2 and 8 aren't very
-interesting but let's look closely at room 29:
+This is a small enough list of candidates that we can just look at the
+illustrations of rooms 2, 8, and 29 by hand to see which one might
+have the hidden door in it! Rooms 2 and 8 aren't very interesting but
+let's look closely at room 29:
 
 ![MAZE graph](/assets/images/maze-room-29.jpg)
 
 Aha! There's a door to room 17 hidden behind the curtain, the
-characters in this room just took off the sign for it and used it as a
-candelabra!
+characters in this room just took off the sign for it, turned it
+upside down, and used it as a candelabra!
 
 In hindsight, there are lots of clues in this room that point to
-this. For example, the fact that one character is upside down,
-indicating we're looking for something upside down. Or the sign
-reading: "Directions: Up And On", perhaps indicating that we need to
-turn something right-side up in order to move on.
+this. For instance, one of the characters is upside down, indicating
+we're looking for something upside down. Also, the sign reading
+"Directions: Up And On" could indicate that we need to turn somethinga
+right-side up in order to move on.
 
 Adding this edge to the graph gives us the complete path through the
 maze:
@@ -234,10 +235,11 @@ program to help me.
 
 Anyway, the title of this post is sort of clickbait. I did use Python
 to find the path through the maze, but that's far from "the world's
-hardest puzzle".  When the book was first released in 1985, the hidden
-door and the path through the maze were discovered very quickly. The
-"world's hardest puzzle" part is finding and answering the riddle
-hidden in the illustrations, which still to this day no one has done!
+hardest puzzle".  When the book was first published in 1985, the
+hidden door and the path through the maze were discovered very
+quickly. The "world's hardest puzzle" part is finding and answering
+the riddle hidden in the illustrations, which still to this day no one
+has done!
 
 If you want to learn more about the book and see all the work that its
 small but dedicated community of fans has put into solving it, check
@@ -253,12 +255,15 @@ well as the DOT file representing the maze [on my
 GitHub](https://github.com/porterjamesj/maze).
 
 
-[^1]: This isn't necessarily true, in that the hidden door could
+[^1]: You can download the full DOT file, representing the entire
+      maze,
+      [here](https://raw.githubusercontent.com/porterjamesj/maze/master/maze.dot).
+[^2]: This isn't necessarily true, in that the hidden door could
       somehow create a path to the end and a new path back, but that
       just seemed unlikely so I decided to run with the assumption
       that hidden door only created the forward path, leaving the path
       back unchanged.
-[^2]: You might be thinking "wait, couldn't it also connect two rooms
+[^3]: You might be thinking "wait, couldn't it also connect two rooms
       elsewhere in the maze that somehow create a path to room
       45?". It can't, since any such path would have to go through
       room 17, 23, or 28—but we know these rooms aren't reachable from
