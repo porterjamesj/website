@@ -198,7 +198,8 @@ from node 2 to node 45 (i.e. a door from room 2 to room 45).
 This is a small enough list of candidates that we can just look at the
 illustrations of rooms 2, 8, and 29 by hand to see which one might
 have the hidden door in it! Rooms 2 and 8 aren't very interesting but
-let's look closely at room 29:
+let's look closely at room 29, looking for a hidden door into room 17,
+23, or 28:
 
 ![MAZE graph](/assets/images/maze-room-29.jpg)
 
