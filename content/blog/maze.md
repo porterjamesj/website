@@ -23,7 +23,8 @@ rooms/pages. For example, here's room 1, the entrance to the maze:
 To take the door to room 20, you simply turn to page 20, which will
 also have numbered doors in it. By doing this repeatedly, you
 "navigate" through the maze. To get a feel for what it's like, you can
-"play" the maze online [here](http://www.intotheabyss.net/room-1/).
+"play" the maze online
+[here](http://www.intotheabyss.net/room-1/#post-4).
 
 The goal is to find your way from room 1 to the room at the center of
 the maze (room 45) and back in only sixteen steps (this is the easy
