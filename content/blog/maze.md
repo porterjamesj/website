@@ -243,12 +243,11 @@ has done!
 
 If you want to learn more about the book and see all the work that its
 small but dedicated community of fans has put into solving it, check
-out the delightful website [Into the
-Abyss](http://www.intotheabyss.net/), which is lovingly maintained by
-a devotee known only as "White Raven". It has extensive documentation,
-lore, and discussion about MAZE, and people still post on it regularly
-with new ideas and theories about how to decipher the book's
-mysteries.
+out [Into the Abyss](http://www.intotheabyss.net/), a delightful
+website lovingly maintained by a devotee known only as "White
+Raven". It has extensive documentation, lore, and discussion about
+MAZE, and people still post on it regularly with new ideas and
+theories about how to decipher the book's mysteries.
 
 You can find a Jupyter notebook containing the code from this post, as
 well as the DOT file representing the maze [on my
