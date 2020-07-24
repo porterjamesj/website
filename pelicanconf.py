@@ -24,12 +24,11 @@ ARTICLE_PATHS = ['blog']
 MENUITEMS = [
     ('blog', '/'),
     ('about', '/pages/about.html'),
-    ('cv', '/misc/cv.pdf'),
     ('github', 'http://github.com/porterjamesj'),
     ('email', 'mailto:james@jamesporter.me'),
 ]
 
-STATIC_PATHS = ['misc', 'img', 'julia', 'extra/CNAME', 'assets']
+STATIC_PATHS = ['misc', 'img', 'extra/CNAME', 'assets']
 EXTRA_PATH_METADATA = {'extra/CNAME': {'path': 'CNAME'}}
 
 TIMEZONE = 'America/New_York'
