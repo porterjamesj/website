@@ -3,11 +3,13 @@ Date: 2016-04-09
 Slug: goodreads-vis
 Summary: I made a web page to visualize Goodreads activity
 
+*Sept 2021 Update: This is no longer working due to Goodreads API changes, and I don't use Goodreads enough to bother updating it.*
+
 I recently started using [Goodreads](http://goodreads.com/) because I
 was curious about how many books I read in a year (so far in 2016 the
 answer is "4", in case you were curious). I also made a web page that
 draws plots of Goodreads activity, which you can find
-[here](http://jamesporter.me/misc/goodreads-vis/). You have to enter a
+[here](/misc/goodreads-vis/). You have to enter a
 Goodreads "user id", which is the number in the URL on a profile
 page. For example my profile URL is
 `https://www.goodreads.com/user/show/51772290-james-porter`, so my user
