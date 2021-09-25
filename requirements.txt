@@ -1,5 +1,4 @@
 appdirs==1.4.4
-aubio==0.4.9
 blinker==1.4
 distlib==0.3.2
 docutils==0.17.1
