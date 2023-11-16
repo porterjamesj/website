@@ -1,0 +1,6 @@
+baseURL = 'http://jamesporter.me'
+languageCode = 'en-us'
+title = 'James Porter'
+author = 'James Porter'
+
+disableKinds = ['taxonomy', 'term']
