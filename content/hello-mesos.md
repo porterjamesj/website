@@ -4,6 +4,8 @@ date: 2014-11-15
 slug: hello-mesos
 summary: The tiniest Apache Mesos framework
 guid: 'tag:jamesporter.me,2014-11-15:/2014/11/15/hello-mesos.html'
+aliases:
+  - '/2014/11/15/hello-mesos.html'
 ---
 
 

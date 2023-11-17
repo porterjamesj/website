@@ -18,6 +18,12 @@
 
   <body>
     <div class="site">
+      <header>
+        {{- range site.Menus.main }}
+          <a href="{{ .URL }}">{{ .Name }}</a>
+        {{- end }}
+      </header>
+
       <div id="content">
 	{{ block "main" . }}
 	{{ end }}

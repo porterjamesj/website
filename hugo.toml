@@ -5,6 +5,16 @@ author = 'James Porter'
 
 disableKinds = ['taxonomy', 'term']
 
+[menu]
+[[menu.main]]
+    name = 'home'
+    pageRef = '/'
+    weight = 10
+[[menu.main]]
+    name = 'email'
+    url = 'james@jamesporter.me'
+    weight = 20
+
 [markup]
   [markup.highlight]
     style = 'borland'
