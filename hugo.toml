@@ -4,3 +4,7 @@ title = 'James Porter'
 author = 'James Porter'
 
 disableKinds = ['taxonomy', 'term']
+
+[markup]
+  [markup.highlight]
+    style = 'borland'

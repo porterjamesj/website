@@ -2,7 +2,7 @@
 title: "First post"
 ---
 
-This line is from `content/firstpost.md`.
+Testing out some code `code here` why is it so big?.
 
 ![Test image](images/maze-room-1.jpg)
 
