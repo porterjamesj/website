@@ -6,10 +6,14 @@
     <meta name="author" content="{{ site.Params.author }}">
     <link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet" type="text/css">
 
-    <!-- TODO this is not working, need to debug -->
     {{ range resources.Match "css/*.css" }}
-    <link rel="stylesheet" type="text/css" href="{{ .Permalink }}"/>
+      <link rel="stylesheet" type="text/css" href="{{ .Permalink }}"/>
     {{ end}}
+
+    {{ with .OutputFormats.Get "rss" -}}
+      {{ printf `<link rel=%q type=%q href=%q title=%q>` .Rel .MediaType.Type .Permalink site.Title | safeHTML }}
+    {{ end }}
+
   </head>
 
   <body>
