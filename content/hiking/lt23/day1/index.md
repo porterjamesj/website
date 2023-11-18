@@ -22,24 +22,26 @@ The #3 goes past both of the approach trails for the Southern Terminus of the LT
 
 As I get off the bus and cross the bridge that leads to the trailhead, it slowly dawns on me that the "real-world" logistics are over. Tickets, schedules, reservations—that's all done. After finding the AT blazes and following them basically through someone's backyard (they have a hose set up with a note saying hikers are welcome to fill up on water), I'm on a trail in the woods! It feels really exciting be hiking after all the stress of getting here! The weather is perfect, and its a gentle climb along a stream towards the VT-MA border and the beginning of the LT. The sun filters through the trees, and the trail is dry and clear.
 
-![First sign](images/first_trail_sign.jpeg)
-![Class of '88 trail](images/class_of_88.jpeg)
+{{< two_images_one_caption
+      src1="images/first_trail_sign.jpg" alt1="Sign showing distances on the trail"
+      src2="images/class_of_88.jpg" alt2="Sign for the Class of 88 Trail"
+      caption="Signage on the AT approach trail"
+>}}
 
 After a breezy few miles of hiking, I arrive at the VT-MA border around 1PM, where I meet Particle and Mythman[^1], the first of the many other hikers I'd travel with. Particle is also about to start an LT thru-hike. Mythman is her partner—he's just dropping her off, but he hiked it himself last year. I stop for lunch (sausage, cheese, trail mix, pita) and we chat for a bit while Particle gets her pack ready and they say their goodbyes. She sets off before I do; Mythman is kind of enough to take my photo with the trailhead sign.
 
-![Me at trailhead](images/me_with_sign.jpeg)
-
+{{< oneimage src="images/me_with_sign.jpg" alt="A photograph of the author standing by a sign that says 'Welcome to the Long Trail'" caption="Yours truly by the sign marking the trail's southern terminus" >}}
 I set out across the state line while Mythman turns around to hike back to his car. I'm finally hiking the Long Trail! Almost immediately upon entering Vermont, the trail gets much muddier. There are huge puddles every few hundred feet! I guess they don't call it "Vermud" for nothing. I catch up to Particle within a few miles and we hike together and chat. She's really friendly, quite a bit younger than me. Grew up in Burlington and lives there now, a real Vermonter. Graduated college a few years ago, then did some teaching and worked as a case worker for six months before quitting to hike the trail.
 
 My original plan was to finish the day at Seth Warner Shelter after about 10 miles of hiking. Particle's planning to push on to Congdon Shelter, four miles further. I'm a little nervous to go so far on the first day, since one of the big pieces of advice I heard before starting was "don't push yourself to hard at the start". In the end though, the energy and company is infectious, and I decide to go on with her.
 
 ## TODO map from the start of the LT, showing Seth Warner and Congdon shelters
 
-![Pond](images/pond.jpeg)
+{{< oneimage src="images/pond.jpg" alt="A photograph of a pond along the trail" >}}
 
 We arrive at Congdon Shelter around 5 or 6, just as it starts to rain. In the shelter we meet Parfait, another thru-hiker, who has her stuff set up on one of the bunks. Particle goes to set up her tent while I get my stuff out in the shelter and chat with Parfait a bit. She's a bit older than me, started hiking a few years and attempted the LT in '21. She's done a bunch of hiking out west and got her trail name out there somewhere. Married to a Canadian and lives way up north there somewhere. True to her name, she's a sweet, comforting presence. She's hiking with her dog Zero, a beautiful, friendly silken windhound, and hiking partner Jessica who's already set up in her tent with her own dog.
 
-![Zero](images/zero.jpeg)
+{{< oneimage src="images/zero.jpg" alt="A photograph of Zero, Parfait's silken windhound, begging for food at a picnic table." caption="Zero, searching for food." >}}
 
 They were in their tents at Sherman Brook campsite on the approach trail during the thunderstorm last night. Parfait said it was terrifying. There's more storms in the forecast for Sunday and Monday, when we'll be going over Stratton Mountain, which Parfait is nervous about. I'm a little nervous too hearing her talk about it. I make mac and cheese for dinner and watch the steady rain outside the shelter. We go to sleep as soon as it gets dark, which will become my custom for the next month.
 

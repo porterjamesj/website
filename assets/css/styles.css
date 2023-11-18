@@ -12,7 +12,7 @@ body {
 }
 
 .site {
-  max-width: 586px;
+  max-width: 700px;
   text-align: justify;
   margin: 0 auto 0 auto;
   display: flex;
@@ -117,7 +117,7 @@ video {
   padding-left: 10px;
 }
 
-.article img, .article video {
+:where(.article img, .article video) {
   display: block;
   max-width: 586px;
   height: auto;
