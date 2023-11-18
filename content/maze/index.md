@@ -5,7 +5,7 @@ slug: maze
 summary: Applying graph analysis to a beloved book from childhood
 guid: 'tag:jamesporter.me,2019-11-09:/2019/11/09/maze.html'
 aliases:
-  - /'2019/11/09/maze.html'
+  - /2019/11/09/maze.html
 ---
 
 When I was a kid I had a unique and interesting book called *[MAZE:

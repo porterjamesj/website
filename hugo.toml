@@ -12,7 +12,7 @@ disableKinds = ['taxonomy', 'term']
     weight = 10
 [[menu.main]]
     name = 'email'
-    url = 'james@jamesporter.me'
+    url = 'mailto:james@jamesporter.me'
     weight = 20
 
 [markup]
