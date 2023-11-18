@@ -2,7 +2,7 @@
 title: Douglas Adams and Declarative Programming
 date: 2013-10-17
 slug: douglas-adams-and-declarative-programming
-summary: some thoughts on The Hitchhikers\'s Guide to the Galaxy
+summary: some thoughts on The Hitchhikers's Guide to the Galaxy
 guid: 'tag:jamesporter.me,2013-10-17:/2013/10/17/douglas-adams-and-declarative-programming.html'
 url: /2013/10/17/douglas-adams-and-declarative-programming.html
 ---

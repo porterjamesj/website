@@ -4,6 +4,7 @@ date: 2019-08-30
 slug: wedding-videobooth
 summary: Some technical and aesthetic notes about building a surprise for the wedding of some friends
 guid: 'tag:jamesporter.me,2019-08-30:/2019/08/30/wedding-videobooth.html'
+url: /wedding-videobooth
 aliases:
   - '2019/08/30/wedding-videobooth.html'
 ---
