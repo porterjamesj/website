@@ -22,7 +22,7 @@ The #3 goes past both of the approach trails for the Southern Terminus of the LT
 
 As I get off the bus and cross the bridge that leads to the trailhead, it slowly dawns on me that the "real-world" logistics are over. Tickets, schedules, reservations—that's all done. After finding the AT blazes and following them basically through someone's backyard (they have a hose set up with a note saying hikers are welcome to fill up on water), I'm on a trail in the woods! It feels really exciting be hiking after all the stress of getting here! The weather is perfect, and its a gentle climb along a stream towards the VT-MA border and the beginning of the LT. The sun filters through the trees, and the trail is dry and clear.
 
-{{< two_images_one_caption
+{{< two_images
       src1="images/first_trail_sign.jpg" alt1="Sign showing distances on the trail"
       src2="images/class_of_88.jpg" alt2="Sign for the Class of 88 Trail"
       caption="Signage on the AT approach trail"

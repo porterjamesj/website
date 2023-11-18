@@ -10,7 +10,7 @@ Monday, September 11th
 - End: Stratton Pond Shelter
 - Approx. Miles: 10.6
 
-What a day! I set out early in the morning for Stratton Mountain hiking with Particle and Randy. It's a little over seven miles from here to the peak.
+What a day! After another night of back pain-induced restless sleep, I set out early in the morning for Stratton Mountain hiking with Particle and Randy. It's a little over seven miles from here to the peak.
 
 The weather is crummy—this is my first real day of being rained on while hiking. It's far from the thunderstorms that were forecasted though, just a steady rain and a bit chilly. I don't even mind it too much, the feeling of being cooled by rain while exercising is nice sometimes. We hike along mostly in silence everyone alone with their thoughts as the trail becomes a small stream. Between the rain, the exhaustion of the hike, and my mind being left to its own devices, I have a powerful emotional experience on the way up. I feel that the rain is somehow "cleansing" me of the worry and negativity that characterized my mental state before I left on this trip. Almost like a baptism of sorts. I'm being reborn as hiker trash[^1]! 😁
 
