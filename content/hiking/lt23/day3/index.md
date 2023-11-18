@@ -1,4 +1,8 @@
+---
 title: Glastenbury Mountain
+slug: day3
+weight: 30
+---
 
 Sunday, September 10th
 

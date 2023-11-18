@@ -1,4 +1,8 @@
+---
 title: Stratton Mountain
+slug: day4
+weight: 40
+---
 
 Monday, September 11th
 

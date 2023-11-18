@@ -1,4 +1,8 @@
+---
 title: Manchester Center
+slug: day5
+weight: 50
+---
 
 Tuesday, September 12th
 
@@ -13,4 +17,4 @@ Anyway, the trail is flat and cruisy[^1] from here to VT Route 11/30. Much of it
 
 
 
-[^1]: "Cruisy" is a haiker-ism that just means easy trail that you can "cruise" along, covering miles quickly due to little elevation change, nicely groomed trail with few few obstaces, etc.
+[^1]: "Cruisy" is a hiker-ism that just means easy trail that you can "cruise" along, covering miles quickly due to little elevation change, nicely groomed trail with few few obstaces, etc.

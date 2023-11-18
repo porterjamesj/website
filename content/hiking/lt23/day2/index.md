@@ -1,4 +1,8 @@
+---
 title: Glastenbury Wilderness
+slug: day2
+weight: 20
+---
 
 Saturday, September 9th
 
