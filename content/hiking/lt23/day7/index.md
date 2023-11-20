@@ -33,7 +33,7 @@ I felt so fast in my new shoes I was almost running at points! I'm a total conve
       src1="images/sign_with_shoe.jpg"
       caption1="Someone lost a shoe."
       src2="images/frog.jpg"
-      caption2="big frog."
+      caption2="Big frog."
 >}}
 
 I hike another mile on, feeling great about my chances of making it to Little Rock Pond. I've already come eight miles and it's not even noon! Suddenly I notice—I don't have my trekking pole. My heart sinks. I don't *need* it (my tent has it's own poles[^2]), but it's really help going down steep climbs, and I don't want to have to buy another one. I figure I must have left it at Griffith Lake when I stopped for lunch. I hem and haw for a few minutes and decide to go back for it.
@@ -57,7 +57,7 @@ I make it up Baker and sit for a while to rest and take stock. It's beautiful up
 
 I met an older hiker up there named Heard the Call, traveling SOBO on the AT. She hikes three seasons a year and then finds a seasonal job in the winter. Sounds pretty amazing. Her kids are all grown and encourage her so why the hell not. "I truly embrace YOLO" she says. She seems really confident that I can make it to Little Rock Pond tonight. She also encourages me to hike the AT someday. I feel pretty tempted after today; it just sounds amazing from everyone I've met out here who's done it. I also take advantage of the cell service up here to text Alicia and Rob, my old neighbors and friends from New York. I think they're going to join me for a day near Killington.
 
-I set off down north off Baker with a spring in my step. My mind wanders on the way, bouncing all over the place. I'm hiking fast, the weather's been beautiful all day, I didn't lose my pole. I'm in a great mood. I'm thinking about life after the trail, and a big part is finding this whole experience so amazing that I just want to become hiker trash for a while and live on the trail. It would be a big sacrifice though. The money, the time away from my friends back home. My therapist would probably say I'm thinking in black and white and it doesn't need to be as all-or-nothing as I'm making it out to be...he's probably right. In any case, it's an empowering thought. Makes me feel like I have more options in life.
+I set off down north off Baker with a spring in my step. My mind wanders on the way, bouncing all over the place. I'm hiking fast, the weather's been beautiful all day, I didn't lose my pole. I'm in a great mood. I'm thinking about life after the trail, and a big part is finding this whole experience so amazing that I just want to become hiker trash for a while and spend a lot of next year on-trail. It would be a big sacrifice though. The money, the time away from my friends back home. My therapist would probably say I'm thinking in black and white and it doesn't need to be as all-or-nothing as I'm making it out to be...he's probably right. In any case, it's an empowering thought. Makes me feel like I have more options in life.
 
 I pass by Big Branch Shelter and stop to get more water. Almost there.
 
