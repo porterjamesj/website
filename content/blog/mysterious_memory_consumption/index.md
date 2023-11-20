@@ -106,7 +106,7 @@ that you can try out on your own machine if you like.
 
 I've also made a short, poorly-produced demonstration video:
 
-{{< controlsvideo "videos/memory.webm" >}}
+{{< controlsvideo src="videos/memory.webm" >}}
 
 One shell in the video is running `top` tracking the demo Flask
 webserver, which streams data from a local

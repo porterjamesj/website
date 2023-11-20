@@ -20,6 +20,8 @@ Particle and I decide to hike together again for a bit, setting out kind of late
 ![Fog](/assets/images/hiking/lt23/day2/fog.jpeg)
 ![Near the bee's nest](/assets/images/hiking/lt23/day2/bees_nest.jpeg)
 
+## TODO Add snake photo
+
 After a steep descent down to VT Route 9, we catch up with Jessica, who's decided to get off trail. She offers to give Particle her tent, since she won't be needing it and Particle needs a new one. Big of her, and a great example of the kindness and generous mindset I'd see from thru-hikers throughout the trip. The focus is less on "will I get this back" and more on "how can I help everyone
 
 I set off alone on the climb up out of the hollow. It's a steep and difficult climb—the trail ascends 600 feet in about half a mile! Many of the road crossings on the LT are like this—a quick, steep descent into a gap, cross the road, then an equally quick ascent back up. I usually found these challenging, in many cases more so than the major mountain peaks.

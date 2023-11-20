@@ -4,6 +4,8 @@ slug: day6
 weight: 60
 ---
 
+Wednesday, September 13th
+
 - Start: VFW Post 6471 in Manchester Center
 - End: Bromley Mountain Peak
 - Approx Miles: 3
