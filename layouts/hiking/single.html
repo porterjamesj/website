@@ -1,0 +1,19 @@
+{{ define "main" }}
+
+{{ $pages := .CurrentSection.Pages }}
+
+<div class="article">
+  <h2>{{ .Title }}</h2>
+  <div>
+    {{ with $pages.Next . }}
+    <a href ="{{ .RelPermalink }}">Prev</a>
+    {{ end }}
+    {{ with $pages.Prev . }}
+    <a href ="{{ .RelPermalink }}">Next</a>
+    {{ end }}
+  </div>
+
+  {{ .Content }}
+</div>
+
+{{ end }}

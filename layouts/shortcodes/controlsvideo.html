@@ -1,0 +1,6 @@
+<figure class="pt3 flex flex-column items-center">
+    <video class="mv0" controls {{ with .Get "width" }}style="width: {{ . }};"{{ end }}>
+      <source src="{{ .Get "src" }}">
+    </video>
+  {{ with .Get "caption" }}<figcaption class="pt2 f6 gray i lh-solid">{{ . }}</figcaption>{{ end }}
+</figure>
