@@ -16,20 +16,21 @@ It's still early when I get out of bed and quickly pack up camp after eating my 
 
 I reach the shelter to find Particle still packing up. I also meet Randy, an AT section hiker. I end up hiking on-and-off with the two of them for most of the day, which is relatively easy and uneventful. We cross over Glastenbury Mountain early in the day. Sadly the fire tower on top is closed, apparently its been deemed unsafe. I doubt there'd be a view anyway since it's foggy. I can see how this area gets its eerie reputation. The woods here just have a kind of a mysterious, otherworldly feel.
 
-![The trail near Glasternbury Mountain](/assets/images/hiking/lt23/day3/trail.jpeg)
-![A mossy tree](/assets/images/hiking/lt23/day3/tree.jpeg)
-![Some mysterious berries I kept seeing on the trail at high altitudes](/assets/images/hiking/lt23/day3/berries.jpeg)
+{{< two_images src1="images/trail.jpg" src2="images/tree.jpg"
+      caption="Scenes from the trail near Glastenbury Mountain."
+>}}
 
+{{< oneimage src="images/berries.jpg" width="120" caption="Some mysterious berries I kept seeing on the trail at high altitudes." >}}
 
 I stopped for lunch at Kid Gore Shelter.
 
-![The view from Kid Gore Shelter, where I stopped for lunch](/assets/images/hiking/lt23/day3/lunch.jpeg)
+{{< oneimage src="images/lunch.jpg" >}}
 
-Passed by a few beaver bogs and stopped to take a break.
+Passed by a few beaver bogs and stopped to take a break. My boots are muddy! You can see the beaver dam on the left.
 
-![Taking a break by a beaver bog. My boots are muddy! You can see the beaver dam on the left.](/assets/images/hiking/lt23/day3/bog.jpeg)
+{{< oneimage src="images/bog.jpg" >}}
 
-I reached Story Spring Shelter, which is surrounded by a big clearing for tenting, just as it started raining. Particle and arrived soon after. Randy's from Brooklyn and just graduated high school in the spring. She's taking a gap year before going to college at UVM in Burlington. She's excited to get out of NYC, which is so strange for me to hear—it's so hard for me to imagine wanted to leave New York! I guess its different if you grew up there. Its really nice hanging out with the two of them for the evening though, really different from last night by myself. Its funny feeling so old though. I can feel the life experience gap between my and the two of them. Have to try not to "back in my day" and remember to treat everyone like an adult 🙂. I was thinking how the trail is like RC in that way—brings together people of a variety of ages and walks of life who are so different from each other, but have one goal in common[^1]. It's cool. Speaking of RC, I've been thinking about my life and future while I hike, and it strikes me that its easy to think about the big questions about here because none of it feels scary. Things that worry you in everyday life just feel sort of inconsequential, like they're about a different world that has no bearing on this one.
+I reached Story Spring Shelter, which is surrounded by a big clearing for tenting, just as it started raining. Particle and arrived soon after. Randy's from Brooklyn and just graduated high school in the spring. She's taking a gap year before going to college at UVM in Burlington. She's excited to get out of NYC, which is so strange for me to hear—it's so hard for me to imagine wanted to leave New York! I guess its different if you grew up there. Its really nice hanging out with the two of them for the evening though, really different from last night by myself. Its funny feeling so old though. I can feel the life experience gap between my and the two of them. Have to try not to "back in my day" and remember to treat everyone like an adult 🙂. I was thinking how the trail is like RC[^1] in that way—brings together people of a variety of ages and walks of life who are so different from each other, but have one goal in common. It's cool. Speaking of RC, I've been thinking about my life and future while I hike, and it strikes me that its easy to think about the big questions about here because none of it feels scary. Things that worry you in everyday life just feel sort of inconsequential, like they're about a different world that has no bearing on this one.
 
 Tomorrow's a big day—our first real climb up Stratton. I'm a little nervous but I'm sure we'l be fine. Randy is carrying so much weight (eight days of food, playing cards, four pound tent!) I hope she manages. The thunderstorms Parfait was worried about seem to have dissipated to just a light rain fortunately. I'm also a little worried about being able to get a hitch into Manchester Center to resupply[^2], but we'll cross that bridge when we come to it.
 

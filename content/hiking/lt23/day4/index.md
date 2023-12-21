@@ -16,33 +16,39 @@ The weather is crummy—this is my first real day of being rained on while hikin
 
 Our surroundings are striking for this section. All the high peaks in the Green Mountains have distinctly different vegetation than you'd find at the base. There are strange white wildflowers, funky mushrooms you don't see lower down, and everything's covered in moss so you feel like you're in [The Green Knight](https://en.wikipedia.org/wiki/The_Green_Knight_(film)). I'm not enough of a naturalist to name the plants, and I don't take many pictures because of the rain, but it is beautiful.
 
-![Some hiker graffiti at Strong Spring Shelter: "Be bear, be happy"](/assets/images/hiking/lt23/day4/be_bear.jpeg)
-![Scenery on the way up Stratton](/assets/images/hiking/lt23/day4/stream.jpeg)
+{{< two_images src1="images/be_bear.jpg" src2="images/stream.jpg" caption1="Hiker graffiti at Story Spring Shelter: \"Be bear, be happy\"" caption2="Scenery on the way up Stratton." >}}
 
 We mostly cruise up the mountain, only stopping for a couple breaks. It's much easier than I had feared, and we reach the peak a little after noon. The view is pretty much totally socked in unfortunately. I'm prepared for it to a rain a lot on the hike, I just want one good view from a mountain peak before the end! This is was not to be it.
 
-![Stratton Mountain info sign](/assets/images/hiking/lt23/day4/sign.jpeg)
-![The "view" from the fire tower](/assets/images/hiking/lt23/day4/fog.jpeg)
-![Looking down on the surrounding trees from the fire tower](/assets/images/hiking/lt23/day4/down.jpeg)
+{{< oneimage src="images/sign.jpg" caption="Stratton Mountain info sign">}}
 
-While we eat lunch we're caught up by the aptly named Flash. Extremely skinny guy, with gear so ultralight his pack doesn't have a belt. Basically running up the mountain as he approaches. Very friendly though. He's a serious hiker who's done the AT and Arizona Trail already. He's from Vermont originally (Particle is excited to finally meet another Vermonter on the trail), and is trying to finish the LT in 10 days (!!).
+{{< two_images src1="images/fog.jpg" src2="images/down.jpg"
+      caption1="The \"view\" from the fire tower"
+      caption2="Looking down on the surrounding trees"
+>}}
 
-![3.2 miles to Stratton Pond, our destination](/assets/images/hiking/lt23/day4/trailhead_sign.jpeg)
-![The trail heading north from the peak](/assets/images/hiking/lt23/day4/trail_into_woods.jpeg)
-![Alpine scenery](/assets/images/hiking/lt23/day4/scenery.jpeg)
+While we eat lunch we're caught up by the aptly named Flash. Extremely skinny guy, with gear so ultralight his pack is basically a daypack—no belt. He's more-or-less running up the mountain as he approaches. Very friendly though. He's a serious hiker who's done the AT and Arizona Trail already. He's from Vermont originally (Particle is excited to finally meet another Vermonter on the trail), and is trying to finish the LT in 10 days (!!).
+
+{{< two_images src1="images/trailhead_sign.jpg" src2="images/trail_into_woods.jpg"
+      caption1="3.2 miles to Stratton Pond, our destination."
+      caption2="The trail heading north from the peak."
+>}}
+
+{{< oneimage src="images/scenery.jpg" caption="Alpine scenery">}}
 
 We set off down the trail and it's an easy three miles to Stratton Pond, with the rain having cleared up to boot. Stratton Pond is a pretty popular spot for local backpackers and hikers since its beautiful and accessible. We meet a local couple and two other long-distances hikers, Qubit and Bugbait, at the shelter. Qubit's an older fellow hiking home to Maine on the AT. Bugbait's in his 20s, lives in Massachusetts and works at REI, so he knows a lot about gear.
 
 We rest and chat briefly and Particle decides to push on to William Douglas Shelter, five more miles. I'm feeling energized by how much easier than expected the day has been, so I decide to join her. I head down the side-trail to the pond itself, just to check it out before I leave and, well, it changes my mind. It's so beautiful that I decide to stay the night here. I came here to enjoy stuff like this, not just chew up miles.
 
-![Stratton Pond](/assets/images/hiking/lt23/day4/pond.jpeg)
+{{< oneimage src="images/pond.jpg" caption="Stratton Pond" >}}
 
 After heading back up briefly to set up my tent on a platform[^2], I jump in the pond, wash myself off, wash my clothes and hang them up to dry on the nearby fir trees...and then just sit and watch the sun and the clouds and the still water. The weather is spectacular, the sun's really come out for the first time since the hike started. I'm glad to be briefly out of the "green tunnel"[^3] for a bit and in a place with some open sky for it. The feeling of just sitting by the pond waiting for the sun to go down, drying my clothes, with no obligation to be anywhere or do anything...amazing. It's a magical few hours. The birds chirp. The wind blows. This one will stick with me. It's moments like these you come out here for.
 
-![The pond](/assets/images/hiking/lt23/day4/pond_wide.jpeg)
-![Trees](/assets/images/hiking/lt23/day4/pond_trees.jpeg)
-![Sun going down](/assets/images/hiking/lt23/day4/sunset.jpeg)
-![My first selfie of the trip](/assets/images/hiking/lt23/day4/selfie.jpeg)
+{{< oneimage width="120" src="images/pond_wide.jpg" >}}
+
+{{< two_images src1="images/pond_trees.jpg" src2="images/sunset.jpg" >}}
+
+{{< oneimage src="images/selfie.jpg" caption="My first selfie of the trip." >}}
 
 The clouds finally roll in and rob me of the sunset, so I went back to the shelter to cook dinner and sleep. Tomorrow I'll go into Manchester Center for my first resupply.
 
@@ -52,7 +58,7 @@ Looking back on it, this was one of my most amazing days of the hike, and the fi
 
 I encountered two texts during the day that I'm including because I feel like they somehow reflect the experience. The shelter privy had a poem that someone wrote out and taped to the wall—[*The Ponds*](https://www.best-poems.net/mary_oliver/the_ponds.html), by Mary Oliver. This part stuck with me:
 
-
+{{< rawhtml >}}
 <blockquote>
 <p>
 Still, what I want in my life<br/>
@@ -65,6 +71,7 @@ to float a little<br/>
 above this difficult world.<br/>
 </p>
 </blockquote>
+{{< /rawhtml >}}
 
 I also re-read the *Earthsea* novels by Ursula LeGuin, my favorite author, during the first part of the trip. This passage from *The Farthest Shore*, which I was reading on this day, stuck with me:
 
