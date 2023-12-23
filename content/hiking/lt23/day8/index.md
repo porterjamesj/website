@@ -102,6 +102,8 @@ Ryan lives up north near Bolton and is hiking home from here. Big, friendly bois
 
 Mockingbird and Rock 'N Roll are traveling together, but she's thru-hiking the LT while he's doing the AT. Both a little older than me; they seem like pretty serious hikers. Mockingbird is sleeping with a hammock, which I've heard a lot about but not seen anyone using until now. I would later learn that Rock 'N Roll made a bunch of videos of his hike, you; can watch them on his [YouTube channel](https://www.youtube.com/@stillwaterhiker/videos).
 
+
+
 Some photos of some of these folks and others I've hiked with so far, courtesy of Spineless Cougar:
 
 {{< two_images
@@ -118,7 +120,14 @@ Some photos of some of these folks and others I've hiked with so far, courtesy o
       caption2="Mockingbird and Rock 'N Roll"
 >}}
 
-There's a whole bundle of firewood and we get a nice campfire going and dry our clothes. Apparently a local named Big John likes to drive his ATV up the nearby forest road and leave wood for campers. It's great to hang out and chat with such a big group and hear everyone's stories amidst the good campfire vibes. I stay up later than I intended and go to sleep content. Killington tomorrow!
+There's a whole bundle of firewood and we get a nice campfire going and dry our clothes. Apparently a local named Big John likes to drive his ATV up the nearby forest road and leave wood for campers. It's great to hang out and chat with such a big group and hear everyone's stories amidst the good campfire vibes.
 
+Everyone's talking about the upcoming climb up Killington and our plans for Rutland afterwards. Rutland is the next major resupply point, and the two most popular lodging options are the [Inn at the Long Trail](http://www.innatlongtrail.com/) and the Yellow Deli Hostel. The Inn is a cozy combination of ski lodge and Irish pub that has live music and reportedly great vibes. The Yellow Deli is popular with hikers because it's free, but also somewhat dubious because it's run by [the Twelve Tribes](https://en.wikipedia.org/wiki/Twelve_Tribes_communities), a controversial fundamentalist Christian sect (or cult depending who you ask), that actually runs several hostels in trail towns along the AT.
+
+{{< oneimage src="images/yellow_deli.jpg" caption="A sign along the trail advertising the Yellow Deli hostel." >}}
+
+The Yellow Deli and the ethics of staying there are popular topics of conversation throughout this section of trail. I remember someone remarking that hiker hostels are must be a pretty good cult recruitment strategy, since many thru-hikers are just sort of lost in life and liable to latch on to anything they come across. Regardless, my plan is to stay at the Inn, since I've read it's a not-to-be-missed experience, and trail crosses almost directly past it. How cool is that?
+
+I stay up later than I intended hanging out with everyone and go to sleep content. Killington tomorrow!
 
 [^1]: "Trail magic" has two meanings. The first is a serendipitous "only on the trail" positive happening. For example, finding a pair of gloves lying on the ground shortly after losing your own. The second, and more common, meaning is when locals give hikers food and supplies at trail crossings. Hikers are perpetually undereating to save pack weight, so any calories you didn't have to carry on your back are a blessing.
