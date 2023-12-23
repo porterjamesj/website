@@ -10,7 +10,7 @@ Friday, September 15th
 - End: Clarendon Shelter
 - Approx Miles: 13.6
 
-I set off in the morning, hoping to get as close to Killington (the next major mountain peak) as possible, to make the climb easier tomorrow. I would have loved to hang out more with Pyro and Anansi though! I know I won't get quite so far as yesterday, since I'm tired from going 18+ miles, and the terrain is tougher today, with two gorges to go climb in and out of. I always find those tougher than the big mountains. There's something about the extreme steepness, even if it's brief.
+I set off in the morning, hoping to get as close to Killington (the next major mountain peak) as possible, to make the climb easier tomorrow. I would have loved to hang out more with Pyro and Anansi though! I know I won't get quite so far as yesterday, since I'm tired from going 18+ miles, and the terrain is tougher today, with two gorges to go climb in and out of. I always find those tougher than the big mountains. There's something about the extreme steepness, even if it's brief. Fortunately I'm feeling good. The new sleeping pad seems to have resolved the back pain I was having earlier.
 
 {{< two_images
       src1="images/mill_village.jpg"
