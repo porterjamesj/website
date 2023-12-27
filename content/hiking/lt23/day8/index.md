@@ -126,7 +126,7 @@ Everyone's talking about the upcoming climb up Killington and our plans for Rutl
 
 {{< oneimage src="images/yellow_deli.jpg" caption="A sign along the trail advertising the Yellow Deli hostel." >}}
 
-The Yellow Deli and the ethics of staying there are popular topics of conversation throughout this section of trail. I remember someone remarking that hiker hostels are must be a pretty good cult recruitment strategy, since many thru-hikers are just sort of lost in life and liable to latch on to anything they come across. Regardless, my plan is to stay at the Inn, since I've read it's a not-to-be-missed experience, and trail crosses almost directly past it. How cool is that?
+The Yellow Deli and the ethics of staying there are popular topics of conversation throughout this section of trail. I remember someone remarking that hiker hostels must be a pretty good cult recruitment strategy, since many thru-hikers are just sort of lost in life and liable to latch on to anything they come across. Regardless, my plan is to stay at the Inn, since I've read it's a not-to-be-missed experience, and the trail crosses almost directly past it. How cool is that?
 
 I stay up later than I intended hanging out with everyone and go to sleep content. Killington tomorrow!
 
