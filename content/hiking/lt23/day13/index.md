@@ -4,7 +4,7 @@ slug: day13
 weight: 130
 ---
 
-Tuesday, September 19th
+Wednesday, September 20th
 
 - Start: David Logan Shelter
 - End: Middlebury Gap
@@ -97,7 +97,7 @@ The last couple of miles I'm just plodding along with zero energy. I don't even 
       src2="images/snow_bowl.jpg" caption2="The ski lifts at Middlebury Snow Bowl."
 >}}
 
-Finally I arrive at VT-125, just as Tom is getting out of his car. It feels like such a huge victory just to see the road. We head back to his place, a few minutes drive away. It's as tranquil and beautiful as I remember it from my youth. All the doors, fixtures, furniture, etc. are rustic yet tasteful and refined. A perfect place to take a break!
+Finally I arrive at VT-125, just as Tom is getting out of his car. It feels like such a huge victory just to see the road. This has been my most challenging day of hiking by far. We head back to his place, a few minutes drive away. It's as tranquil and beautiful as I remember it from my youth. All the doors, fixtures, furniture, etc. are rustic yet tasteful and refined. A perfect place to take a break!
 
 I take perhaps the greatest shower of my life, then we catch up over Heddy Topper, lasagna, and a sorely needed salad. It's good to see Tom again after all the years. We talk about my hike and his thoughts on retirement—the pros and cons, when to do it, etc.
 
