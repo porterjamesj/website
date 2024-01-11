@@ -12,7 +12,11 @@ Tuesday, September 12th
 
 I'm up and at 'em early today, and get hiking quickly. I see Bugbait and Qubit leaving ahead of me while I get my stuff together. I'm a bit nervous to go into town—it's my first time, so I don't really know how long getting a hitch in will take, or how long it will take me to do my errands. I'm also not sure if I'm going to stay the night in town or try to hitch back out to the trail in the afternoon. I've heard a rumor that the VFW lets hikers camp in their backyard, but I don't want to count on it. So much of thru-hiking is like this; you're operating on information passed down the trail and from FarOut comments that's anywhere from days to months out of date. Trail conditions, business hours, trail angel's sentiments towards hikers—all can change quickly and you just have to do your best with the info you have an be willing to adapt. It's a big adjustment for me as someone who likes to have a plan for every contingency.
 
-Anyway, the trail is flat and cruisy[^1] from here to VT Route 11/30. Much of it follows a disused forest road, and the enveloping fog gives everything a spooky vibe.
+I should also probably say something here about how the overall organization of the trail. You can picture it sort of like a spine and ribs: the spine is the trail running north roughly along the ridge line of the Green Mountains; the ribs are the roads the cut east/west through the mountain passes (which are called "gaps"), perpendicular to the trail. When you reach a road, there are often trail towns to the east and west, and you have to choose which one to head into to resupply and potentially spend a night off-trail. For example, I'm about to descend to VT Route 11/30. Manchester Center is to the west, Peru to the east. Peru is a very small town so virtually everyone goes into Manchester Center, but later road crossings present more of a choice.
+
+# TODO graphic showing trail organization
+
+Anyway, the trail is flat and cruisy[^1] from here to VT-11. Much of it follows a disused forest road, and the enveloping fog gives everything a spooky vibe.
 
 {{< oneimage src="images/wide_ltnorth.jpg" width="120" >}}
 

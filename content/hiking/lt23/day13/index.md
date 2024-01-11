@@ -10,7 +10,7 @@ Wednesday, September 20th
 - End: Middlebury Gap
 - Approx Miles: 17
 
-My goal today is to go 17 miles to Middlebury Gap, where I'll meet up with Tom, a family friend who lives nearby. He's a friend of my parents who we used to visit a lot when I was growing up, but who I haven't seen in years. It feels sort of funny to have another day off-trail so soon, but I wanted to do stay at the Inn, and I want to visit with Tom, so that's that!
+My goal today is to go 17 miles to Middlebury Gap, where I'll meet up with Tom, a family friend who lives nearby. He's a friend of my parents who we used to visit a lot when I was growing up, but who I haven't seen in years. It feels sort of funny to have another day off-trail so soon, but I wanted to stay at the Inn, and I want to visit with Tom, so that's that!
 
 The day dawns clear and bright. Beautiful hiking weather, mostly just through the "green tunnel" of the Battell Wilderness.
 
@@ -44,6 +44,7 @@ I leave ahead of everyone else, aware of the distance I have yet to cover. I hus
 {{< two_images
       src1="images/noname.jpg"
       src2="images/cliffs_afar.jpg"
+      caption2="The Great Cliffs of Horrid from the south."
 >}}
 
 {{< two_images
@@ -75,7 +76,7 @@ Walking today, it occurrs to me that hiking makes me feel sort of "invulnerable,
       src2="images/vibes4.jpg"
 >}}
 
-Eventually Mooch, Stiltz and I all find each other again and arrive at Sucker Brook Shelter, where we meet Megapod, who recently retired after a long career as a school principal, and is out for a section hike. He got his trail name (because of his big feet) when he thru hiked the AT in the 80s.
+Eventually Mooch, Stiltz and I all find each other again and arrive at Sucker Brook Shelter, where we meet John, who recently retired after a long career as a school principal, and is out for a section hike.
 
 We all get a laugh out of an entry in the logbook which read something like "Saw a moose drinking from the stream right by the shelter. It didn't seem aggressive but I don't know a lot about moose intentions?" The phrase "moose intentions" just struck us all as very funny somehow, and became the source of endless amusement and jokes throughout the rest of the hike[^2]. I'm also very jealous of this person having seen a moose! I want to see a moose!!
 
