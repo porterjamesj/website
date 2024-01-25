@@ -96,7 +96,7 @@ Shortly after the gorge, I come out of the woods and cross VT-103 near some trai
 
 There's one person here already, an older fellow named Steve from Allentown PA, out for a two-week section hike on the AT. He's friendly and we chat for a while about how I ended up here, his son's career, etc. However, we're sooner joined by a gaggle of others. Bugbait shows up, then Zack, then Easy, then Ryan and his dog Karl Barx. Ryan's buddy Rob from church. Mockingbird and Rock 'N Rock show up later. It's a full house tonight.
 
-Easy is from North Carolina, and works as a ridgerunner for the GMC, and true to his name, is laid back and easygoing. He hikes back and forth through the Killington section, talking to hikers, doing light trail maintenance, and maintaining the privies. Seems like a great job aside from the privy bit! He thru-hiked the CDT last year.
+Easy is from North Carolina, and works as a ridgerunner for the GMC, and true to his name, is laid back and easygoing. He hikes back and forth through the Killington section, talking to hikers, doing light trail maintenance, and least glamorously, maintaining and composting sewage from the privies. Seems like a great job aside from the privy bit! He thru-hiked the CDT last year.
 
 Ryan lives up north near Bolton and is hiking home from here. Big, friendly boisterous guy with a hearty voice and laugh. His home abuts GMC land, and he's actually on the GMC board. "The Long Trail is literally my neighbor!" he says. He thru-hiked the trail with his wife a few years back, and the two of them now have a son on the way. Been a Vermonter all his life.
 
