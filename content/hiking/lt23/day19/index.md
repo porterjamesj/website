@@ -1,5 +1,5 @@
 ---
-title: Stowe, Ben & Jerry's, Bolton Mountain
+title: Ben & Jerry's, Bolton Mountain
 slug: day19
 weight: 190
 ---
