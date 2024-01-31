@@ -53,11 +53,11 @@ We eventually hit Duxbury Road and road walk the last two miles to Route 2, wher
 
 We've been struggling a bit with where to stay during this town stop. Waterbury is the most popular option, and has a very charming-looking in called the Old Stagecoach that I was excited about before the starting the hike. Sadly, it and every other place in town are totally booked[^1]. Stiltz, Recebba, and I ended up finding an AirBnb in Stowe, one town further north. Mooch is staying with a family friend. Stiltz actually lived in Stowe for a few months while working in the area, so she knows it pretty well.
 
-We bumble around where the trail crosses Route 2 for a while trying to figure out how to get there, eventually paying for a shuttle from a woman named Joy who runs a local taxi service. We found her business card in the "little free library" box at the trailhead parking lot.
+We bumble around where the trail crosses Route 2 for a while trying to figure out how to get there, eventually paying for a shuttle from a woman named Joy who runs a local taxi service. We found her business card in the "little free library" box at the trailhead parking lot. We get to Stowe pretty quickly, which apparently isn't always guaranteed. I learned that the traffic here can be pretty bad in spite of it being fairly rural. There's only one north-south road connecting Waterbury and Stowe (appropriately called "Waterbury-Stowe Road") so at busy times it can take an hour to go the 10 miles between them, because there's just no other route for traffic to take.
 
 ## TODO map of Waterbury and Stowe
 
-We shower and clean up before exploring town a little bit. Stowe is charming in the sort of artificial way these types of bougie vacation places are.
+Anyway, we shower and clean up at our AirBnb before exploring town a little bit. Stowe is charming in the sort of artificial way these types of bougie vacation places are.
 
 {{< two_images src1="images/stowe1.jpg" src2="images/stowe2.jpg" caption="Stowe" >}}
 
