@@ -1,5 +1,5 @@
 ---
-title: Ben & Jerry's, Bolton Mountain
+title: Waterbury, Ben & Jerry's
 slug: day19
 weight: 190
 ---
@@ -48,7 +48,10 @@ A sign welcomes me to Mt. Mansfield State Forest, reminding me of the trail's bi
 
 {{< oneimage src="images/shelter.jpg" caption="Buchanan Lodge">}}
 
-Arriving at the shelter, who should I find sitting on the porch but... Stiltz and Mooch! We have the place to ourselves and its fun to hang out and goof around. But I will admit I'm feeling a little tired of hiking together. Not because of them—they're great companions. I'm just missing the solitude I had in the earlier parts of the hike. In all things balance, I suppose. I'll try to find a way to hike by myself more in the coming days. I really enjoyed it today.
+Arriving at the shelter, who should I find sitting on the porch but... Stiltz and Mooch! We have the place to ourselves and its fun to hang out and goof around. Hang Ten, a buddy of theirs who they hiked with in the southern section, and who I met briefly at the Inn in Rutland, is planning to meet up with us tomorrow before Mt. Mansfield and hike with us 'til then end.
+
+I will admit I'm feeling a little tired of hiking together. Not because of anything about Stiltz and Mooch—they're great companions. I'm just missing the solitude I had in the earlier parts of the hike. In all things balance, I suppose. I'll try to find a way to hike by myself more in the coming days. I really enjoyed it today.
+
 
 [^1]: Although I did wait about 30 min in line for it!
 [^2]: I prefer ice cream to be about 50% candy, 50% ice cream, which Ben & Jerry's gets right on the money. And I spent a lot of time in New England growing up, so it's nostalgic for sure.
