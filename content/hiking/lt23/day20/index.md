@@ -56,7 +56,7 @@ The rest of the hike today is a brutally steep climb up to Butler Lodge. I'm tot
 
 {{< two_images src1="images/french.jpg" src2="images/wamp.jpg" >}}
 
-We're far enough north now that some of the trail signage is bilingual in French and English, to help out Québecois visitors. A reminder of how close we are to the trail's end at the Canadian border.
+We're far enough north now that some of the trail signage is bilingual in French and English, to help out Québecois visitors. A reminder of how close we are to the trail's end at the Canadian border. Stiltz remarks that we've just crossed the 200-mile mark.
 
 It's funny how the group dynamic changes with the addition of Hang Ten. The age gap between him/Mooch and me/Stiltz definitely shows more. The two of them exacerbate each other's "annoying little brother" energy as Stiltz put it 😆.
 
