@@ -14,9 +14,9 @@ Today Stiltz and I wake up and say goodbye to Rebecca, who's catching a shuttle 
 
 We get a hitch back down to Waterbury from a dude with huge stoner vibes. We barely had time to stick out thumbs out before three people pulled over to offer us a ride. And all of them seemed to know each other. Vermont...
 
-We quickly hit the grocery store to resupply. While Stiltz shops I sit outside and watch Ella, who wines the entire time. Real seperation anxiety with that one. Stiltz quickly heads back to the trailhead but I stick around in town for a bit, got a couple more things to take care of.
+We quickly hit the grocery store to resupply. While Stiltz shops I sit outside and watch Ella, who wines the entire time. Real seperation anxiety with that one. I do my shopping, being sure to by nutritious energy bars rather than just Pop Tarts for breakfast this time. Stiltz quickly heads back to the trailhead but I stick around in town for a bit, got a couple more things to take care of.
 
-First stop is the post office where I pick up a care package from my friends back home. It's full of supplies I requested, high-quality ramen, cookies, and notes with encouraging messages and drawings. Love them.
+First stop is the post office, where I pick up a care package from my friends. It's full of supplies I requested, high-quality ramen, cookies, and notes with encouraging messages and drawings. Love them.
 
 I had a crazing for pizza so stopped by the local pizza joint and got a couple slices for lunch and then headed to Ben and Jerry's HQ, which is just outside of Waterbury. Ben & Jerry's is my favorite widely-available ice cream and a part of my childhood[^2], I couldn't not.
 
