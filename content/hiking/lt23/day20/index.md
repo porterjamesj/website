@@ -60,7 +60,7 @@ We're far enough north now that some of the trail signage is bilingual in French
 
 It's funny how the group dynamic changes with the addition of Hang Ten. The age gap between him/Mooch and me/Stiltz definitely shows more. The two of them exacerbate each other's "annoying little brother" energy as Stiltz put it 😆.
 
-I've been coordinating with my friends Rachel and Joe, who are meeting up with me on Friday. I'll have to slow down a bit to meet them, and I'm actually kind of excited to fall behind everyone else. It's been nice having companions, but it feels right to finish the trip like it started—solo.
+I've been coordinating with my friend Rachel and her partner Joe, who are meeting up with me on Friday. I'll have to slow down a bit to meet them, and I'm actually kind of excited to fall behind everyone else. It's been nice having companions, but it feels right to finish the trip like it started—solo.
 
 Anyway tomorrow, the traverse across Mansfield! The highest point in Vermont and the climax of the trail. Excited to be with the gang for that.
 
