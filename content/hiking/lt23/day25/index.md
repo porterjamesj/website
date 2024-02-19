@@ -51,7 +51,11 @@ It's a little after 2pm and I have six miles to go to Hazen's Notch Camp, some o
 
 I cross paths with a day hiker shortly after leaving Tillotson who also warns me about the difficulty of the descent into Hazen's Notch. Apparently it's incredibly steep, and very dangerous to descent if it's at all wet.
 
-I have a relatively easy hike up Haystack Mountain, where there's a nice view of Belvidere and the fire tower to the south. They look so far away already!
+Traipsing through the woods at some point after this, I don't see so much as hear my first large wildlife siting of the trip. I hear some crashing in the underbrush that definitely sounds too big to be the usual chipmunks, but also didn't sound like a grouse[^1]. I pause, look, and listen for a minute. Again I hear the sound and see a brief glimpse or impression of... something... bounding further off into the trees. It looked to have about the size and agility of a dog. No idea what that could be[^2]. It felt more lithe and agile than a bear cub.
+
+This spooks for a little while, not knowing what it was. Gets me thinking about the spectrum of ways you can appreciate hiking, from a Vandermeer-esque beholding the unknowable beauty and horror of the wilderness on one end, to the "FKT, how fast can I do the AT" technical vibe of treating it like a sport. There's a place for both I think.
+
+Anyway, I have a relatively easy hike up Haystack Mountain, where there's a nice view of Belvidere and the fire tower to the south. They look so far away already!
 
 {{< two_images src1="images/sign.jpg" src2="images/haystack_view.jpg" caption1="Six miles to go" caption2="The view from Haystack Mountain. The peak in the top left corner is Mt. Belvidere" >}}
 
@@ -85,4 +89,7 @@ I arrive at Hazen's Notch Camp just as it's getting too dark for comfort. Amazin
 {{< oneimage src="images/hazens.jpg" width="100" >}}
 
 
-I'm sharing the shelter tonight with a quiet SOBO from Connecticut named Gem. Suits me fine. I eat mac and cheese with bagged chicked and the last of the smoked pepperoni I bought at the general store in Jeffersonville. So good. Hoping to pick up a few more snacks at Jay Peak tomorrow. Man, only two more days 🙁.
+I'm sharing the shelter tonight with a quiet SOBO from Connecticut named Gem. Suits me fine. I eat mac and cheese with bagged chicked and the last of the smoked pepperoni I bought at the general store in Jeffersonville. So good. Hoping to pick up a few more snacks at Jay Peak tomorrow. Jay is supposed to a pretty big resort, and a relatively easy climb. Man, only two more days 🙁
+
+[^1]: Grouse are a really common site along the trail. They're big-ish birds that like to sit in the underbrush nearby the trail until you're about to hike past them, then suddenly burst into the air with a flurry of loud wing flaps, leaf noises, and cooing. Terrifying every time. Then they fly 100 yards up the trail, plop themselves down, and do it all again a few minutes later 😑.
+[^2]: Reflecting on this now, it was probably just a deer.
