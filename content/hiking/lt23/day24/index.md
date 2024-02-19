@@ -75,7 +75,5 @@ Hiking is a good start<br/>
 {{< /rawhtml >}}
 
 
-
-
 [^1]: It works just fine for me.
 [^2]: [Summertime by Skrillex & Kid Cudi](https://www.youtube.com/watch?v=swDMu59Pbfc)
