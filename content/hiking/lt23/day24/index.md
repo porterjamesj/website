@@ -58,5 +58,24 @@ The view from the ledge looks out on this unsightly white pile of crud, which Mo
 
 There's an older couple staying with us in the shelter tonight, Jeff and Karen I think where their names. They live in nearby North Troy and do a lot of volunteer work helping maintain the northern section of the trail. I felt kind of bad, they were perfectly friendly but I felt like they wanted a quiet, chill overnight to themselves but had to put up with us bunch of hiker hooligans instead. Ah well.
 
+I saw something in a logbook today that's stuck with me ever since:
+
+{{< oneimage src="images/waste.jpg" >}}
+
+I don't know who Faceplant was, but I couldn't agree more:
+
+{{< rawhtml >}}
+<blockquote>
+<p>
+Life is a gift.<br/>
+Waste it wisely.<br/>
+Hiking is a good start<br/>
+</p>
+</blockquote>
+{{< /rawhtml >}}
+
+
+
+
 [^1]: It works just fine for me.
 [^2]: [Summertime by Skrillex & Kid Cudi](https://www.youtube.com/watch?v=swDMu59Pbfc)
