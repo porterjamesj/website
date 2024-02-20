@@ -34,7 +34,13 @@ I wander around the near the summit lodge, lots of leaf peepers around. There's 
 
 {{< two_images src1="images/survey_mark.jpg" src2="images/buddy.jpg" caption1="Summit USGS marker" caption2="A nearby memorial bench. \"Ski Hard ✯ Dive Deep\"" >}}
 
-It's also interesting to learn about Jay Peak and get a sense of the vibe, just from seeing the decor and reading the stuff on the wall in the lodge. Jay definitely feels more fancy and corporate than say MRG. Reminds me of Killington in that way. However, because its so hard to get to from New York or Boston, it feels more like it's for "real skiiers" who actually love the sport if that makes sense, not just rich people on holiday. Some of the trails sound pretty hardcode. Apparently a lot of Montrealers ski there; a lot of the signs are bilingual in French and English.
+It's also interesting to learn about Jay Peak and get a sense of the vibe, just from seeing the decor and reading the stuff on the wall in the lodge. Jay definitely feels more fancy and corporate than say MRG. Reminds me of Killington in that way. However, because its so hard to get to from New York or Boston, it feels more like it's for "real skiers" who actually love the sport if that makes sense, not just rich people on holiday. Some of the trails sound pretty hardcode. Apparently a lot of Montrealers ski here; a lot of the signs are bilingual in French and English.
+
+I've also been learning more about trends and niches in the skiing world. Apparently something that's gotten really popular lately is "skinning", or skiing uphill. From signs I've seen posted, the resorts seem to be struggling to keep up with demand for it.
+
+There's also backcountry skiing, which is like downhill skiing, except in a backcountry area rather than a groomed trail. It's much more dangerous than skiing at a resort—you have to dodge around trees and obstacles, and there's no ski patrol to rescue you if you get hurt. Big Jay, which can be reached via the saddle from Jay Peak, is a popular backcountry destination.
+
+There's apparently something of a controversy about backcountry skiers cutting trees to make their own trails. It seems like it happens sometimes and people usually just look the other way, but years ago some skiers did a huge clear cut on Big Jay (which is state land) and faced criminal charges for it. The attitude about this in the hardcore backcountry community seems to be something like "if you need to do that much cutting, its because you don't have the skills, try getting good instead."
 
 {{< oneimage src="images/jay_wall.jpg" width="120" caption="Old photos, flyers, and news articles about Jay on the wall inside the lodge" >}}
 
