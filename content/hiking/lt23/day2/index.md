@@ -19,9 +19,7 @@ In the middle of the night last night Parfait and I were roused by someone with 
 
 Particle and I decide to hike together again for a bit, setting out kind of late—about an hour after Parfait. A fog sets in quickly. Appropriately mysterious, as we're going to cross through the [Bennington Triangle](https://en.wikipedia.org/wiki/Bennington_Triangle) today, an area with a bit of an eerie reputation due to the mysterious disappearances that have happened there. We stop at Harmon Hill and chat with a couple of friendly older fellows who are hiking SOBO on the AT[^1]. I accidentally set my pack down on a wasp nest and get stung while frantically running away from the swarm that emerges. Thankfully, this was the most serious injury I would sustain.
 
-{{< two_images src1="images/fog.jpg" src2="images/bees_nest.jpg" >}}
-
-## TODO Add snake photo
+{{< two_images src1="images/fog.jpg" src2="images/snake.jpg" caption2="Garter snake alongside the trail. My first wildlife sighting!" >}}
 
 After a steep descent down to VT Route 9, we catch up with Jessica, who's decided to get off trail. She offers to give Particle her tent, since she won't be needing it and Particle needs a new one. Big of her, and a great example of the kindness and generous mindset I'd see from thru-hikers throughout the trip. The focus is less on "Will I get this back?" and more on "How can I help everyone finish their hike successfully?"
 
