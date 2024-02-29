@@ -1,7 +1,7 @@
 <div class="pt3 flex flex-column items-center">
   <div class="flex flex-row" style="width: 120%">
     <!-- TODO kind of a hack, find a way to make grid positioning work more cleanly -->
-    <figure class="mr2 flex flex-column items-center" style="width: 181%">
+    <figure class="mr2 flex flex-column items-center" style="width: {{ .Get "col1_width" }}">
       <img src='{{ .Get "src1" }}' alt='{{ .Get "alt1" }}'/>
       {{ with .Get "caption1" }}<figcaption class="pt1 f6 gray i lh-solid ph4" style="font-synthesis: none;">{{ . }}</figcaption>{{ end }}
     </figure>

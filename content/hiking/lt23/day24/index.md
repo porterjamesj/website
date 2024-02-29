@@ -31,7 +31,7 @@ The trail passes through a section of private land being used for maple sap prod
 
 The trail goes on through more beautiful woods.
 
-{{< four_stack_images src1="images/trail.jpg" src2="images/mush1.jpg" src3="images/up.jpg" src4="images/wall.jpg" >}}
+{{< four_stack_images src1="images/trail.jpg" src2="images/mush1.jpg" src3="images/up.jpg" src4="images/wall.jpg" col1_width="2298px" >}}
 
 I hit the slopes of Laraway Mountain, the biggest climb of the day, and make it up to the lookout near the peak.
 
@@ -39,7 +39,7 @@ I hit the slopes of Laraway Mountain, the biggest climb of the day, and make it 
 
 There's a couple of guys already sitting up there, one with a fierce looking dog who turns out to just be kind of lazy and friendly. Stoner types, I can't remember their trail names. They met thru-hiking on the AT last near and are now good friends. Cute! We sit and chat for a while while I eat my lunch. They're going SOBO, following the fall foliage down. I bid them farewell and press on north past the wooded summit of Laraway.
 
-{{< three_stack_images src1="images/sky.jpg" src2="images/bogboards.jpg" src3="images/mush2.jpg" >}}
+{{< three_stack_images src1="images/sky.jpg" src2="images/bogboards.jpg" src3="images/mush2.jpg" col1_width="1518px" >}}
 
 The day remains sunny, warm, and beautiful. I do a lot of contemplating about the rapidly approaching end of my journey as I hike. What it all means, how I'll feel when I get back, what I'll do. Being sad that it's ending. Thinking "maybe I'll do a triple crown trail next year!" But also really really appreciating every moment of being out in these perfect woods in the perfect weather. I'm literally singing[^2] while walking for joy at how beautiful it is.
 

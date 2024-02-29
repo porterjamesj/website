@@ -22,9 +22,7 @@ Right out of camp we pass through Devil's Gulch, a dense, mossy area full of scr
 
 We pass through some regular flat forest hiking, and then a frustrating PUD, before crossing Route 118 and hitting the real climb up Belvidere. Along the way I see a HUGE TOAD, probably the biggest I've ever seen. Also another small garter snake on the trail that I had to step over; he was scared of me 🙁.
 
-<!-- TODO styling doesnt work here come back and fix -->
-
-{{< three_stack_images src1="images/118.jpg" src2="images/toad.jpg" src3="images/mush.jpg" caption2="You can't tell from the photo but this guy was enormous." >}}
+{{< three_stack_images src1="images/118.jpg" src2="images/toad.jpg" src3="images/mush.jpg" caption2="You can't tell from the photo but this guy was enormous." col1_width="1594px" >}}
 
 The first half is easy, clear trail and a relatively gradual climb, reminded me of Stratton and Killington. We stop for a break and make some comments about how it's not that bad, then immediately hit the second half, which was much steeper and scramblier 😛.
 
