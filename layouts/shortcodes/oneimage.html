@@ -1,4 +1,4 @@
-<figure class="pt3 flex flex-column items-center">
+<figure class="pt2 flex flex-column items-center">
   <div class="flex flex-column items-center" style="width: {{ or (.Get "width") "70" }}%;">
     <img src='{{ .Get "src" }}' alt='{{ .Get "alt" }}'/>
     {{ with .Get "caption" }}<figcaption class="pt1 ph3 f6 gray i lh-solid">{{ . }}</figcaption>{{ end }}
