@@ -94,7 +94,7 @@ Then I turn off the LT and head towards Journey's End Camp, where I'll stay the 
 {{< two_images src1="images/probo.jpg" src2="images/noot.jpg" caption1="NOBO? SOBO? No Probo." caption2="All you've got to do is walk and breathe" >}}
 
 
-"All you have to do is walk and breathe" really sticks with me[^3]. Thanks Noot, whoever you are. Great poem.
+"All you have to do is walk and breathe" really sticks with me[^3]. Thanks Noot, whoever you are.
 
 A few people pass by and I chat with them. Older fellow picking up his nephew who's finishing today. He's done a lot of canoe trips and we talk about that. A women finishes up a bit later and her partner comes to pick her up. She lease me with a celebratory Long Trail Ale. It's nice to just be chilling here with nowhere to go, watching the world go by.
 
