@@ -16,9 +16,9 @@ Arriving at the transportation center I buy my bus ticket and grab a breakfast s
 
 I get on the #1 bus, which takes me as far as North Adams. The bus goes slow making stops at various businesses along the way, but I don't mind. I'm in no rush and I've always enjoyed sitting on a bus in the sunlight, watching people go about their business. I have to transfer to the #3 bus in North Adams, so I stop at a Subway to buy a Coke and use the bathroom.
 
-The #3 goes past both of the approach trails for the Southern Terminus of the LT—the Pine Cobble Trail, and an AT trailhead. I get off at the AT simply because it's closer.
+The #3 goes heads west out of North Adams towards Williamstown, passing  both of the approach trails for the Southern Terminus of the LT—the Pine Cobble Trail, and an AT trailhead. I get off at the AT simply because it's closer.
 
-### TODO include map of approach trails here?
+{{< oneimage src="images/approach_trails_map.jpg" caption="The two approach trails to the LT. I took the Appalachian Trail." >}}
 
 As I get off the bus and cross the bridge that leads to the trailhead, it slowly dawns on me that the "real-world" logistics are over. Tickets, schedules, reservations—that's all done. After finding the AT blazes and following them basically through someone's backyard (they have a hose set up with a note saying hikers are welcome to fill up on water), I'm on a trail in the woods! It feels really exciting be hiking after all the stress of getting here! The weather is perfect, and its a gentle climb along a stream towards the VT-MA border and the beginning of the LT. The sun filters through the trees, and the trail is dry and clear.
 
@@ -35,7 +35,7 @@ I set out across the state line while Mythman turns around to hike back to his c
 
 My original plan was to finish the day at Seth Warner Shelter after about 10 miles of hiking. Particle's planning to push on to Congdon Shelter, four miles further. I'm a little nervous to go so far on the first day, since one of the big pieces of advice I heard before starting was "don't push yourself to hard at the start". In the end though, the energy and company is infectious, and I decide to go on with her.
 
-## TODO map from the start of the LT, showing Seth Warner and Congdon shelters
+{{< oneimage src="images/lt_start_map.jpg" caption="The beginning of the LT. I had been planning to stop at Seth Warner Shelter, but pressed on with Particle to Congdon Shelter." >}}
 
 {{< oneimage src="images/pond.jpg" alt="A photograph of a pond along the trail" >}}
 

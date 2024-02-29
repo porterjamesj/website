@@ -30,7 +30,7 @@ Had a really nice hike down the mountain with them while catching up. They're do
 
 We veer from the official Long Trail and onto the Sherburne Pass Trail after a few miles, as the Sherburne Pass Trail goes directly to the Inn.
 
-# TODO map showing the trails south of Route 4
+{{< oneimage src="images/route_4_map.jpg" caption="The trails surrounding Route 4. The AT and LT part ways at Maine Junction." >}}
 
 We made it down to Route 4 and the Inn in the early afternoon. Alicia and Rob take the Rutland bus (which is free!) back to their car at the base of Killington to drive home while I go to check in. I'm pretty pleased with the plan I came up with for them and how well it worked!
 

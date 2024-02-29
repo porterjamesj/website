@@ -55,7 +55,8 @@ We've been struggling a bit with where to stay during this town stop. Waterbury 
 
 We bumble around where the trail crosses Route 2 for a while trying to figure out how to get there, eventually paying for a shuttle from a woman named Joy who runs a local taxi service. We found her business card in the "little free library" box at the trailhead parking lot. We get to Stowe pretty quickly, which apparently isn't always guaranteed. I learned that the traffic here can be pretty bad in spite of it being fairly rural. There's only one north-south road connecting Waterbury and Stowe (appropriately called "Waterbury-Stowe Road") so at busy times it can take an hour to go the 10 miles between them, because there's just no other route for traffic to take.
 
-## TODO map of Waterbury and Stowe
+{{< oneimage src="images/waterbury_stowe_map.jpg" caption="Waterbury and Stowe in relation to the trail." width="100" >}}
+
 
 Anyway, we shower and clean up at our AirBnb before exploring town a little bit. Stowe is charming in the sort of artificial way these types of bougie vacation places are.
 

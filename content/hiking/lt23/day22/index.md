@@ -32,9 +32,9 @@ A couple hours of hiking go by quickly and we're at Whiteface Shelter, halfway u
 
 I hang around the shelter for a while by myself, and quickly feel bored and listless. It's a cloudy and hazy day which I'm sure doesn't help my mood. I coordinate with Rachel by text a bit. I'm still curious what it will be like to see her after so long away.
 
-Her and Joe are planning to park at Beaver Meadow trailhead, hike up to meet me via Beaver Meadow and Whiteface trails, then hike down to Route 15 with me tomorrow and get a shuttle back to their car.
+Her and Joe are planning to park at Beaver Meadow trailhead, hike up to meet me via Beaver Meadow and Whiteface trails, then hike over Whiteface Mountain and down to Route 15 with me tomorrow and get a shuttle back to their car.
 
-## TODO: map of all these trails
+{{< oneimage src="images/whiteface_trails.jpg" caption="Trails around Whiteface Mountain." width="100" >}}
 
 At last I get the text that they're at the trailhead. I decide to hike down to meet them along the way. I'm just bored of sitting around!
 
@@ -51,8 +51,6 @@ We check out Beaver Meadow Lodge on our way back, which was awesome. Wood stove 
 {{< oneimage src="images/beaver_meadow_lodge.jpg" caption="Beaver Meadow Lodge" >}}
 
 We make it back up to the LT, but via the Chilcoot trail, backtracking a bit to redo some of the miles I did this morning, just to make their day of hiking a bit longer and more interesting.
-
-## TODO: maybe show map again?
 
 {{< two_images src1="images/joe.jpg" src2="images/sunset.jpg" >}}
 

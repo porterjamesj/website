@@ -36,12 +36,13 @@ It's hard to imagine what getting back will be like, but it turns out better tha
 
 I make my way home from the bus station and round the corner to see my roommates and best friends out on our porch, lit by the warm glow of the string of lights behind them, jumping for joy and cheering for me. I come inside to a big group hug. So much love. I find on my bed an adorable poster they made chronicling my journey.
 
-## TODO: picture of poster
+{{< oneimage src="images/poster.jpg" width="100" >}}
 
-Rachel made a chocolate cake. They took me out for dinner at a new Japanese restaurant around the corner. We watch more Battlebots. Coming home to this confirms it for me—such raucous joy was worth giving up New York for. It's so special.
+Rachel made a chocolate cake. We go out for dinner at a new Japanese restaurant around the corner. We watch more Battlebots. Coming home to this confirms it for me—such raucous joy was worth giving up New York for. It's so special.
 
 So here I sit, struggling with the idea of having to get back into civilized life, such as mine is. My future is hazy and uncertain, but I feel no particular urgency to figure it out. As for the past, I suppose I should have some sort of grand reflection on the trip, but I don't really. It was amazing. Amazing to feel the peace of being out there and to reconnect with my roots. I hope I can keep that connection going and feel the acceptance of myself and my life that I felt out there as I go on. Thru hiking is amazing, there's nothing else like it. I'll leave you with this:
 
-## TODO: pic of poem from journal
+{{< oneimage src="images/poem.jpg" >}}
+
 
 [^1]: Highly recommend her or her husband Adam, by the way, if you're in need of a shuttle in Northern Vermont. You can get her contact info from the GMC; she's also pretty active in the Long Trail Facebook groups.
