@@ -28,20 +28,20 @@ We mostly cruise up the mountain, only stopping for a couple breaks. It's much e
 
 While we eat lunch we're caught up by the aptly named Flash. Extremely skinny guy, with gear so ultralight his pack is basically a daypack—no belt. He's more-or-less running up the mountain as he approaches. Very friendly though. He's a serious hiker who's done the AT and Arizona Trail already. He's from Vermont originally (Particle is excited to finally meet another Vermonter on the trail), and is trying to finish the LT in 10 days (!!).
 
-{{< two_images src1="images/trailhead_sign.jpg" src2="images/trail_into_woods.jpg"
-      caption1="3.2 miles to Stratton Pond, our destination."
-      caption2="The trail heading north from the peak."
+
+{{< three_stack_images col1_width="1561px"
+    src1="images/scenery.jpg" caption1="Alpine scenery"
+    src2="images/trailhead_sign.jpg" caption2="3.2 miles to Stratton Pond, our destination."
+    src3="images/trail_into_woods.jpg" caption3="The trail heading north from the peak."
 >}}
 
-{{< oneimage src="images/scenery.jpg" caption="Alpine scenery">}}
+We set off down the trail and it's an easy three miles to Stratton Pond, with the rain having cleared up to boot. Stratton Pond is a pretty popular spot for local backpackers and day hikers since it's beautiful and easily accessible. We meet a local couple and two other long-distances hikers, Qubit and Bugbait, at the shelter. Qubit's an older fellow hiking home to Maine on the AT. Bugbait's and LT thru-hiker in his 20s, lives in Massachusetts and works at REI, so he knows a lot about gear.
 
-We set off down the trail and it's an easy three miles to Stratton Pond, with the rain having cleared up to boot. Stratton Pond is a pretty popular spot for local backpackers and hikers since its beautiful and accessible. We meet a local couple and two other long-distances hikers, Qubit and Bugbait, at the shelter. Qubit's an older fellow hiking home to Maine on the AT. Bugbait's in his 20s, lives in Massachusetts and works at REI, so he knows a lot about gear.
-
-We rest and chat briefly and Particle decides to push on to William Douglas Shelter, five more miles. I'm feeling energized by how much easier than expected the day has been, so I decide to join her. I head down the side-trail to the pond itself, just to check it out before I leave and, well, it changes my mind. It's so beautiful that I decide to stay the night here. I came here to enjoy stuff like this, not just chew up miles.
+We rest and chat briefly and Particle decides to push on to William Douglas Shelter, five more miles. I'm feeling energized by how much easier than expected the day has been, so I decide to join her. I head down the side-trail to the pond itself, just to check it out before I leave and, well, it changes my mind. It's so beautiful that I decide to stay the night here. I'm hiking to enjoy stuff like this, not just chew up miles.
 
 {{< oneimage src="images/pond.jpg" caption="Stratton Pond" >}}
 
-After heading back up briefly to set up my tent on a platform[^2], I jump in the pond, wash myself off, wash my clothes and hang them up to dry on the nearby fir trees...and then just sit and watch the sun and the clouds and the still water. The weather is spectacular, the sun's really come out for the first time since the hike started. I'm glad to be briefly out of the "green tunnel"[^3] for a bit and in a place with some open sky for it. The feeling of just sitting by the pond waiting for the sun to go down, drying my clothes, with no obligation to be anywhere or do anything...amazing. It's a magical few hours. The birds chirp. The wind blows. This one will stick with me. It's moments like these you come out here for.
+After heading back up briefly to set up my tent on a platform[^2], I jump in the pond, wash myself off, wash my clothes and hang them up to dry on the nearby fir trees...and then just sit and watch the sun and the clouds and the still water. The weather is spectacular, the sun's really come out for the first time since the hike started. I'm glad to be briefly out of the "green tunnel"[^3] for a bit and in a place with some open sky. The feeling of just sitting by the pond waiting for the sun to go down, drying my clothes, with no obligation to be anywhere or do anything...amazing. It's a magical few hours. The birds chirp. The wind blows. This one will stick with me. It's moments like these you come out here for.
 
 {{< oneimage width="120" src="images/pond_wide.jpg" >}}
 
@@ -49,13 +49,13 @@ After heading back up briefly to set up my tent on a platform[^2], I jump in the
 
 {{< oneimage src="images/selfie.jpg" caption="My first selfie of the trip." >}}
 
-The clouds finally roll in and rob me of the sunset, so I went back to the shelter to cook dinner and sleep. Tomorrow I'll go into Manchester Center for my first resupply.
+The clouds finally roll in and rob me of the sunset, so I head back up to the shelter to cook dinner and sleep. Tomorrow I'll go into Manchester Center for my first resupply.
 
 ----
 
 Looking back on it, this was one of my most amazing days of the hike, and the first time I felt like "Wow, I'm really out here".
 
-I encountered two texts during the day that I'm including because I feel like they somehow reflect the experience. The shelter privy had a poem that someone wrote out and taped to the wall—[*The Ponds*](https://www.best-poems.net/mary_oliver/the_ponds.html), by Mary Oliver. This part stuck with me:
+I encountered two texts during the day that I'm including because I feel like they somehow reflect the experience. The privy[^4] at the shelter had a poem that someone wrote out and taped to the wall—[The Ponds](https://www.best-poems.net/mary_oliver/the_ponds.html), by Mary Oliver. This part stuck with me:
 
 {{< rawhtml >}}
 <blockquote>
@@ -80,3 +80,4 @@ I also re-read the *Earthsea* novels by Ursula LeGuin, my favorite author, durin
 [^1]: A self-effacing term thru-hikers use to describe their state of being after eating junk food, living in the woods, and barely showering for weeks or months on end.
 [^2]: Many backcountry camping areas in the White and Green Mountains have what's called "tent platforms", which are basically sturdy wooden pallets you pitch your tent on. They're helpful in they enable tenting in terrain that's too steep or rocky to have good natural tent sites, but annoying in that it's harder to use stakes and guylines to set up or stabilize your tent. Some hikers love to complain about them.
 [^3]: They call the southern section of the LT the green tunnel because you're mostly just walking through dense trees without a lot of open space or views, and it can get a bit monotonous.
+[^4]: All the LT shelters have privies to poop in, which really makes wilderness backpacking so much more pleasant than having to dig a cathole in the woods (which in the absence of a privy is your only option).
