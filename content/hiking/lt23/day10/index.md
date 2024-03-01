@@ -2,9 +2,8 @@
 title: The Inn at the Long Trail
 slug: day10
 weight: 100
+date: 2023-09-17
 ---
-
-Sunday, September 17th
 
 - Start: Cooper Lodge
 - End: Inn at the Long Trail

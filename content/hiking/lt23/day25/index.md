@@ -2,9 +2,8 @@
 title: Devil's Gulch, Mt. Belvidere, Hazen's Notch
 slug: day25
 weight: 250
+date: 2023-10-02
 ---
-
-Monday, October 2nd
 
 - Start: Spruce Ledge Camp
 - End: Hazen's Notch Camp

@@ -2,9 +2,8 @@
 title: Battell Wilderness
 slug: day13
 weight: 130
+date: 2023-09-20
 ---
-
-Wednesday, September 20th
 
 - Start: David Logan Shelter
 - End: Middlebury Gap

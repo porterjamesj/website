@@ -2,9 +2,8 @@
 title: Burnt Rock Mountain and Mt. Ethan Allan
 slug: day17
 weight: 170
+date: 2023-09-24
 ---
-
-Sunday, September 24th
 
 - Start: Stark's Nest
 - End: Montclair Glen Lodge

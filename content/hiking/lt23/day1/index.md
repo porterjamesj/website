@@ -2,9 +2,8 @@
 title: Southern Terminus
 slug: day1
 weight: 10
+date: 2023-09-08
 ---
-
-Friday, Sept 8th
 
 - Start: Pittsfield, MA
 - End: Congdon Shelter
@@ -18,7 +17,7 @@ I get on the #1 bus, which takes me as far as North Adams. The bus goes slow mak
 
 The #3 goes heads west out of North Adams towards Williamstown, passing  both of the approach trails for the Southern Terminus of the LT—the Pine Cobble Trail, and an AT trailhead. I get off at the AT simply because it's closer.
 
-{{< oneimage src="images/approach_trails_map.jpg" caption="The two approach trails to the LT. I took the Appalachian Trail." >}}
+{{< oneimage src="images/approach_trails_map.jpg" caption="The two approach trails to the LT. I took the Appalachian Trail." width="100" >}}
 
 As I get off the bus and cross the bridge that leads to the trailhead, it slowly dawns on me that the "real-world" logistics are over. Tickets, schedules, reservations—that's all done. After finding the AT blazes and following them basically through someone's backyard (they have a hose set up with a note saying hikers are welcome to fill up on water), I'm on a trail in the woods! It feels really exciting be hiking after all the stress of getting here! The weather is perfect, and its a gentle climb along a stream towards the VT-MA border and the beginning of the LT. The sun filters through the trees, and the trail is dry and clear.
 

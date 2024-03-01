@@ -2,9 +2,8 @@
 title: Morse Mountain & Beaver Meadow
 slug: day22
 weight: 220
+date: 2023-09-29
 ---
-
-Friday, September 29th
 
 - Start: Madonna Peak
 - End: Whiteface Shelter

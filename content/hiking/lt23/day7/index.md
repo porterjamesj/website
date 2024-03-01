@@ -2,9 +2,8 @@
 title: Peru Peak Wilderness, Griffith Lake, and Big Branch Wilderness
 slug: day7
 weight: 70
+date: 2023-09-14
 ---
-
-Thursday, September 14th
 
 - Start: Bromley Mountain Peak
 - End: Little Rock Pond Shelter

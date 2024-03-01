@@ -2,9 +2,8 @@
 title: Camel's Hump
 slug: day18
 weight: 180
+date: 2023-09-25
 ---
-
-Monday, September 25th
 
 - Start: Montclair Glen Lodge
 - End: US Route 2

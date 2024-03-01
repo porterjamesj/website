@@ -2,9 +2,8 @@
 title: Mt. Mansfield
 slug: day21
 weight: 210
+date: 2023-09-28
 ---
-
-Thursday, September 28th
 
 - Start: Butler Lodge
 - End: Madonna Peak

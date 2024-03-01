@@ -2,9 +2,8 @@
 title: Canada Border
 slug: day27
 weight: 270
+date: 2023-10-04
 ---
-
-Wednesday, October 4th
 
 - Start: Jay Peak
 - End: Canada Border

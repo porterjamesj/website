@@ -2,9 +2,8 @@
 title: Manchester Center
 slug: day5
 weight: 50
+date: 2023-09-12
 ---
-
-Tuesday, September 12th
 
 - Start: Stratton Pond Shelter
 - End: VFW Post 6471 in Manchester Center

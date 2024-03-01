@@ -2,9 +2,8 @@
 title: Glastenbury Wilderness
 slug: day2
 weight: 20
+date: 2023-09-09
 ---
-
-Saturday, September 9th
 
 - Start: Congdon Shelter
 - End: stealth site just south of Goddard Shelter

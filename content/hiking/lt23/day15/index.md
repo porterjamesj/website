@@ -2,9 +2,8 @@
 title: Breadloaf Wilderness
 slug: day15
 weight: 150
+date: 2023-09-22
 ---
-
-Friday, September 22nd
 
 - Start: Skylight Lodge
 - End: Battell Shelter

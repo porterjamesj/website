@@ -2,9 +2,8 @@
 title: Stratton Mountain
 slug: day4
 weight: 40
+date: 2023-09-11
 ---
-
-Monday, September 11th
 
 - Start: Story Spring Shelter
 - End: Stratton Pond Shelter

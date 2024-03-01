@@ -2,9 +2,8 @@
 title: Mt. Abraham and Mt. Ellen
 slug: day16
 weight: 160
+date: 2023-09-23
 ---
-
-Saturday, September 23rd
 
 - Start: Battell Shelter
 - End: Stark's Nest

@@ -2,9 +2,8 @@
 title: Maine Junction
 slug: day12
 weight: 120
+date: 2023-09-19
 ---
-
-Tuesday, September 19th
 
 - Start: Inn at the Long Trail
 - End: David Logan Shelter

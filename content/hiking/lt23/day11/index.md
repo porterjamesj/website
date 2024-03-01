@@ -2,9 +2,8 @@
 title: Rutland
 slug: day11
 weight: 110
+date: 2023-09-18
 ---
-
-Monday, September 18th
 
 - Start: Inn at the Long Trail
 - End: Inn at the Long Trail

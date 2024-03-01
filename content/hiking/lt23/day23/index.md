@@ -2,9 +2,8 @@
 title: Whiteface Mountain & Jeffersonville
 slug: day23
 weight: 230
+date: 2023-09-30
 ---
-
-Saturday, September 30th
 
 - Start: Whiteface Shelter
 - End: Roundtop Shelter

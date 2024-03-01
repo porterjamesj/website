@@ -19,20 +19,13 @@ Between a few trips to REI and my old gear from my teenage years, I cobbled toge
 
 After an overnight shakedown trip with a friend just to make sure I still remembered how to backpack, I was ready. I bought a train ticket to Pittsfield, Massachusets, near the southern terminus, and booked an overnight stay in town, planning to set out hiking on the morning of Friday, September 8th.
 
-
-### My journey
-
-1. [To the trailhead](day0)
-2. [Southern Terminus](day1)
-3. [Glastenbury Wilderness](day2)
-4. [Glastenbury Mountain](day3)
-5. [Stratton Mountain](day4)
-
-
 ### Notes to self
 
 - Mention transitions book at some point, the "neutral zone"
 - Consider talking about all the rain in July somewhere on this page? I feel like its important context but don't know where to fit it in
 
+## My journey
+
+<!-- The list of sub-pages will be rendered here by the template -->
 
 [^1]: Like any subculture, long-distance backpackers have their fair share of jargon. "NOBO" and "SOBO" are hiker slang for "northbound" and "southbound" respectively. Most long-distance trails run generally north or south. "Are you NOBO or SOBO?" is a common first question to ask when meeting another hiker on the trail.

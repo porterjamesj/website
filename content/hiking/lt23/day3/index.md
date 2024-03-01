@@ -2,9 +2,8 @@
 title: Glastenbury Mountain
 slug: day3
 weight: 30
+date: 2023-09-10
 ---
-
-Sunday, September 10th
 
 - Start: stealth site just south of Goddard Shelter
 - End: Story Spring Shelter

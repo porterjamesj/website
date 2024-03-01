@@ -2,9 +2,8 @@
 title: Journey's End
 slug: aftermath
 weight: 280
+date: 2023-10-05
 ---
-
-Thursday, October 5th through Satuday, October 7th
 
 This morning I wake up and hike back to the border, to meet up with Stiltz, Mooch, and Hang Ten one last time. They've been a day behind me since we split up at Tillotsen, and I've been texting with Stiltz to coordinate. I arrive at the border exact as they do.
 

@@ -2,9 +2,8 @@
 title: Codding Hollow & Laraway Mountain
 slug: day24
 weight: 240
+date: 2023-10-01
 ---
-
-Sunday, October 1st
 
 - Start: Roundtop Shelter
 - End: Spruce Ledge Camp

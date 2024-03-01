@@ -2,9 +2,8 @@
 title: Ripton
 slug: day14
 weight: 140
+date: 2023-09-21
 ---
-
-Thursday, September 21th
 
 - Start: Middlebury Gap
 - End: Skylight Lodge

@@ -2,9 +2,8 @@
 title: Jay Peak
 slug: day26
 weight: 260
+date: 2023-10-03
 ---
-
-Tuesday, October 3rd
 
 - Start: Hazen's Notch Camp
 - End: Jay Peak

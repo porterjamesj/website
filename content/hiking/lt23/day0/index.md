@@ -2,9 +2,8 @@
 title: To the trailhead
 slug: day0
 weight: 5
+date: 2023-09-07
 ---
-
-Thursday, Sept 7th
 
 I begin on an inauspicious note—by missing my train! I got delayed on my way to the station got here five minutes late. The train's gone. Fortunately for me, there's a Greyhound bus leaving for Pittsfield only an hour later, so I buy my ticket and settle in to wait. It occurs to me that in spite of being an avid Amtrak rider for years, this is somehow the first time I've ever missed my train.
 

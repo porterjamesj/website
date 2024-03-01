@@ -2,9 +2,8 @@
 title: Killington
 slug: day9
 weight: 90
+date: 2023-09-16
 ---
-
-Saturday, September 16th
 
 - Start: Clarendon Shelter
 - End: Cooper Lodge

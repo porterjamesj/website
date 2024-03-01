@@ -2,9 +2,8 @@
 title: Clarendon Gorge
 slug: day8
 weight: 80
+date: 2023-09-15
 ---
-
-Friday, September 15th
 
 - Start: Little Rock Pond Shelter
 - End: Clarendon Shelter

@@ -2,9 +2,8 @@
 title: Waterbury, Ben & Jerry's
 slug: day19
 weight: 190
+date: 2023-09-26
 ---
-
-Tuesday, September 26th
 
 - Start: US Route 2
 - End: Buchanan Lodge

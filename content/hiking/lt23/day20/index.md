@@ -2,9 +2,8 @@
 title: Bolton Mountain
 slug: day20
 weight: 200
+date: 2023-09-27
 ---
-
-Wednesday, September 27th
 
 - Start: Buchanan Lodge
 - End: Butler Lodge
