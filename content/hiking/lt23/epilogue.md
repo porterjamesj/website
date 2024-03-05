@@ -4,11 +4,19 @@ slug: epilogue
 weight: 1000
 ---
 
-## After the End
+## Gear thoughts
 
-I wake up on the
+- One trekking pole
+- Shoes vs boots
+- Overall weight
+- Pad
+- Heat layers (only had puffy and thermal shirt, no fleece or sun hoodie)
+- Sleeping bag (too heavy)
+- Things I sent back: map & compass, hat (?)
 
 
-- Would take more pictures of people
-- Gear thoughts
-  -
+## What I'd do differently
+
+- Plan less overall
+- Would take more pictures of people rather than just landscapes
+- More videos
