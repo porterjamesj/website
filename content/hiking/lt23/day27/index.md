@@ -20,7 +20,7 @@ But first, a bit of time to enjoy the final view, and boy is it a good one.
 
 It's fun to be alone in a space that's so clearly intended for business and usually bustling with people. The gondola doesn't run until later in the morning, so the only person I might encounter is a really enterprising day hiker. But there's no one.
 
-I pack up and start descending the via the ski trails. I take one more video before the trails veers back into the woods.
+I pack up and start descending the via the ski trails. I take one more video before the trail veers back into the woods.
 
 {{< controlsvideo src="videos/trails.mp4" >}}
 
@@ -29,7 +29,7 @@ Descending quickly, I soon reach Laura Woodward Shelter, but press on quickly ov
 {{< two_images src1="images/laura.jpg" src2="images/dead_tree.jpg" >}}
 {{< two_images src1="images/trees.jpg" src2="images/roots.jpg" >}}
 
-Around 11 I get to Shooting Star Shelter, where I stop for lunch. My guess is it's named after the huge rocks sitting in a clearing nearby. In a flight of fancy, you might imagine that they were shooting stars that fell to Earth. In actuality I bet there were deposited by retreating glaciers. It feels a bit more romantic than most of the other shelter names. Appropriate for the end of the journey.
+Around 11 I get to Shooting Star Shelter, where I stop for lunch. My guess is it's named after the huge rocks sitting in a clearing nearby. In a flight of fancy, you might imagine that they were shooting stars that fell to Earth. In actuality I bet they were deposited by retreating glaciers. It feels a bit more romantic than most of the other shelter names. Appropriate for the end of the journey.
 
 {{< two_images src1="images/shooting_star.jpg" src2="images/rock.jpg" caption1="Shooting Star Shelter" caption2="The proverbial shooting star" >}}
 
@@ -46,9 +46,9 @@ Thought #2: This hike has been, I won't say easy, but certainly not as challengi
 
 Thought #3: Speaking of claiming to be a hiker, that's one thing this trip surely gave me: an identity. It feels good, and safe. Like if everything else in life goes wrong, I have this world of the trail and identity of a thru-hiker to fall back on. There's also a positive way to look at this, as more things to experience and look forward to. "Goals" maybe even. I have not resolved any big life dilemmas out here, but I do feel more at peace with my life and my choices. Chaotic as it may be, it's a lot less hectic than some people's I've met out here. The trail provides for us all.
 
-I also feel more at peace with my decision to leave RC. I will never really be able to be sure that I made the "right" choice, if such a thing can even be said to exist, but I do feel as though something in my soul was calling me away. I just feel more attuned to people, nature, touch, texture, etc. than efficiency, productivity, abstraction, symbolism. I think you have to listen to such upwellings from within yourself, even if it's not very practical.
+I also feel more at peace with my decision to leave RC. I will never really be able to be sure that I made the "right" choice, if such a thing can even be said to exist, but I do feel as though something in my soul was calling me away. I just feel more attuned to people, nature, touch, texture, etc. than efficiency, productivity, abstraction, symbolism. I think if you can listen to such upwellings from within yourself, you should, even if it's not very practical.
 
-When I was a kid I went to scout camp in the summer at a place called Camp Manatoc. It had a motto in the form of a little poem written on the gate, so you saw it as you departed. It went:
+When I was a kid I went to Boy Scout camp in the summer at a place called Camp Manatoc. It had a motto in the form of a little poem written on the gate, so you saw it as you departed. It went:
 
 {{< rawhtml >}}
 <blockquote>
@@ -62,7 +62,7 @@ that to these things you must return. <br />
 </blockquote>
 {{< /rawhtml >}}
 
-This trip has felt like a return, in so many ways, even while it was something entirely new. To old hobby, values, identity.
+This trip has felt like a return, in so many ways, even while being something entirely new. To an old hobby, values, identity.
 
 I re-read Ursula LeGuin's *Earthsea* novels on this trip, and I've been thinking a lot about a quote and recurring theme of hers: "true voyage is return"[^2]. In *A Wizard of Earthsea*, Ged goes on this huge epic journey to defeat his great foe, and in the end he finds himself face to face with—himself. And three books later at the end of the series he finds himself a goatherd on Gont again, like he was as a child. There's something in all that. Anyway, I'll stop there for now. Onward, to the end of my journey.
 
@@ -86,16 +86,16 @@ I take the obligatory celebration photos with the marker, but they don't come ou
 
 {{< oneimage src="images/celebrate.jpg" >}}
 
-Then I turn off the LT and head towards Journey's End Camp, where I'll stay the night. Felt sad and wistful to be following the blue blazes, knowing that there are no more white ones. The camp itself is a nice, four-sided building. Covered in graffiti that's somewhat more reflective than average shelter scribbles.
+Then I turn off the LT and head towards Journey's End Camp, where I'll stay the night. Feels sad and wistful to be following the blue blazes, knowing that there are no more white ones. The camp itself is a nice, four-sided building. Covered in graffiti that's somewhat more reflective than average shelter scribbles.
 
-{{< two_images src1="images/border_sign.jpg" src2="images/journeys_end_camp.jpg" >}}
-{{< two_images src1="images/wheel.jpg" src2="images/hayduke.jpg" caption1="The 3-D Transcendental Hiking Wheel" caption2="Hayduke Lives" >}}
+{{< two_images src1="images/border_sign.jpg" src2="images/journeys_end_camp.jpg" caption2="Journey's End Camp" >}}
+{{< two_images src1="images/wheel.jpg" src2="images/hayduke.jpg" caption1="The 3-D Transcendental Hiking Wheel" caption2="Hayduke Lives!" >}}
 {{< two_images src1="images/probo.jpg" src2="images/noot.jpg" caption1="NOBO? SOBO? No Probo." caption2="All you've got to do is walk and breathe" >}}
 
 
-"All you have to do is walk and breathe" really sticks with me[^3]. Thanks Noot, whoever you are.
+"All you've got to do is walk and breathe" really sticks with me[^3]. Thanks Noot, whoever you are.
 
-A few people pass by and I chat with them. Older fellow picking up his nephew who's finishing today. He's done a lot of canoe trips and we talk about that. A women finishes up a bit later and her partner comes to pick her up. She lease me with a celebratory Long Trail Ale. It's nice to just be chilling here with nowhere to go, watching the world go by.
+A few people pass by and I chat with them. Older fellow picking up his nephew who's finishing today. Like me he's done some wilderness canoe trips so we talk about that. A women finishes up a bit later and her partner comes to pick her up. She gives me with a celebratory Long Trail Ale. It's nice to just be chilling here with nowhere to go, watching the world go by.
 
 Eventually it gets dark, and I go to bed, sleeping fitfully. Somehow after all this time, I'm still worried about bears (lol).
 

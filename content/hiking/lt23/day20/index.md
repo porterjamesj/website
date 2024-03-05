@@ -17,7 +17,7 @@ Anyway today's hiking starts off with an annoyingly difficult climb up Bolton. L
 
 {{< two_images src1="images/moss.jpg" src2="images/bolton.jpg" caption2="Bolton Mountain, like many of the shorter peaks in the north half of the trail, has a tree-covered, viewless summit." >}}
 
-We stop for lunch of a random sunny rock in the middle of the trail, then take a long break at Puffer Shelter. Yesterday Ryan told me to push for Puffer if I could, and I see why. The sunrise from here would be amazing.
+We stop for lunch on a random sunny rock in the middle of the trail, then take a long break at Puffer Shelter. Yesterday Ryan told me to push for Puffer if I could, and I see why. The sunrise from here would be amazing.
 
 {{< oneimage src="images/puffer.jpg" width="120" caption="Puffer Shelter" >}}
 
@@ -26,9 +26,9 @@ We stop for lunch of a random sunny rock in the middle of the trail, then take a
 We keep on hiking through a beautiful day.
 
 {{< two_images src1="images/ella.jpg" src2="images/bog.jpg" >}}
-{{< two_images src1="images/tree.jpg" src2="images/leaves.jpg" >}}
+{{< two_images src1="images/tree.jpg" src2="images/leaves.jpg" caption2="Fall colors starting to get going." >}}
 
-Eventually we arrive at Taylor Lodge, right next to Lake Mansfield. The water source is 0.2 miles from the shelter, which I'm at first annoyed by[^1]. However, the walk there passes through an incredibly beautiful area called Nebraska Notch. It's a steep, narrow gully with little trickling waterfalls, rock cliffs towering above us, trees with their leaves just starting to change color. There's a few ducks swimming in the bog at the bottom. This was probably the most beautiful natural area I saw on the whole trip, it struck me even more than the epic peaks with their views. Somehow it just felt so serene. Pictures don't do it justice. Mooch and I stand at the bottom for a while, whooping into the valley walls to hear our voices echo.
+Eventually we arrive at Taylor Lodge, right next to Lake Mansfield. The water source is 0.2 miles from the shelter, which I'm at first annoyed by[^1]. However, the walk there passes through an incredibly beautiful area called Nebraska Notch. It's a steep, narrow gully with little trickling waterfalls, rock cliffs towering above us, trees with their leaves just starting to change color. There's a few ducks swimming in the bog at the bottom. This is probably the most beautiful natural area of the whole trip to me; it strikes me even more than the epic peaks with their views. Somehow it just feels so serene. Pictures don't do it justice. Mooch and I stand at the bottom for a while, whooping into the valley walls to hear our voices echo.
 
 The trail to the water source continues on to Lake Mansfield, which is also very pretty. Would make a great day hike.
 
@@ -36,7 +36,7 @@ The trail to the water source continues on to Lake Mansfield, which is also very
 
 {{< two_images src1="images/pipe.jpg" src2="images/gang.jpg" caption1="The water source here is a piped spring, like many in this section of the trail." caption2="The gang preparing to roll out from Taylor Lodge." >}}
 
-As we're about to leave, Hang Ten arrives! He's been coordinating with Stiltz and knew we were here. Apparently he went home after we split up at Rutland, almost immediately got fired from his job, and decided to just get back on trail and finish it with us. You love to see it.
+As we're about to leave, Hang Ten arrives! He's been texting with Stiltz and knew we were here. Apparently he went home after we split up at Rutland, almost immediately got fired from his job, and decided to just get back on trail and finish it with us. You love to see it.
 
 Just after Taylor Lodge, there's a blue-blazed trail that leads through a difficult but fun and interesting rock scramble through Clara Bow Cave. Most LT hikers take it, and we did the same. Totally worth the extra effort, it was really cool!
 
@@ -63,7 +63,7 @@ I've been coordinating with my friend Rachel and her partner Joe, who are meetin
 
 Anyway tomorrow, the traverse across Mansfield! The highest point in Vermont and the climax of the trail. Excited to be with the gang for that.
 
-{{< oneimage src="images/end_gang.jpg" width="120" caption="Photo credit: Mooch" >}}
+{{< oneimage src="images/end_gang.jpg" width="120" caption="Me, Stiltz, and hang Ten. Photo credit: Mooch" >}}
 
 
 [^1]: Most shelters have a water source right nearby.

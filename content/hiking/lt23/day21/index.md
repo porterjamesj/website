@@ -9,15 +9,15 @@ date: 2023-09-28
 - End: Madonna Peak
 - Approx Miles: 10.4
 
-The dawn from Butler Lodge is almost more beautiful than the sunrise.
+The dawn from Butler Lodge is almost more beautiful than the sunset.
 
 {{< oneimage src="images/dawn.jpg" width="100" >}}
 
 Today's the big day. Mt. Mansfield. As Mooch put it, it's kind of the point of the whole trip! We're blessed with a clear, windless day—couldn't ask for more.
 
-In addition to being the trail's tallest peak, Mansfield is also very long—almost more like a small range than a single mountain. It has several few sub-peaks that are said to resemble a human face when viewed in profile.
+In addition to being the trail's tallest peak, Mansfield is also very long—almost more like a small range than a single mountain. It has several sub-peaks that are said to resemble a human face when viewed in profile.
 
-{{< oneimage src="images/profile.jpg" width="100" caption="Photo credit @WeRmudfun on YouTube." >}}
+{{< oneimage src="images/profile.jpg" width="100" caption="The Mansfield range. Photo credit @WeRmudfun on YouTube." >}}
 
 I can sort of see it. If you imagine an old man's face in a 19th century political cartoon it feels a bit more plausible. As we approach from the south, we'll cross over the forehead, past the nose, and then on to the chin, which is the peak of the mountain, the trail, and the state!
 
@@ -41,7 +41,7 @@ It feels cool to be up so high along the ridge as we start toward the nose. Easy
 
 {{< oneimage src="images/roadwalk.jpg" width="120" caption="Photo credit Mooch" >}}
 
-We stop for a snack at the visitor center (closed as its the middle of the week) near the nose, which you can't hike on. Apparently its private property, I guess owned by the radio stations whose towers are up there.
+We stop for a snack at the visitor center (closed, as it's the middle of the week) near the nose, which you can't hike on. Apparently it's private property, I guess owned by the radio stations whose towers are up there.
 
 {{< two_images src1="images/visitor_sign.jpg" src2="images/visitor_center.jpg" >}}
 {{< two_images src1="images/nose.jpg" src2="images/lt_sign.jpg" >}}
@@ -57,7 +57,7 @@ There's even a sign up here that says "Subway" on it?!? My trail name was fated 
 {{< two_images src1="images/subway1.jpg" src2="images/subway2.jpg" >}}
 {{< two_images src1="images/back.jpg" src2="images/arctic.jpg" >}}
 
-I put on [x2](https://www.youtube.com/watch?v=ZrIUMxLmVAM) for the final ascent to hype me up. It works, I'm hyped! The high-energy music and beautiful blue sky all around me combine to make me feel elated, a mood I'd remain in for the rest of the day.
+I put on [x2](https://www.youtube.com/watch?v=ZrIUMxLmVAM) for the final ascent to hype me up. It works, I'm hyped! The high-energy music and beautiful blue sky all around me combine to make me feel elated, a mood I'll remain in for the rest of the day.
 
 Before I know it, I'm at the peak! I was expecting a big sign proclaiming "Mt. Mansfield, highest point in the state of Vermont" or something like that. But there's almost nothing here. If it weren't for the USGS survey mark and, well, the fact that when you look around everything is below you, you've never know you'd made it.
 
@@ -80,7 +80,7 @@ Overall I just feel lucky to be here. Bagging a big peak is a lot more special a
 {{< two_images src1="images/usgs.jpg" src2="images/me.jpg" caption1="The USGS survey mark for the summit of Mt. Mansfield" caption2="Just happy to be here" >}}
 {{< two_images src1="images/ella.jpg" src2="images/trees.jpg" caption1="Ella's tuckered out" caption2="Fall colors starting to get going" >}}
 
-The descent starts out with the craziest scrambles we've had so far. Totally doable by non-climbers like myself, but a little scary. Some pretty exposed sections where you really could fall off a cliff if you misplaced a foot. Fun and exciting though.
+The descent starts out with the craziest scrambles we've had so far. Totally doable by non-climbers like myself, but a little scary. Some pretty exposed sections where you really could fall right off a cliff if you misplaced a foot. Fun and exciting though.
 
 {{< controlsvideo src="videos/down.mp4" >}}
 
@@ -88,20 +88,20 @@ We make it to Taft Lodge, which marks the end of the Mt. Mansfield protected arc
 
 {{< two_images src1="images/taft.jpg" src2="images/door.jpg" caption2="Short doorway with Mooch for comparison" >}}
 
-When we leave we split up a bit with everyone kind of going at their own pace. Mooch zooms ahead, Stiltz and Hang Ten fall back, and I get pretty well ahead of them. The trail from here is a pretty easy, cruisy downhill, so it goes quick.
+When we leave we separate a bit with everyone kind of going at their own pace. Mooch zooms ahead, Stiltz and Hang Ten fall back, and I get pretty well ahead of them. The trail from here is a pretty easy, cruisy downhill, so it goes quick.
 
-Trees starting to get some amazing fall color. I also pass a rusted old machine part in the woods, looks like its from a concrete mixer maybe? Apparently there's some cool stuff like this on the blue-blazed trails around Camel's Hump and Mansfield, including the remains of a crashed B-52 bomber from WWII-era pilot training, the seemingly gravity-defying "cantilever rock", and "The Gap", a somewhat scary section of trail where you have to jump over a deep crevasse to continue.
+Trees starting to get some amazing fall color. I also pass a rusted old machine part in the woods, looks like it's from a concrete mixer maybe? Apparently there's some cool stuff like this on the blue-blazed trails around Camel's Hump and Mansfield, including the remains of a crashed B-52 bomber from WWII-era pilot training, the seemingly gravity-defying "cantilever rock", and "The Gap", a somewhat scary section of trail where you have to jump over a deep crevasse to continue.
 
 {{< two_images src1="images/roots.jpg" src2="images/cement.jpg" >}}
 {{< two_images src1="images/colors.jpg" src2="images/stairs.jpg" >}}
 
-I make it down to VT-108 and Smuggler's Notch. The trail here goes through a cute little interpretive nature boardwalk past a beaver dam. The boardwalk ends at Barnes Camp, a visitor info center shared by the GMC and the state parks department. There was a friendly park employee in there who gave me some water and told me about the history. Cute place.
+I make it down to VT-108 and Smuggler's Notch. The trail here goes through a cute little interpretive nature boardwalk past a beaver dam. The boardwalk ends at Barnes Camp, a visitor info center shared by the GMC and the state parks department. There's a friendly parks employee in there who gives me some water and tells me some of the history. Cute place.
 
 
 {{< two_images src1="images/boardwalk.jpg" src2="images/barnes_outside.jpg" >}}
 {{< two_images src1="images/barnes_inside.jpg" src2="images/towrope.jpg" >}}
 
-Stiltz and Hang Ten catch up as I'm about to leave. I still feel super energizing and I'm almost bounding up the 2000 foot climb back up to Sterling Pond! Just beautiful and easy uphill trails on a sunny day 🙂. Feels great to hike with just myself for company again. The pond itself is tranquil and gorgeous. Man I love alpine ponds.
+Stiltz and Hang Ten catch up as I'm about to leave. I still feel super energized and I'm almost bounding up the 2000 foot climb back up to Sterling Pond! Just beautiful and easy uphill trails on a sunny day 🙂. Feels great to hike with just myself for company again. The pond itself is tranquil and gorgeous. Man I love alpine ponds.
 
 {{< two_images src1="images/stairs2.jpg" src2="images/valley.jpg" >}}
 {{< two_images src1="images/toad.jpg" src2="images/path.jpg" caption1="Big toad" >}}
@@ -120,7 +120,7 @@ Wowie zowie.
 
 {{< two_images src1="images/lift.jpg" src2="images/sky.jpg" >}}
 
-I got a sudden urge to listen to [White Roses](https://www.youtube.com/watch?v=YaHt106IqkY) by Charli XCX, and some of the other slower, sappier songs from [Number 1 Angel](https://en.wikipedia.org/wiki/Number_1_Angel). Honestly they were underappreciated by me when it first came out. I don't know how it jumped into my head but it just felt like the right mood for the moment—and it was. Everything just felt so brisk and clear and crystalline in a way that matches the song's energy. Also had a chance to re-appreciate [Lipgloss](https://www.youtube.com/watch?v=U3wSBK6xiXs). Man what a song. I bounced around outside the hut with my headphones in, still full of energy.
+I get a sudden urge to listen to [White Roses](https://www.youtube.com/watch?v=YaHt106IqkY) by Charli XCX, and some of the other slower, sappier songs from [Number 1 Angel](https://en.wikipedia.org/wiki/Number_1_Angel). Honestly they were underappreciated by me when it first came out. I don't know how it jumped into my head but it just feels like the right mood for the moment—and it is. Everything just feels so brisk and clear and crystalline in a way that matches the song. Also had a chance to re-appreciate [Lipgloss](https://www.youtube.com/watch?v=U3wSBK6xiXs). Man what a great song. I bounce around outside the hut with my headphones in, still full of energy.
 
 I'm taking a nearo tomorrow to meet up with Rachel and Joe a few miles from here, at which point the rest of the gang will pull ahead of me. I'm a bit nervous to be going solo through some of the more challenging bits of trail ahead, but also excited. I think I'm up for it by now. I haven't really been thinking much about how the journey is almost at it's end—only a few days left. I don't want it to end! Wish I could keep hiking and not have to go back and think about real life. But a different part of me is excited to get back to my friends and have a cozy fall.
 

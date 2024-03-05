@@ -9,9 +9,9 @@ date: 2023-09-16
 - End: Cooper Lodge
 - Approx Miles: 10.4
 
-Today's the second big climb of the trip, up the second tallest peak in Vermot: Killington. It was a fun morning what with all the people around and everyone getting up and ready around the same time, reminded me of being at Scout camp in the summer when I was a kid.
+Today's the second big climb of the trip, up the second tallest peak in Vermont: Killington. It's a fun morning what with all the people around and everyone getting up and ready around the same time, reminds me of being at Boy Scout camp in the summer when I was a kid.
 
-Mockingbird, Rock 'N Roll, Bugbait, and Zach all set out early. Ryan, Easy, and I all get a slightly later start and set out hiking together around the same time. We get to talking about FKTs[^1] (apparently someone set a new unsupported record for the LT earlier this summer) and I mention the only world record I've ever attempted, the shortest time to ride the NYC subway to every station[^2]. They laugh; I talk about the attempt for a bit...and then Ryan says "Well, I reckon your trail name ought to be Subway." Subway! I love it!
+Mockingbird, Rock 'N Roll, Bugbait, and Zach all set out early. Ryan, Easy, and I all get a slightly later start and set out hiking together around the same time. We get to talking about FKTs[^1] (apparently someone set a new unsupported record for the LT earlier this summer) and I mention the only world record I've ever attempted: the shortest time to ride the NYC subway to every station[^2]. They laugh; I talk about the attempt for a bit...and then Ryan says "Well, I reckon your trail name ought to be Subway." Subway! I love it!
 
 It references something unique about me, and my love for New York City. It also captures something about my vibe: subways are a little furtive and underground. They can be kind of confusing and hard to navigate, but are ultimately useful and rewarding to figure out—like me! A subway track is also like a trail: it goes on straight in one direction, with occasional junctions. The timing feels fitting: Alicia and Rob, who attempted the record with me, are going to meet up with me tomorrow. I also like that I got my trail name from a real Vermonter and GMC board member to boot. I know people will think it's about Subway sandwiches. But I even love sandwiches! It's perfect!
 
@@ -51,8 +51,7 @@ We cross Upper Cold River Road, where Easy splits off. His car is parked here an
       src2="images/clover.jpg"
 >}}
 
-The climb is tough, but not ridiculous. Beautiful though. The density of moss in the alpine forest never ceases to amaze me. Eventually I reach Cooper Lodge, which is the finish of the climb—a short but *very* steep spur trail leads to the peak and the terminus of the Killington ski resort gondola.
-
+The climb is tough, but not ridiculous. Beautiful though. The density of moss in the alpine forest never ceases to amaze me. Eventually I reach Cooper Lodge, which is the finish of the climb—a short but *very* steep spur trail leads from here to the peak and the terminus of the Killington ski resort gondola.
 
 {{< two_images
       src1="images/cooper_lodge.jpg"
@@ -108,5 +107,5 @@ After preparing my dinner of mac and cheese in the dark, I go to sleep excited t
 
 [^1]: "Fastest known times", which are speed records for completing a trail. You can see the FKTs for the Long Trail [here](https://fastestknowntime.com/route/long-trail-vt).
 [^2]: I've sadly never written anything about this so I have nothing to link to. Briefly: in 2018, Alicia, Rob, me, and a few others attempted to set this record, mostly just out of youthful zeal and enthusiasm for the city and public transit, but also because the 2nd Avenue Subway had just opened up to 96th Street. The previous record was void becuase of the new stations, so this was a perfect time to make the attempt. We also had some fun ideas that never quite came together about using the then-new MTA real-time data feeds to help with our route planning. We visited all 472 stations in 25 hours and change, and while we were never in the Guinness Book due to a technicality, I believe that until [Kate Jones officially set the record in April 2023](https://www.guinnessworldrecords.com/news/2023/5/swiss-woman-visits-every-new-york-city-subway-station-in-record-breaking-time-749935), we were the people who'd been to every station the fastest.
-[^3]: What is it with everyone being from North Carolina on this trip?
+[^3]: What is it with everyone I meet being from North Carolina?
 [^4]: This is a pretty popular hiker activity when crossing over ski resorts becuase the lodges and base camps usually have restraunts and bars.

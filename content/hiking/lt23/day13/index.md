@@ -26,7 +26,7 @@ The day dawns clear and bright. Beautiful hiking weather, mostly just through th
 
 {{< controlsvideo src="videos/waterfall.mp4" >}}
 
-We stop and take a break at Sunrise Shelter, the newest shelter on the trail. It was recently rebuilt and has only been open a month! It feels strange after all the decades-old shelters on the rest of the trail. All the corners are square, the wood bright and clean. It also has an ADA-compliant ramp, which is apparently required on newly constructed shelters, even if they're only accessible via miles of rough trail. Whether this makes sense is another popular topic of hiker discussion.
+We stop and take a break at Sunrise Shelter, the newest shelter on the trail. It was recently rebuilt and has only been open a month! It feels strange after all the decades-old shelters we've been staying in. All the corners are square, the wood bright and clean. It also has an ADA-compliant ramp, which is apparently required on newly constructed shelters, even if they're only accessible via miles of rough trail. Whether this makes sense is another popular topic of hiker discussion.
 
 {{< two_images
       src1="images/exterior.jpg"
@@ -36,6 +36,7 @@ We stop and take a break at Sunrise Shelter, the newest shelter on the trail. It
 {{< two_images
       src1="images/gang.jpg"
       src2="images/mooch_ella.jpg"
+      caption1="Stiltz, Ella, and Mooch."
 >}}
 
 I leave ahead of everyone else, aware of the distance I have yet to cover. I hustle through the sunlit woods while being squawked at by a flock of jays I seem to have disturbed. After passing the No Name Backcountry Area I approach Brandon Gap and the Great Cliffs of Horrid[^1].
@@ -61,9 +62,9 @@ I eat my typical lunch of cheese, sausage, and GORP while listening to the wind 
 
 {{< oneimage src="images/me_on_cliffs.jpg" >}}
 
-I sit with Stiltz and Ella for a few minutes while they eat and then press on.
+I sit with Stiltz and Ella for a few minutes while she gets their lunch out, and then I press on.
 
-Walking today, it occurrs to me that hiking makes me feel sort of "invulnerable," because everything I'm afraid of has to do with things like money or society, and none of that can touch you out in the woods. You're "set apart" for a time. Incredible feeling.
+Walking today, it occurrs to me that hiking makes me feel sort of "invulnerable," because my fears mostly have to do with things like money and society, and none of that can touch you out in the woods. You're "set apart" for a time. Incredible feeling.
 
 {{< two_images
       src1="images/vibes1.jpg"
@@ -77,7 +78,7 @@ Walking today, it occurrs to me that hiking makes me feel sort of "invulnerable,
 
 Eventually Mooch, Stiltz and I all find each other again and arrive at Sucker Brook Shelter, where we meet John, who recently retired after a long career as a school principal, and is out for a section hike.
 
-We all get a laugh out of an entry in the logbook which read something like "Saw a moose drinking from the stream right by the shelter. It didn't seem aggressive but I don't know a lot about moose intentions?" The phrase "moose intentions" just struck us all as very funny somehow, and became the source of endless amusement and jokes throughout the rest of the hike[^2]. I'm also very jealous of this person having seen a moose! I want to see a moose!!
+We all get a laugh out of an entry in the logbook which read something like "Saw a moose drinking from the stream right by the shelter. It didn't seem aggressive but I don't know a lot about moose intentions?" The phrase "moose intentions" just strikes us all as very funny somehow, and becomes the source of endless amusement and jokes throughout the rest of the hike[^2]. I'm also very jealous of this person having seen a moose! I want to see a moose!!
 
 I'm pretty tired by this point, but I rest for half an hour and then leave the others behind to get hiking again. I'm still over four miles from Middlebury Gap, and boy is it a tough four miles.
 
@@ -90,7 +91,7 @@ I hike out of the Battell Wilderness and up the Middlebury Snow Bowl. I round th
 
 Sure enough, it's Karl and his owner Ryan, who gave me my trail name several days back! I haven't seen him since he passed me on top of Killington. It's great to see a friendly face up here after some difficult solo miles. We catch up quickly. He has his tent set up in the clearing near the lifts and invites me to stay and camp with him. It's tempting for the great views and the company, but I've already texted Tom and asked him to pick me up at the road. As I start the descent, Ryan is taking a photo for a group of local women out on a day hike, hamming it up in his charming, energetic way. The scene puts a smile on my face.
 
-The last couple of miles I'm just plodding along with zero energy. I don't even take the 0.1 mile side trail to see Lake Pleid. That's a real cost to hiking with such speed and exertion—you don't have the time or energy to appreciate the beauty around you.
+The last couple of miles I'm just plodding along with zero energy. I don't even take the 0.1 mile side trail to see Lake Pleid. That's a real cost to hiking with such speed and exertion—you sometimes don't have the time or energy to appreciate the beauty around you.
 
 {{< two_images
       src1="images/tired_face.jpg" caption1="Trying to convey how tired I am."
@@ -124,4 +125,4 @@ I go to bed at "hiker midnight" (9:30pm) and sleep the sleep of the dead.
 
 [^1]: Yes, that's their actual name.
 [^2]: Whenever anything was dubious or uncertain we'd go "But what are it's intentions???" or "I don't know a lot about [thing] intentions".
-[^3]: Toothbrush handle sawing is a bit of a meme in the hiking community; it's sort of of a way of gently poking fun at overzealous ultralight hikers.
+[^3]: Toothbrush handle sawing is a bit of a meme in the hiking community; it's often brought up as a sort of reductio ad absurdum to gently poke fun at overzealous ultralight hikers.

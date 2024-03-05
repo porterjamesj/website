@@ -99,7 +99,7 @@ There's one person here already, an older fellow named Steve from Allentown PA, 
 
 Easy is from North Carolina, works as a ridgerunner for the GMC, and true to his name, is laid back and easygoing. He hikes back and forth through the Killington section, talking to hikers, doing light trail maintenance, and least glamorously, maintaining and composting sewage from the privies. Seems like a great job aside from the privy bit! He thru-hiked the CDT last year.
 
-Ryan lives up north near Bolton and is hiking home from here. Big, friendly boisterous guy with a hearty voice and laugh. His home abuts GMC land, and he's actually on the GMC board. "The Long Trail is literally my neighbor!" he says. He thru-hiked the trail with his wife a few years back, and the two of them now have a son on the way. Been a Vermonter all his life.
+Ryan lives up north near Bolton and is hiking home from here. Big, friendly boisterous guy with a hearty voice and laugh. His home abuts GMC land, and he's actually on the GMC board. "The Long Trail is literally my neighbor" he says. He thru-hiked the trail with his wife a few years back, and the two of them now have a son on the way. Clearly deeply religious, but not a pushy way. Been a Vermonter all his life.
 
 Mockingbird and Rock 'N Roll are traveling together, but she's thru-hiking the LT while he's doing the AT. Both a little older than me; they seem like pretty serious hikers. Mockingbird is sleeping with a hammock, which I've heard a lot about but not seen anyone using until now. I would later learn that Rock 'N Roll made a bunch of videos of his hike, you; can watch them on his [YouTube channel](https://www.youtube.com/@stillwaterhiker/videos).
 

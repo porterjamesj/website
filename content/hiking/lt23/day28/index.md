@@ -5,7 +5,7 @@ weight: 280
 date: 2023-10-05
 ---
 
-This morning I wake up and hike back to the border, to meet up with Stiltz, Mooch, and Hang Ten one last time. They've been a day behind me since we split up at Tillotsen, and I've been texting with Stiltz to coordinate. I arrive at the border exact as they do.
+This morning I wake up and hike back to the border, to meet up with Stiltz, Mooch, and Hang Ten one last time. They've been a day behind me since we split up at Tillotsen, and I've been texting with Stiltz to coordinate. I arrive at the border exactly as they do.
 
 We celebrate and catch up. They've been taking it easy and enjoying themselves. Apparently they got off trail one night near Jay Peak and had kind of a wild night at a hostel.
 
@@ -13,23 +13,27 @@ We take one last group photo with the border marker and head down to Journey's E
 
 {{< oneimage src="images/gang.jpg" >}}
 
+They also help me get a better celebration pic.
+
+{{< oneimage src="images/me.jpg" >}}
+
 We chill for a bit while they text to coordinate their rides out of here, then one by one we say our goodbyes as they head on down the trail to the parking lot. Somehow, I feel like this isn't the last I'll see of them.
 
-I hang around for a while, eating gummy candy and writing my reflections in the logbook, then head out to roadwalk the six miles to Jay Village Inn. The woods conspire to make me rue leaving, putting on a show to rival anything I've seen on trip.
+I hang around for a while, eating gummy candy and writing my reflections in the logbook, then head out to roadwalk the six miles to Jay Village Inn, where I'll stay the night. The woods conspire to make me rue leaving, putting on a show to rival anything I've seen.
 
 {{< controlsvideo src="videos/woods.mp4" >}}
 
 {{< two_images src1="images/water.jpg" src2="images/road.jpg" >}}
 
-The Inn is nicer than I expected. As I arrive, a delivery guy outside asks if I'm doing the trail. I tell him I just finished and he insists giving my $10 as congratulations and tells me to buy myself a drink.
+The Inn is nicer than I expected. As I arrive, a delivery guy outside asks if I'm doing the trail. I tell him I just finished and he insists on giving me $10 as congratulations and tells me to buy myself a drink.
 
-I take a much needed shower and put on some TV. Somehow I find myself watching Battlebots, which I've never seen before but is oddly entertaining. It's surprisingly easy to get invested in the fate of these little robots. At night I eat an enormous and delicious dinner of roast duck and vegetables. A true feast.
+I take a much needed shower and put on some TV. Somehow I find myself watching Battlebots, which I've never seen before but find oddly entertaining. It's surprisingly easy to get invested in the fate of these little robots. At night I eat an enormous and delicious dinner of roast duck and vegetables. A true feast.
 
 {{< oneimage src="images/dinner.jpg" width="100" >}}
 
 The next morning Elizabeth Paashus[^1] shuttles me to Burlington. It's really interesting learning about her and her family's life. They used to live in a school bus and drive around the country, but settled around here relatively recently. They're big hikers themselves, did the Long Trail in 2019 I think and Elizabeth has even been on a thru-hike with her six year-old daughter! She works part time doing sales and marketing for a wood stove company; her husband Adam makes custom zero-drop sandals as [Deliberate Life Designs](https://www.deliberatelifedesigns.com/). Inspiring to hear about people making it work doing a hodgepodge of their own stuff like that.
 
-She drops me in Burlington and I bumble around for a bit before getting on the bus home. It feels almost surreal to be sitting on a bus, getting closer and closer.
+She drops me in Burlington and I bumble around for a bit before getting on the bus home. It feels almost surreal to be sitting on a bus, getting closer and closer to home.
 
 It's hard to imagine what getting back will be like, but it turns out better than I ever could have imagined.
 
