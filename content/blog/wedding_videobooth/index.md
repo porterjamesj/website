@@ -87,11 +87,11 @@ things like clicks and mouse movement to instead by triggered by the
 tracked blobs. This proved to be pretty challenging and lead to a lot
 of pitfalls and visually interesting bugs, for example:
 
-![James demoing bug](videos/james_flower_glitch.png)
+![James demoing bug](images/james_flower_glitch.png)
 
 Eventually, we managed to get it working:
 
-![James Yellowtail image](videos/james_first_yellowtail.png)
+![James Yellowtail image](images/james_first_yellowtail.png)
 
 This was finally starting to feel a bit like what we had in our mind's
 eye when we started this project.
