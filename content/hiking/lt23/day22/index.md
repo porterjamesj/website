@@ -53,9 +53,9 @@ We make it back up to the LT, but via the Chilcoot trail, backtracking a bit to 
 
 {{< two_images src1="images/joe.jpg" src2="images/sunset.jpg" >}}
 
-We get back to Whiteface Shelter around 5pm. Set up, do chores. make dinner. They have such a smorgasbord—stovetop stuffing, pepperoni, mashed potatoes. Its funny to see the amount of food they brought for one night out. Rachel also brought some brownies that her and our friend Emily made. SO GOOD. I must have eaten half a tray.
+We get back to Whiteface Shelter around 5pm. Set up, do chores. make dinner. They have such a smorgasbord—stovetop stuffing, pepperoni, mashed potatoes. It's funny to see the amount of food they brought for one night out. Rachel also brought some brownies that her and our friend Emily made. SO GOOD. I must have eaten half a tray.
 
-Before going to sleep Rachel and I play some games with an "oracle deck" she got, its kind of like an arty millennial tarot. It's fun, especially one where you deal four cards, play a song, and have to each decide which card best captures the song. Her and Emily made it up and I love it. I don't feel like I've ever played a game that uses popular music in the same way. It's great to just have a late night hang sesh with a close friend. I've missed that out on the trail.
+Before going to sleep Rachel and I play some games with an "oracle deck" she got, it's kind of like an arty millennial tarot. It's fun, especially one where you deal four cards, play a song, and have to each decide which card best captures the song. Her and Emily made it up and I love it. I don't feel like I've ever played a game that uses popular music in the same way. It's great to just have a late night hang sesh with a close friend. I've missed that out on the trail.
 
 
 [^1]: This shows you how on the hiker schedule I am. I woke up at 6:30am on a day when I knew I could sleep in!

@@ -35,7 +35,7 @@ I wander around the near the summit lodge, lots of leaf peepers around. There's 
 
 {{< two_images src1="images/survey_mark.jpg" src2="images/buddy.jpg" caption1="Summit USGS marker" caption2="A nearby memorial bench. \"Ski Hard ✯ Dive Deep\"" >}}
 
-It's also interesting to learn about Jay Peak and get a sense of the vibe, just from seeing the decor and reading the stuff on the wall in the lodge. Jay definitely feels more fancy and corporate than say MRG. Reminds me of Killington in that way. However, because its so hard to get to from New York or Boston, it feels more like it's for "real skiers" who actually love the sport if that makes sense, not just rich people on holiday. Some of the trails sound pretty hardcore. Apparently a lot of Montrealers ski here; a lot of the signs are bilingual in French and English.
+It's also interesting to learn about Jay Peak and get a sense of the vibe, just from seeing the decor and reading the stuff on the wall in the lodge. Jay definitely feels more fancy and corporate than say MRG. Reminds me of Killington in that way. However, because it's so hard to get to from New York or Boston, it feels more like it's for "real skiers" who actually love the sport if that makes sense, not just rich people on holiday. Some of the trails sound pretty hardcore. Apparently a lot of Montrealers ski here; a lot of the signs are bilingual in French and English.
 
 I've also been learning more about trends and niches in the skiing world. Apparently something that's gotten really popular lately is "skinning", or skiing uphill. From signs I've seen posted, the resorts seem to be struggling to keep up with demand for it.
 
@@ -71,7 +71,7 @@ Back on top, I charge my stuff some more while making all my reservations for a 
 
 {{< controlsvideo src="videos/sunset.mp4" >}}
 
-I set up my tent at the very top of the "Face Chutes," one of the most death-defying ski areas at the resort. There's a little vestibule on the lodge that some hikers sleep in, but its has kind of crappy vibes and apparently the fluorescent light stays on all night. I'd rather be cozy in my tent! Don't even need to make dinner as I'm still full from the sub earlier.
+I set up my tent at the very top of the "Face Chutes," one of the most death-defying ski areas at the resort. There's a little vestibule on the lodge that some hikers sleep in, but it has kind of crappy vibes and apparently the fluorescent light stays on all night. I'd rather be cozy in my tent! Don't even need to make dinner as I'm still full from the sub earlier.
 
 I drink the cider I bought up from the base and write in my journal. As far as the end of the journey—no thoughts, head empty today. Still feels hard to imagine being off-trail. Well, last day tomorrow. It's just a walk in the woods...
 {{< oneimage src="images/tent.jpg" width="120" >}}

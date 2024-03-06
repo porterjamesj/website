@@ -11,7 +11,7 @@ date: 2023-09-14
 
 Holy cow what I day! Strap-On is up and at 'em early, leaving while I'm still bleary-eyed in my sleeping bag. I wake up to a still-foggy Bromley. Boooo. I faff around for an hour hoping for it to clear up for a view, but eventually give up and leave around 8am.
 
-My goal for today is to make it to Little Rock Pond Shelter, 18 miles from here. I hadn't been planning such an ambitious day, but Strap-On told me to push for it because its such a beautiful spot, and both times he's hiked this trail he's passed by it in the middle of the day and wished it made sense for him to stay overnight. I told him I didn't think I could do 18 miles and he said "Nah you got it, it's all downhill!"
+My goal for today is to make it to Little Rock Pond Shelter, 18 miles from here. I hadn't been planning such an ambitious day, but Strap-On told me to push for it because it's such a beautiful spot, and both times he's hiked this trail he's passed by it in the middle of the day and wished it made sense for him to stay overnight. I told him I didn't think I could do 18 miles and he said "Nah you got it, it's all downhill!"
 
 With this lofty goal in mind, I set out hiking and the fog blows off about 30 minutes later. Should have waited a bit longer for the mountain view. Oh well. The hiking is amazing out the gate, and all downhill like Strap-On promised.
 

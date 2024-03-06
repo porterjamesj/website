@@ -47,7 +47,7 @@ A sign welcomes me to Mt. Mansfield State Forest, reminding me of the trail's bi
 
 {{< oneimage src="images/shelter.jpg" caption="Buchanan Lodge">}}
 
-Arriving at the shelter, who should I find sitting on the porch but... Stiltz and Mooch! We have the place to ourselves and its fun to hang out and goof around. Hang Ten, a buddy of theirs who they hiked with in the southern section, and who I met briefly at the Inn at the Long Trail, is planning to meet up with us tomorrow before Mt. Mansfield and hike with us 'til then end.
+Arriving at the shelter, who should I find sitting on the porch but... Stiltz and Mooch! We have the place to ourselves and it's fun to hang out and goof around. Hang Ten, a buddy of theirs who they hiked with in the southern section, and who I met briefly at the Inn at the Long Trail, is planning to meet up with us tomorrow before Mt. Mansfield and hike with us 'til then end.
 
 I will admit I'm feeling a little tired of hiking together. Not because of Stiltz and Mooch—they're great companions. I'm just missing the solitude I had in the earlier parts of the hike. In all things balance, I suppose. I'll try to find a way to hike by myself more in the coming days. I really enjoyed it today.
 

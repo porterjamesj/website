@@ -37,7 +37,7 @@ This journal is partially transcribed from the handwritten journal I wrote durin
 
 I've tried to keep the focus on what I felt and experienced, rather than getting bogged down in technical details about gear and day-to-day backpacking minutia. The main text assumes some knowledge of backpacking and thru-hiking, but I've tried to explain anything potentially confusing in the footnotes.
 
-I've also tried to be as honest as possible—if I remember feeling a certain way, I mention it, even if it's a little embarrassing or doesn't really fit into the story neatly.
+I've also tried to be as honest as possible—if I remember feeling a certain way, I mention it, even if it's a little embarrassing, sounds corny in hindsight, or doesn't really fit into the story neatly. It's how I actually felt while I was out there, and that's what I want to convey.
 
 
 
