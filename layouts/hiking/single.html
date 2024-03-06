@@ -36,6 +36,7 @@
   {{ else }}
     <div style="width: 2em;"></div>
   {{ end }}
+  <a href="{{ .CurrentSection.RelPermalink }}" class="no-underline">{{ .CurrentSection.Title }}</a>
   {{ with $pages.Prev . }}
     <a href="{{ .RelPermalink }}" class="no-underline">Next <span class="f4">⤖</span></a>
   {{ else }}
@@ -54,7 +55,8 @@
     <a href ="{{ .RelPermalink }}" class="no-underline"><span class="f4">⬻</span> Prev</a>
   {{ else }}
     <div style="width: 2em;"></div>
-  {{ end}}
+  {{ end }}
+  <a href="{{ .CurrentSection.RelPermalink }}" class="no-underline">{{ .CurrentSection.Title }}</a>
   {{ with $pages.Prev . }}
     <a href ="{{ .RelPermalink }}" class="no-underline">Next <span class="f4">⤖</span></a>
   {{ else }}
