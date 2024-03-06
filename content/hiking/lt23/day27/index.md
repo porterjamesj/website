@@ -64,7 +64,7 @@ that to these things you must return. <br />
 
 This trip has felt like a return, in so many ways, even while being something entirely new. To an old hobby, values, identity.
 
-I re-read Ursula LeGuin's *Earthsea* novels on this trip, and I've been thinking a lot about a quote and recurring theme of hers: "true voyage is return"[^2]. In *A Wizard of Earthsea*, Ged goes on this huge epic journey to defeat his great foe, and in the end he finds himself face to face with—himself. And three books later at the end of the series he finds himself a goatherd on Gont again, like he was as a child. There's something in all that. Anyway, I'll stop there for now. Onward, to the end of my journey.
+I re-read Ursula LeGuin's *Earthsea* novels on this trip, and I've been thinking a lot about a recurring theme of hers: "true voyage is return"[^2]. In *A Wizard of Earthsea*, Ged goes on this huge epic journey to defeat his great foe, and in the end he finds himself face to face with—himself. And three books later at the end of the series he finds himself a goatherd on Gont again, like he was as a child. There's something in all that. Anyway, I'll stop there for now. Onward, to the end of my journey.
 
 ----
 
