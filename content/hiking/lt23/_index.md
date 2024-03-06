@@ -32,7 +32,7 @@ After an overnight shakedown trip with my good friend Rachel, just to make sure 
 
 This journal is partially transcribed from the handwritten journal I wrote during the hike, and partially written later from my memory.
 
-I've tried to keep the focus on what I felt and experienced, rather than getting bogged down in technical details about gear and day-to-day backpacking stuff. The main text assumes some knowledge of backpacking and thru-hiking terminology, but I've tried to explain most potentially confusing terms in footnotes. For those who are curious, there's a more detailed discussion of my gear choices and what I would do differently with hindsight in [the epilogue](/hiking/lt23/epilogue).
+I've tried to keep the focus on what I felt and experienced, rather than getting bogged down in technical details about gear and day-to-day backpacking minutia. The main text assumes some knowledge of backpacking and thru-hiking, but I've tried to explain anything potentially confusing in the footnotes. For those who are curious, there's a more detailed discussion of my gear choices and what I would do differently with hindsight in [the epilogue](/hiking/lt23/epilogue).
 
 I've also tried to be as honest as possible—if I remember feeling a certain way, I mention it, even if it's a little embarrassing or doesn't really fit into the story neatly.
 
