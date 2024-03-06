@@ -19,7 +19,7 @@ The Long Trail was the first long distance hiking trail in America, and the insp
 
 ### About me
 
-Like many who attempt a thru-hike, I'd found myself at a crossroads in life. A few months before, I'd ended a relationship, left my job of seven years at the [Recurse Center](https://www.recurse.com/), and moved out of New York City, my home for most of my adult life. I had my reasons for all these changes, but none of them were easy. It was a huge amount of turbulence all at once, and both working at RC and being a New Yorker were huge parts of my identity. The time felt right for something restorative and reflective like hiking.
+Like many who attempt a thru-hike, I'd found myself at a crossroads in life. A few months before, I'd gone through a breakup, left my job of seven years at the [Recurse Center](https://www.recurse.com/), and moved out of New York City, my home for most of my adult life. I had my reasons for all these changes, but none of them were easy. It was a huge amount of turbulence all at once, and both working at RC and being a New Yorker were huge parts of my identity. The time felt right for something restorative and reflective like hiking.
 
 I've harbored a desire to do some kind of thru-hike since I was young, having been aware of the Appalachian Trail and compelled by the quixotic romance of being an "end-to-ender" as long as I can remember. I did a lot of backpacking and wilderness canoeing as a teenager and have always thought of myself as an outdoors-y person, but that fell by the wayside in my 20s. I had a vague desire to reconnect with that part of myself, but never managed to act on it. Now I had the time and the motivation. By the time I'd finished moving out of New York in June of 2023, it was too late to start one of the [triple crown trails](https://en.wikipedia.org/wiki/Triple_Crown_of_Hiking), but the LT seemed perfect. It would only take about a month to hike, I'd have several months to plan, and I've always had an affinity for New England forests, having spent a lot of time in Maine growing up.
 
@@ -27,7 +27,7 @@ I've harbored a desire to do some kind of thru-hike since I was young, having be
 
 The first two questions every potential thru-hiker faces are "When?" and "Which direction?". I decided to go NOBO[^2] in September. NOBO is the traditional direction to hike the LT, and would let me build up my strength in the relatively flat south before hitting the big climbs in the north. September is generally considered a good time to hike—the worst of the summer heat is over, and the bugs are mostly gone. I was also looking for a balance of solitude and socializing, and I hoped that going in the fall rather than the summer would mean a less crowded trail. I'd also be able to see the peak fall color in the north in early October.
 
-Between a few trips to REI and my old gear from my teenage years, I cobbled together everything I would need. My gear was functional, but *heavy*. My pack and sleeping bag were from 2005, and far from ultralight—just the two of them weighed about nine pounds. I didn't have a scale, so I didn't weight my pack before starting, but I suspect it was over 40 pounds fully loaded.
+Between a few trips to REI and my old gear from my teenage years, I cobbled together everything I would need. My gear was functional, but *heavy*. My pack and sleeping bag were from the 2000s and far from ultralight—just the two of them weighed about nine pounds. I didn't have a scale, so I didn't weigh my pack before starting, but I suspect it was over 40 pounds fully loaded. For the curious, there's a more detailed discussion of my gear choices and what I would do differently with hindsight in [the epilogue](/hiking/lt23/epilogue).
 
 After an overnight shakedown trip with my good friend Rachel, just to make sure I still remembered how to backpack, I was ready. I bought a train ticket to Pittsfield, Massachusetts, near the southern terminus, and booked an overnight stay in town, planning to set out hiking on the morning of Friday, September 8th.
 
@@ -35,7 +35,7 @@ After an overnight shakedown trip with my good friend Rachel, just to make sure 
 
 This journal is partially transcribed from the handwritten journal I wrote during the hike, and partially written later from my memory.
 
-I've tried to keep the focus on what I felt and experienced, rather than getting bogged down in technical details about gear and day-to-day backpacking minutia. The main text assumes some knowledge of backpacking and thru-hiking, but I've tried to explain anything potentially confusing in the footnotes. For those who are curious, there's a more detailed discussion of my gear choices and what I would do differently with hindsight in [the epilogue](/hiking/lt23/epilogue).
+I've tried to keep the focus on what I felt and experienced, rather than getting bogged down in technical details about gear and day-to-day backpacking minutia. The main text assumes some knowledge of backpacking and thru-hiking, but I've tried to explain anything potentially confusing in the footnotes.
 
 I've also tried to be as honest as possible—if I remember feeling a certain way, I mention it, even if it's a little embarrassing or doesn't really fit into the story neatly.
 
