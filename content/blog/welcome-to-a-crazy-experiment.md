@@ -5,6 +5,7 @@ slug: welcome-to-a-crazy-experiment
 summary: in which our hero begins an education of sorts; various ramblings
 guid: 'tag:jamesporter.me,2013-06-03:/2013/06/03/welcome-to-a-crazy-experiment.html'
 url: /2013/06/03/welcome-to-a-crazy-experiment.html
+rss: true
 ---
 
 Today was the first day of the summer 2013 batch of [Hacker School](http://www.hackerschool.com), in which I am a participant. The variety of wonderful people participating in this thing is excellent; I am very much looking forward to the rest of the summer.

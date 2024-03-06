@@ -5,6 +5,7 @@ slug: emacs-lisp-closures-exposed
 summary: Some interesting features of an old language
 guid: 'tag:jamesporter.me,2013-06-14:/2013/06/14/emacs-lisp-closures-exposed.html'
 url: /2013/06/14/emacs-lisp-closures-exposed.html
+rss: true
 ---
 
 I recently learned about some interesting wrinkles in Emacs Lisp that

@@ -5,6 +5,7 @@ slug: testing-elisp
 summary: I wrote some tests for my Emacs package
 url: /2014/05/15/testing-elisp.html
 guid: 'tag:jamesporter.me,2014-05-15:/2014/05/15/testing-elisp.html'
+rss: true
 ---
 
 Last summer I found myself dissatisfied with the existing solutions

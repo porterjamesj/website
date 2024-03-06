@@ -7,6 +7,7 @@ guid: 'tag:jamesporter.me,2019-08-30:/2019/08/30/wedding-videobooth.html'
 url: /wedding-videobooth
 aliases:
   - '2019/08/30/wedding-videobooth.html'
+rss: true
 ---
 
 *This project was a collaboration with my friend [Rachel

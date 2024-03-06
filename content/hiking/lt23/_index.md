@@ -1,6 +1,9 @@
 ---
 title: Long Trail 2023
 slug: lt23
+summary: My 2023 thru-hike of Vermont's Long Trail
+rss: true
+date: 2024-03-05
 ---
 
 From September 8th to October 4th 2023, I thru-hiked Vermont's Long Trail. You can read about my journey here—these pages contain my trail journal along with some background to set the scene.

@@ -7,6 +7,7 @@ guid: 'tag:jamesporter.me,2019-11-09:/2019/11/09/maze.html'
 url: /maze
 aliases:
   - /2019/11/09/maze.html
+rss: true
 ---
 
 When I was a kid I had a unique and interesting book called *[MAZE:

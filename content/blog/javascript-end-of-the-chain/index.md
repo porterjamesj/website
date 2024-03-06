@@ -5,6 +5,7 @@ slug: javascript-end-of-the-chain
 summary: How does property lookup bottom out?
 guid: 'tag:jamesporter.me,2013-08-06:/2013/08/06/javascript-end-of-the-chain.html'
 url: /2013/08/06/javascript-end-of-the-chain.html
+rss: true
 ---
 
 Since coming to Hacker School I've learned JavaScript. One of the

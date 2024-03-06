@@ -5,6 +5,7 @@ slug: mysterious-memory-consumption
 summary: The story of a tricky bug
 guid: tag:jamesporter.me,2015-12-09:/2015/12/09/mysterious-memory-consumption.html
 url: /2015/12/09/mysterious-memory-consumption.html
+rss: true
 ---
 
 This is the story of a vexing bug I solved at a previous job which

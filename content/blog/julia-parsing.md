@@ -5,6 +5,7 @@ date: 2013-11-27
 summary: cheating by using Julia metaprogramming
 guid: 'tag:jamesporter.me,2013-11-27:/2013/11/27/how-to-succeed-at-parsing.html'
 url: /2013/11/27/how-to-succeed-at-parsing.html
+rss: true
 ---
 
 For one of the final biology courses of my undergraduate years, I'm

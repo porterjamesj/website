@@ -5,6 +5,7 @@ slug: goodreads-vis
 summary: I made a web page to visualize Goodreads activity
 guid: 'tag:jamesporter.me,2016-04-09:/2016/04/09/goodreads-vis.html'
 url: '/2016/04/09/goodreads-vis.html'
+rss: true
 ---
 
 ### Tombstone 💀🪦🥀
