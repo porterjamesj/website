@@ -1,6 +1,6 @@
 <figure class="pt3 flex flex-column items-center">
-    <video class="mv0" controls style="max-width: 100%;">
-      <source src="{{ .Get "src" }}">
+    <video class="mv0" controls style="max-width: 100%;" preload="metadata">
+      <source src="{{ .Get "src" }}#t=0.001">
     </video>
   {{ with .Get "caption" }}<figcaption class="pt2 f6 gray i lh-solid">{{ . }}</figcaption>{{ end }}
 </figure>
