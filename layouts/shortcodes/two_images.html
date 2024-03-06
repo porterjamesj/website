@@ -1,0 +1,22 @@
+{{ if .Get "caption" }}
+  <figure class="pt2 flex flex-column items-center">
+    <div class="flex flex-row" style="width: 120%">
+      <img class="mr2 w-70" src='{{ .Get "src1" }}' alt='{{ .Get "alt1" }}'/>
+      <img class="w-70" src='{{ .Get "src2" }}' alt='{{ .Get "alt2" }}'>
+    </div>
+    <figcaption class="pt1 f6 gray i lh-solid ph4" style="font-synthesis: none;">{{ .Get "caption" }}</figcaption>
+  </figure>
+{{ else }}
+  <div class="pt2 flex flex-column items-center">
+    <div class="flex flex-row" style="width: 120%">
+      <figure class="mr2 flex flex-column items-center">
+        <img src='{{ .Get "src1" }}' alt='{{ .Get "alt1" }}'/>
+        {{ with .Get "caption1" }}<figcaption class="pt1 f6 gray i lh-solid ph4" style="font-synthesis: none;">{{ . }}</figcaption>{{ end }}
+      </figure>
+      <figure class="flex flex-column items-center">
+        <img src='{{ .Get "src2" }}' alt='{{ .Get "alt2" }}'>
+        {{ with .Get "caption2" }}<figcaption class="pt1 f6 gray i lh-solid ph4" style="font-synthesis: none;">{{ . }}</figcaption>{{ end }}
+      </figure>
+    </div>
+  </div>
+{{ end}}

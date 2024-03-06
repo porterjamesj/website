@@ -1,7 +1,13 @@
-Title: Hello Mesos
-Date: 2014-11-15
-Slug: hello-mesos
-Summary: The tiniest Apache Mesos framework
+---
+title: Hello Mesos
+date: 2014-11-15
+slug: hello-mesos
+summary: The tiniest Apache Mesos framework
+guid: 'tag:jamesporter.me,2014-11-15:/2014/11/15/hello-mesos.html'
+url: '/2014/11/15/hello-mesos.html'
+rss: true
+---
+
 
 There's always some new piece of software to be excited about and
 right now it's [Apache Mesos](http://mesos.apache.org/). Mesos is a
@@ -85,82 +91,86 @@ I just wanted a simple hello world example in Python, which is exactly
 what I'll walk you through now. All of this code that follows assumes
 Mesos version 0.20.0:
 
-    :::python
-    import logging
-    import uuid
-    import time
+```python
+import logging
+import uuid
+import time
 
-    from mesos.interface import Scheduler
-    from mesos.native import MesosSchedulerDriver
-    from mesos.interface import mesos_pb2
+from mesos.interface import Scheduler
+from mesos.native import MesosSchedulerDriver
+from mesos.interface import mesos_pb2
 
-    logging.basicConfig(level=logging.INFO)
+logging.basicConfig(level=logging.INFO)
 
-    def new_task(offer):
-        task = mesos_pb2.TaskInfo()
-        id = uuid.uuid4()
-        task.task_id.value = str(id)
-        task.slave_id.value = offer.slave_id.value
-        task.name = "task {}".format(str(id))
+def new_task(offer):
+    task = mesos_pb2.TaskInfo()
+    id = uuid.uuid4()
+    task.task_id.value = str(id)
+    task.slave_id.value = offer.slave_id.value
+    task.name = "task {}".format(str(id))
 
-        cpus = task.resources.add()
-        cpus.name = "cpus"
-        cpus.type = mesos_pb2.Value.SCALAR
-        cpus.scalar.value = 1
+    cpus = task.resources.add()
+    cpus.name = "cpus"
+    cpus.type = mesos_pb2.Value.SCALAR
+    cpus.scalar.value = 1
 
-        mem = task.resources.add()
-        mem.name = "mem"
-        mem.type = mesos_pb2.Value.SCALAR
-        mem.scalar.value = 1
+    mem = task.resources.add()
+    mem.name = "mem"
+    mem.type = mesos_pb2.Value.SCALAR
+    mem.scalar.value = 1
 
-        return task
+    return task
 
 
-    class HelloWorldScheduler(Scheduler):
+class HelloWorldScheduler(Scheduler):
 
-        def registered(self, driver, framework_id, master_info):
-            logging.info("Registered with framework id: {}".format(framework_id))
+    def registered(self, driver, framework_id, master_info):
+        logging.info("Registered with framework id: {}".format(framework_id))
 
-        def resourceOffers(self, driver, offers):
-            logging.info("Recieved resource offers: {}".format([o.id.value for o in offers]))
-            # whenever we get an offer, we accept it and use it to launch a task that
-            # just echos hello world to stdout
-            for offer in offers:
-                task = new_task(offer)
-                task.command.value = "echo hello world"
-                time.sleep(2)
-                logging.info("Launching task {task} "
-                             "using offer {offer}.".format(task=task.task_id.value,
-                                                           offer=offer.id.value))
-                tasks = [task]
-                driver.launchTasks(offer.id, tasks)
+    def resourceOffers(self, driver, offers):
+        logging.info("Recieved resource offers: {}".format([o.id.value for o in offers]))
+        # whenever we get an offer, we accept it and use it to launch a task that
+        # just echos hello world to stdout
+        for offer in offers:
+            task = new_task(offer)
+            task.command.value = "echo hello world"
+            time.sleep(2)
+            logging.info("Launching task {task} "
+                         "using offer {offer}.".format(task=task.task_id.value,
+                                                       offer=offer.id.value))
+            tasks = [task]
+            driver.launchTasks(offer.id, tasks)
 
-    if __name__ == '__main__':
-        # make us a framework
-        framework = mesos_pb2.FrameworkInfo()
-        framework.user = ""  # Have Mesos fill in the current user.
-        framework.name = "hello-world"
-        driver = MesosSchedulerDriver(
-            HelloWorldScheduler(),
-            framework,
-            "zk://localhost:2181/mesos"  # assumes running on the master
-        )
-        driver.run()
+if __name__ == '__main__':
+    # make us a framework
+    framework = mesos_pb2.FrameworkInfo()
+    framework.user = ""  # Have Mesos fill in the current user.
+    framework.name = "hello-world"
+    driver = MesosSchedulerDriver(
+        HelloWorldScheduler(),
+        framework,
+        "zk://localhost:2181/mesos"  # assumes running on the master
+    )
+    driver.run()
+```
+
 
 Let's step through it one piece at a time. We start with a fairly
 typical slew of standard library imports
 
-    :::python
-    import logging
-    import uuid
-    import time
+```python
+import logging
+import uuid
+import time
+```
 
 before importing the relevant parts of the `mesos` library:
 
-    :::python
-    from mesos.interface import Scheduler
-    from mesos.native import MesosSchedulerDriver
-    from mesos.interface import mesos_pb2
+```python
+from mesos.interface import Scheduler
+from mesos.native import MesosSchedulerDriver
+from mesos.interface import mesos_pb2
+```
 
 Unfortunately `mesos` is not pip-installable at the moment. The best
 way to use it is to `easy_install` pre-built eggs for your platform,
@@ -178,13 +188,15 @@ that we'll need (Mesos uses protobufs for network communication).
 
 Next we set up some quick logging
 
-    :::python
-    logging.basicConfig(level=logging.INFO)
+```python
+logging.basicConfig(level=logging.INFO)
+```
 
 and declare our scheduler class.
 
-    :::python
-    class HelloWorldScheduler(Scheduler):
+```python
+class HelloWorldScheduler(Scheduler):
+```
 
 We're going to write a scheduler called `HelloWorldScheduler`. This
 scheduler is very simple: whenever it gets a resource offer from the
@@ -196,9 +208,10 @@ descriptions
 [here](https://github.com/apache/mesos/blob/master/src/python/interface/src/mesos/interface/__init__.py). The
 first one is `registered`:
 
-    :::python
-    def registered(self, driver, framework_id, master_info):
-        logging.info("Registered with framework id: {}".format(framework_id))
+```python
+def registered(self, driver, framework_id, master_info):
+    logging.info("Registered with framework id: {}".format(framework_id))
+```
 
 
 `registered` is a method that gets invoked with when this framework
@@ -212,26 +225,28 @@ Next we implement `resourceOffers`, which is a method that gets
 invoked when the scheduler receives resource offers from the Mesos
 master.
 
-    :::python
-    def resourceOffers(self, driver, offers):
-        logging.info("Recieved resource offers: {}".format([o.id.value for o in offers]))
-        # whenever we get an offer, we accept it and use it to launch a task that
-        # just echos hello world to stdout
-        for offer in offers:
-            task = new_task(offer)
-            task.command.value = "echo hello world"
-            time.sleep(2)
-            logging.info("Launching task {task} "
-                         "using offer {offer}.".format(task=task.task_id.value,
-                                                       offer=offer.id.value))
-            tasks = [task]
-            driver.launchTasks(offer.id, tasks)
+```python
+def resourceoffers(self, driver, offers):
+    logging.info("Recieved resource offers: {}".format([o.id.value for o in offers]))
+    # whenever we get an offer, we accept it and use it to launch a task that
+    # just echos hello world to stdout
+    for offer in offers:
+        task = new_task(offer)
+        task.command.value = "echo hello world"
+        time.sleep(2)
+        logging.info("Launching task {task} "
+                     "using offer {offer}.".format(task=task.task_id.value,
+                                                   offer=offer.id.value))
+        tasks = [task]
+        driver.launchTasks(offer.id, tasks)
+```
 
 This is the meat of the scheduler. Let's step through it a few lines
 at a time:
 
-    :::python
-    def resourceOffers(self, driver, offers):
+```python
+def resourceOffers(self, driver, offers):
+```
 
 `resourceOffers` is passed the `driver` that our scheduler is being
 run by, as well as `offers` (which is a list of protobufs, each of
@@ -241,32 +256,34 @@ delegates all communication with Mesos to the driver. This is why we
 are passed the driver in this method—we'll need to tell the Mesos
 master what we want to do with these offers[^3].
 
-    :::python
-    for offer in offers:
-        task = new_task(offer)
+```python
+for offer in offers:
+    task = new_task(offer)
+```
 
 We iterate over the offers received, creating a new task for
 each. Let's look at the implementation of `new_task`:
 
-    :::python
-    def new_task(offer):
-        task = mesos_pb2.TaskInfo()
-        id = uuid.uuid4()
-        task.task_id.value = str(id)
-        task.slave_id.value = offer.slave_id.value
-        task.name = "task {}".format(str(id))
+```python
+def new_task(offer):
+    task = mesos_pb2.TaskInfo()
+    id = uuid.uuid4()
+    task.task_id.value = str(id)
+    task.slave_id.value = offer.slave_id.value
+    task.name = "task {}".format(str(id))
 
-        cpus = task.resources.add()
-        cpus.name = "cpus"
-        cpus.type = mesos_pb2.Value.SCALAR
-        cpus.scalar.value = 1
+    cpus = task.resources.add()
+    cpus.name = "cpus"
+    cpus.type = mesos_pb2.Value.SCALAR
+    cpus.scalar.value = 1
 
-        mem = task.resources.add()
-        mem.name = "mem"
-        mem.type = mesos_pb2.Value.SCALAR
-        mem.scalar.value = 1
+    mem = task.resources.add()
+    mem.name = "mem"
+    mem.type = mesos_pb2.Value.SCALAR
+    mem.scalar.value = 1
 
-        return task
+    return task
+```
 
 We instantiate a new `TaskInfo` protobuf[^4] and fill it in with some
 basic details (a unique id, the id of the slave we want to use, and a
@@ -276,20 +293,22 @@ it probably does (it's quite a modest request), and we could make
 sure if we wanted to by inspecting the `offer.resources` list. We then
 return the protobuf. OK, let's jump back to `resourceOffers`:
 
-    :::python
-    task.command.value = "echo hello world"
+```python
+task.command.value = "echo hello world"
+```
 
 now that we've created a generic task protobuf, we fill in its
 `command` field with what we actually want the task to do, in this
 case simply `echo hello world`.
 
-    :::python
-    time.sleep(2)
-    logging.info("Launching task {task} "
-                 "using offer {offer}.".format(task=task.task_id.value,
-                                               offer=offer.id.value))
-    tasks = [task]
-    driver.launchTasks(offer.id, tasks)
+```python
+time.sleep(2)
+logging.info("Launching task {task} "
+             "using offer {offer}.".format(task=task.task_id.value,
+                                           offer=offer.id.value))
+tasks = [task]
+driver.launchTasks(offer.id, tasks)
+```
 
 We then sleep for 2 seconds (which is there just so it's easier to
 watch the framework run in real time), log the fact of being about to
@@ -300,17 +319,18 @@ it[^5].
 Anyway, that's the entirety of our scheduler class! Now we just need
 to start up a driver and connect to the Mesos master.
 
-    :::python
-    if __name__ == '__main__':
-        framework = mesos_pb2.FrameworkInfo()
-        framework.user = ""  # Have Mesos fill in the current user.
-        framework.name = "hello-world"
-        driver = MesosSchedulerDriver(
-            HelloWorldScheduler(),
-            framework,
-            "zk://localhost:2181/mesos"  # assumes running on the master
-        )
-        driver.run()
+```python
+if __name__ == '__main__':
+    framework = mesos_pb2.FrameworkInfo()
+    framework.user = ""  # Have Mesos fill in the current user.
+    framework.name = "hello-world"
+    driver = MesosSchedulerDriver(
+        HelloWorldScheduler(),
+        framework,
+        "zk://localhost:2181/mesos"  # assumes running on the master
+    )
+    driver.run()
+```
 
 The `MesosSchedulerDriver` takes three parameters: an instance of
 something that implements the `Scheduler` interface (in our case a
@@ -328,40 +348,41 @@ After instantiating the driver, we then call `driver.run()` to start the framewo
 I ran this code using `python hello_mesos.py` on a small Mesos cluster
 with a single master and a single slave. What results is:
 
-    :::text
-    I1116 15:54:31.813361 27339 sched.cpp:139] Version: 0.20.0
-    2014-11-16 15:54:31,813:27339(0x7fe781a9d700):ZOO_INFO@log_env@712: Client environment:zookeeper.version=zookeeper C client 3.4.5
-    2014-11-16 15:54:31,815:27339(0x7fe781a9d700):ZOO_INFO@log_env@716: Client environment:host.name=mesos-master.novalocal
-    2014-11-16 15:54:31,816:27339(0x7fe781a9d700):ZOO_INFO@log_env@723: Client environment:os.name=Linux
-    2014-11-16 15:54:31,816:27339(0x7fe781a9d700):ZOO_INFO@log_env@724: Client environment:os.arch=3.13.0-32-generic
-    2014-11-16 15:54:31,817:27339(0x7fe781a9d700):ZOO_INFO@log_env@725: Client environment:os.version=#57-Ubuntu SMP Tue Jul 15 03:51:08 UTC 2014
-    2014-11-16 15:54:31,818:27339(0x7fe781a9d700):ZOO_INFO@log_env@733: Client environment:user.name=ubuntu
-    2014-11-16 15:54:31,819:27339(0x7fe781a9d700):ZOO_INFO@log_env@741: Client environment:user.home=/home/ubuntu
-    2014-11-16 15:54:31,820:27339(0x7fe781a9d700):ZOO_INFO@log_env@753: Client environment:user.dir=/home/ubuntu
-    2014-11-16 15:54:31,820:27339(0x7fe781a9d700):ZOO_INFO@zookeeper_init@786: Initiating client connection, host=localhost:2181 sessionTimeout=10000 watcher=0x7fe782eefa90 sessionId=0 sessionPasswd=<null> context=0x7fe774000930 flags=0
-    2014-11-16 15:54:31,823:27339(0x7fe76ffff700):ZOO_INFO@check_events@1703: initiated connection to server [127.0.0.1:2181]
-    2014-11-16 15:54:31,826:27339(0x7fe76ffff700):ZOO_INFO@check_events@1750: session establishment complete on server [127.0.0.1:2181], sessionId=0x149b22cdfe600a8, negotiated timeout=10000
-    I1116 15:54:31.826449 27350 group.cpp:313] Group process (group(1)@172.16.1.34:59733) connected to ZooKeeper
-    I1116 15:54:31.826498 27350 group.cpp:787] Syncing group operations: queue size (joins, cancels, datas) = (0, 0, 0)
-    I1116 15:54:31.826529 27350 group.cpp:385] Trying to create path '/mesos' in ZooKeeper
-    I1116 15:54:31.830415 27350 detector.cpp:138] Detected a new leader: (id='0')
-    I1116 15:54:31.831310 27350 group.cpp:658] Trying to get '/mesos/info_0000000000' in ZooKeeper
-    I1116 15:54:31.833284 27350 detector.cpp:426] A new leading master (UPID=master@172.16.1.34:5050) is detected
-    I1116 15:54:31.834072 27350 sched.cpp:235] New master detected at master@172.16.1.34:5050
-    I1116 15:54:31.835058 27350 sched.cpp:243] No credentials provided. Attempting to register without authentication
-    I1116 15:54:31.838003 27349 sched.cpp:409] Framework registered with 20141115-003844-570495148-5050-6532-0067
-    INFO:root:Registered with framework id: value: "20141115-003844-570495148-5050-6532-0067"
+```text
+I1116 15:54:31.813361 27339 sched.cpp:139] Version: 0.20.0
+2014-11-16 15:54:31,813:27339(0x7fe781a9d700):ZOO_INFO@log_env@712: Client environment:zookeeper.version=zookeeper C client 3.4.5
+2014-11-16 15:54:31,815:27339(0x7fe781a9d700):ZOO_INFO@log_env@716: Client environment:host.name=mesos-master.novalocal
+2014-11-16 15:54:31,816:27339(0x7fe781a9d700):ZOO_INFO@log_env@723: Client environment:os.name=Linux
+2014-11-16 15:54:31,816:27339(0x7fe781a9d700):ZOO_INFO@log_env@724: Client environment:os.arch=3.13.0-32-generic
+2014-11-16 15:54:31,817:27339(0x7fe781a9d700):ZOO_INFO@log_env@725: Client environment:os.version=#57-Ubuntu SMP Tue Jul 15 03:51:08 UTC 2014
+2014-11-16 15:54:31,818:27339(0x7fe781a9d700):ZOO_INFO@log_env@733: Client environment:user.name=ubuntu
+2014-11-16 15:54:31,819:27339(0x7fe781a9d700):ZOO_INFO@log_env@741: Client environment:user.home=/home/ubuntu
+2014-11-16 15:54:31,820:27339(0x7fe781a9d700):ZOO_INFO@log_env@753: Client environment:user.dir=/home/ubuntu
+2014-11-16 15:54:31,820:27339(0x7fe781a9d700):ZOO_INFO@zookeeper_init@786: Initiating client connection, host=localhost:2181 sessionTimeout=10000 watcher=0x7fe782eefa90 sessionId=0 sessionPasswd=<null> context=0x7fe774000930 flags=0
+2014-11-16 15:54:31,823:27339(0x7fe76ffff700):ZOO_INFO@check_events@1703: initiated connection to server [127.0.0.1:2181]
+2014-11-16 15:54:31,826:27339(0x7fe76ffff700):ZOO_INFO@check_events@1750: session establishment complete on server [127.0.0.1:2181], sessionId=0x149b22cdfe600a8, negotiated timeout=10000
+I1116 15:54:31.826449 27350 group.cpp:313] Group process (group(1)@172.16.1.34:59733) connected to ZooKeeper
+I1116 15:54:31.826498 27350 group.cpp:787] Syncing group operations: queue size (joins, cancels, datas) = (0, 0, 0)
+I1116 15:54:31.826529 27350 group.cpp:385] Trying to create path '/mesos' in ZooKeeper
+I1116 15:54:31.830415 27350 detector.cpp:138] Detected a new leader: (id='0')
+I1116 15:54:31.831310 27350 group.cpp:658] Trying to get '/mesos/info_0000000000' in ZooKeeper
+I1116 15:54:31.833284 27350 detector.cpp:426] A new leading master (UPID=master@172.16.1.34:5050) is detected
+I1116 15:54:31.834072 27350 sched.cpp:235] New master detected at master@172.16.1.34:5050
+I1116 15:54:31.835058 27350 sched.cpp:243] No credentials provided. Attempting to register without authentication
+I1116 15:54:31.838003 27349 sched.cpp:409] Framework registered with 20141115-003844-570495148-5050-6532-0067
+INFO:root:Registered with framework id: value: "20141115-003844-570495148-5050-6532-0067"
 
-    INFO:root:Recieved resource offers: [u'20141115-003844-570495148-5050-6532-387']
-    INFO:root:Got a resource offer.
-    INFO:root:Launching task bcebedef-6e37-450d-99ca-84206a5385de using offer 20141115-003844-570495148-5050-6532-387.
-    INFO:root:Recieved resource offers: [u'20141115-003844-570495148-5050-6532-388']
-    INFO:root:Got a resource offer.
-    INFO:root:Launching task 197bcdd0-91e0-4647-a271-00356c6e1133 using offer 20141115-003844-570495148-5050-6532-388.
-    INFO:root:Recieved resource offers: [u'20141115-003844-570495148-5050-6532-389']
-    INFO:root:Got a resource offer.
-    INFO:root:Launching task 376f65f6-f7c2-4e0a-8307-a7c489348a4e using offer 20141115-003844-570495148-5050-6532-389.
-    . . .
+INFO:root:Recieved resource offers: [u'20141115-003844-570495148-5050-6532-387']
+INFO:root:Got a resource offer.
+INFO:root:Launching task bcebedef-6e37-450d-99ca-84206a5385de using offer 20141115-003844-570495148-5050-6532-387.
+INFO:root:Recieved resource offers: [u'20141115-003844-570495148-5050-6532-388']
+INFO:root:Got a resource offer.
+INFO:root:Launching task 197bcdd0-91e0-4647-a271-00356c6e1133 using offer 20141115-003844-570495148-5050-6532-388.
+INFO:root:Recieved resource offers: [u'20141115-003844-570495148-5050-6532-389']
+INFO:root:Got a resource offer.
+INFO:root:Launching task 376f65f6-f7c2-4e0a-8307-a7c489348a4e using offer 20141115-003844-570495148-5050-6532-389.
+. . .
+```
 
 The log messages go on forever as the scheduler continuously receives
 a single resource offer (corresponding to the single slave) and
@@ -371,13 +392,15 @@ We can see that the task is running successfully by `ssh`ing into the
 slave and checking the `stdout` of one of the tasks (all of which are
 saved in logfiles):
 
-    ubuntu@mesos-slave:~$ cat /tmp/mesos/slaves/20141115-003844-570495148-5050-6532-0/frameworks/20141115-003844-570495148-5050-6532-0067/executors/bcebedef-6e37-450d-99ca-84206a5385de/runs/latest/stdout
-    Registered executor on mesos-slave.novalocal
-    Starting task bcebedef-6e37-450d-99ca-84206a5385de
-    Forked command at 13319
-    sh -c 'echo hello world'
-    hello world
-    Command exited with status 0 (pid: 13319)
+```
+ubuntu@mesos-slave:~$ cat /tmp/mesos/slaves/20141115-003844-570495148-5050-6532-0/frameworks/20141115-003844-570495148-5050-6532-0067/executors/bcebedef-6e37-450d-99ca-84206a5385de/runs/latest/stdout
+Registered executor on mesos-slave.novalocal
+Starting task bcebedef-6e37-450d-99ca-84206a5385de
+Forked command at 13319
+sh -c 'echo hello world'
+hello world
+Command exited with status 0 (pid: 13319)
+```
 
 Ta-da! A Mesos framework in 60 lines of code.
 

@@ -1,0 +1,19 @@
+<div class="pt2 flex flex-column items-center">
+  <div class="flex flex-row" style="width: 120%">
+    <!-- TODO kind of a hack, find a way to make grid positioning work more cleanly -->
+    <figure class="mr2 flex flex-column items-center" style="width: {{ .Get "col1_width" }}">
+      <img src='{{ .Get "src1" }}' alt='{{ .Get "alt1" }}'/>
+      {{ with .Get "caption1" }}<figcaption class="pt1 f6 gray i lh-solid ph4" style="font-synthesis: none;">{{ . }}</figcaption>{{ end }}
+    </figure>
+    <div class="flex flex-column">
+      <figure class="flex flex-column items-center pb2">
+        <img src='{{ .Get "src2" }}' alt='{{ .Get "alt2" }}'>
+        {{ with .Get "caption2" }}<figcaption class="pt1 f6 gray i lh-solid ph4" style="font-synthesis: none;">{{ . }}</figcaption>{{ end }}
+      </figure>
+      <figure class="flex flex-column items-center">
+        <img src='{{ .Get "src3" }}' alt='{{ .Get "alt3" }}'>
+        {{ with .Get "caption3" }}<figcaption class="pt1 f6 gray i lh-solid ph4" style="font-synthesis: none;">{{ . }}</figcaption>{{ end }}
+      </figure>
+    </div>
+  </div>
+</div>

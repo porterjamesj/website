@@ -1,0 +1,17 @@
+{{ define "main" }}
+<div class="post">
+  <h1 class="posttitle">
+    {{ .Title }}
+  </h1>
+
+  <div class="postinfo">
+    <p class="published" title="{{ .Date.Format "2006-01-02T15:04:05Z0700" }}">
+      {{ .Date | time.Format ":date_medium" }}
+    </p>
+  </div>
+</div>
+
+<div class="article">
+  {{ .Content }}
+</div>
+{{ end }}

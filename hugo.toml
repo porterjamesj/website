@@ -1,0 +1,22 @@
+baseURL = 'https://jamesporter.me/'
+languageCode = 'en-us'
+title = 'James Porter'
+
+disableKinds = ['taxonomy', 'term']
+
+[params]
+  author = 'James Porter'
+
+[menu]
+[[menu.main]]
+    name = 'home'
+    pageRef = '/'
+    weight = 10
+[[menu.main]]
+    name = 'email'
+    url = 'mailto:james@jamesporter.me'
+    weight = 20
+
+[markup]
+  [markup.highlight]
+    style = 'borland'

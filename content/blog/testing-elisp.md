@@ -1,7 +1,12 @@
-Title: Testing Emacs Packages: surprisingly non-awful
-Date: 2014-05-15
-Slug: testing-elisp
-Summary: I wrote some tests for my Emacs package
+---
+title: 'Testing Emacs Packages: surprisingly non-awful'
+date: 2014-05-15
+slug: testing-elisp
+summary: I wrote some tests for my Emacs package
+url: /2014/05/15/testing-elisp.html
+guid: 'tag:jamesporter.me,2014-05-15:/2014/05/15/testing-elisp.html'
+rss: true
+---
 
 Last summer I found myself dissatisfied with the existing solutions
 for managing Python [virtualenvs](https://github.com/pypa/virtualenv)
@@ -34,22 +39,23 @@ The first thing I wanted to do was to simply test that activating a
 virtualenv correctly makes all the changes it should. The
 `ert-deftest` macro is used to define tests, so I wrote:
 
-    :::scheme
-    (ert-deftest venv-workon-works ()
-     (venv-deactivate)
-     (venv-workon "science")
-     ;; we store the name correctly
-     (should (equal venv-current-name "science"))
-     ;; we change the path for python mode
-     (should (s-contains? "science" python-shell-virtualenv-path))
-     ;; we set PATH for shell and subprocesses
-     (should (s-contains? "science" (getenv "PATH")))
-     ;; we set VIRTUAL_ENV for jedi and whoever else needs it
-     (should (s-contains? "science" (getenv "VIRTUAL_ENV")))
-     ;; we add our dir to exec-path
-     (should (s-contains? "science" (car exec-path)))))
+```scheme
+(ert-deftest venv-workon-works ()
+ (venv-deactivate)
+ (venv-workon "science")
+ ;; we store the name correctly
+ (should (equal venv-current-name "science"))
+ ;; we change the path for python mode
+ (should (s-contains? "science" python-shell-virtualenv-path))
+ ;; we set PATH for shell and subprocesses
+ (should (s-contains? "science" (getenv "PATH")))
+ ;; we set VIRTUAL_ENV for jedi and whoever else needs it
+ (should (s-contains? "science" (getenv "VIRTUAL_ENV")))
+ ;; we add our dir to exec-path
+ (should (s-contains? "science" (car exec-path)))))
+```
 
-Note the use of the `should` macro to state expectations—if the
+note the use of the `should` macro to state expectations—if the
 argument to any invocation of `should` doesn't evaluate to a non-`nil`
 value without throwing an error, the test will fail.
 
@@ -65,12 +71,13 @@ that!  It's easy to forget that a lot of languages need things like
 test fixtures to paper over the lack of real metaprogramming
 capabilities. I wrote a `with-temp-env` macro to use in my tests:
 
-    :::scheme
-    (defmacro with-temp-env (name &rest forms)
-      `(let ((venv-location temporary-file-directory))
-        (venv-mkvirtualenv ,name)
-        ,@forms
-        (venv-rmvirtualenv ,name)))
+```scheme
+(defmacro with-temp-env (name &rest forms)
+  `(let ((venv-location temporary-file-directory))
+    (venv-mkvirtualenv ,name)
+    ,@forms
+    (venv-rmvirtualenv ,name)))
+```
 
 The macro takes the name of a temporary virtualenv to create and some
 forms to execute in that virtualenv. It then `let`-binds
@@ -92,14 +99,15 @@ name—the `unwind-protect` macro takes a form to execute and a
 regardless of whether errors are thrown in the main form. I used this
 to adjust my `with-temp-env` macro to the following:
 
-    :::scheme
-    (defmacro with-temp-env (name &rest forms)
-      `(let ((venv-location temporary-file-directory))
-         (unwind-protect
-             (progn
-               (venv-mkvirtualenv ,name)
-               ,@forms)
-           (venv-rmvirtualenv ,name))))
+```scheme
+(defmacro with-temp-env (name &rest forms)
+  `(let ((venv-location temporary-file-directory))
+     (unwind-protect
+         (progn
+           (venv-mkvirtualenv ,name)
+           ,@forms)
+       (venv-rmvirtualenv ,name))))
+```
 
 I did have to wrap the call to `venv-mkvirtualenv` and the form
 splicing in a `progn` in order to use `unwind-protect`, since it
@@ -108,37 +116,39 @@ not too shabby. This version is robust to errors during the execution
 of the `forms`. I was able to change my `venv-workon-works` test to
 the following:
 
-    :::scheme
-    (ert-deftest venv-workon-works ()
-      (with-temp-env
-       "emacs-venvwrapper-test"
-       (venv-deactivate)
-       (venv-workon venv-tmp-env)
-       ;; we store the name correctly
-       (should (equal venv-current-name venv-tmp-env))
-       ;; we change the path for python mode
-       (should (s-contains? venv-tmp-env python-shell-virtualenv-path))
-       ;; we set PATH for shell and subprocesses
-       (should (s-contains? venv-tmp-env (getenv "PATH")))
-       ;; we set VIRTUAL_ENV for jedi and whoever else needs it
-       (should (s-contains? venv-tmp-env (getenv "VIRTUAL_ENV")))
-       ;; we add our dir to exec-path
-       (should (s-contains? venv-tmp-env (car exec-path)))))
+```scheme
+(ert-deftest venv-workon-works ()
+  (with-temp-env
+   "emacs-venvwrapper-test"
+   (venv-deactivate)
+   (venv-workon venv-tmp-env)
+   ;; we store the name correctly
+   (should (equal venv-current-name venv-tmp-env))
+   ;; we change the path for python mode
+   (should (s-contains? venv-tmp-env python-shell-virtualenv-path))
+   ;; we set PATH for shell and subprocesses
+   (should (s-contains? venv-tmp-env (getenv "PATH")))
+   ;; we set VIRTUAL_ENV for jedi and whoever else needs it
+   (should (s-contains? venv-tmp-env (getenv "VIRTUAL_ENV")))
+   ;; we add our dir to exec-path
+   (should (s-contains? venv-tmp-env (car exec-path)))))
+```
 
 which will work reliably on systems besides my own. I was also able to
 use the `with-tmp-env` macro and `unwind-protect` in my other tests,
 e.g.:
 
-    :::scheme
-    (ert-deftest venv-cdvirtualenv-works ()
-      (with-temp-env
-       venv-tmp-env
-       (let ((old-wd default-directory))
-         (unwind-protect
-             (progn
-               (venv-cdvirtualenv)
-               (should (s-contains? venv-tmp-env default-directory)))
-           (cd old-wd)))))
+```scheme
+(ert-deftest venv-cdvirtualenv-works ()
+  (with-temp-env
+   venv-tmp-env
+   (let ((old-wd default-directory))
+     (unwind-protect
+         (progn
+           (venv-cdvirtualenv)
+           (should (s-contains? venv-tmp-env default-directory)))
+       (cd old-wd)))))
+```
 
 which tests that the `venv-cd-virtualenv` command works correctly.
 

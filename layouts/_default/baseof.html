@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.Language }}">
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="author" content="{{ site.Params.author }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet" type="text/css">
+
+    <link rel="stylesheet" href="https://unpkg.com/tachyons@4.12.0/css/tachyons.min.css"/>
+
+    {{ range resources.Match "css/*.css" }}
+      <link rel="stylesheet" type="text/css" href="{{ .Permalink }}"/>
+    {{ end}}
+
+    {{ with .OutputFormats.Get "rss" -}}
+      {{ printf `<link rel=%q type=%q href=%q title=%q>` .Rel .MediaType.Type .Permalink site.Title | safeHTML }}
+    {{ end }}
+
+  </head>
+
+  <body>
+    <div class="site">
+      <header>
+        {{- range site.Menus.main }}
+          <a href="{{ .URL }}">{{ .Name }}</a>
+        {{- end }}
+      </header>
+
+      <div id="content">
+	{{ block "main" . }}
+	{{ end }}
+      </div>
+
+      <footer>
+        <p>
+          © {{ time.Now | time.Format "2006" }} {{ .Site.Params.Author }}, license <a href="https://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC</a> unless otherwise noted.
+        </p>
+        <div class="rc-scout"></div>
+      </footer>
+    </div>
+    <script src="https://www.recurse-scout.com/loader.js?t=9ecdc2995d5539483a7b5ed39e4d750f"></script>
+  </body>
+</html>
