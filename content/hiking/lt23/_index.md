@@ -12,7 +12,7 @@ From September 8th to October 4th 2023, I thru-hiked Vermont's Long Trail. You c
 
 ### About the trail
 
-The Long Trail was the first long distance hiking trail in America, and the inspiration for the Appalachian Trail, with which it shares its first 100 miles. It runs 272 miles along the spine of the Green Mountains, from the Vermont-Massachusets border to the Vermont-Canada border. It has a reputation as a difficult thru-hike due to its steep and frequent climbs (especially in the northern section), as well as lots of rain and mud[^1]. The trail is maintained by the Green Mountain Club; you can read more about it [on their website](https://www.greenmountainclub.org/the-long-trail/).
+The Long Trail was the first long distance hiking trail in America, and the inspiration for the Appalachian Trail, with which it shares its first 100 miles. It runs 272 miles along the spine of the Green Mountains, from the Vermont-Massachusetts border to the Vermont-Canada border. It has a reputation as a difficult thru-hike due to its steep and frequent climbs (especially in the northern section), as well as lots of rain and mud[^1]. The trail is maintained by the Green Mountain Club; you can read more about it [on their website](https://www.greenmountainclub.org/the-long-trail/).
 
 {{< oneimage src="images/lt_map.jpg" caption="The route of the Long Trail." >}}
 
@@ -29,7 +29,7 @@ The first two questions every potential thru-hiker faces are "When?" and "Which 
 
 Between a few trips to REI and my old gear from my teenage years, I cobbled together everything I would need. My gear was functional, but *heavy*. My pack and sleeping bag were from 2005, and far from ultralight—just the two of them weighed about nine pounds. I didn't have a scale, so I didn't weight my pack before starting, but I suspect it was over 40 pounds fully loaded.
 
-After an overnight shakedown trip with my good friend Rachel, just to make sure I still remembered how to backpack, I was ready. I bought a train ticket to Pittsfield, Massachusets, near the southern terminus, and booked an overnight stay in town, planning to set out hiking on the morning of Friday, September 8th.
+After an overnight shakedown trip with my good friend Rachel, just to make sure I still remembered how to backpack, I was ready. I bought a train ticket to Pittsfield, Massachusetts, near the southern terminus, and booked an overnight stay in town, planning to set out hiking on the morning of Friday, September 8th.
 
 ### About this journal
 
