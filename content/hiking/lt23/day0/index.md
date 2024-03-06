@@ -5,7 +5,7 @@ weight: 5
 date: 2023-09-07
 ---
 
-I begin on an inauspicious note—by missing my train! I was delayed on my way to the station, and arrive five minutes late. The train's gone. Fortunately for me, there's a Greyhound bus leaving for Pittsfield only an hour later, so I buy my ticket and settle in to wait. It occurs to me that in spite of being an avid Amtrak rider for years, this is somehow the first time I've ever missed my train.
+I begin on an inauspicious note—by missing my train to Pittsfield! I'm delayed on my way to the station, and arrive five minutes late. The train's gone. Fortunately for me, there's a Greyhound bus leaving for Pittsfield only an hour later, so I buy my ticket and settle in to wait. It occurs to me that in spite of being an avid Amtrak rider for years, this is somehow the first time I've ever missed a train.
 
 I feel strangely empty after all the running and scrambling to try and make the train and then book the bus ticket. I somehow am finding it difficult to picture the trip ahead of me, maybe because I'm still in the flow of "regular life". Doing mundane things like futzing around on my phone while waiting for the bus. I just can't imagine what it will be like to be out there, and I don't really feel the nervousness or excitement that I expected too.
 

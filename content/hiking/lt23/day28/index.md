@@ -1,6 +1,6 @@
 ---
 title: Journey's End
-slug: aftermath
+slug: day28
 weight: 280
 date: 2023-10-05
 ---

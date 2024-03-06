@@ -9,7 +9,7 @@
     {{ else }}
       <div style="width: 2em;"></div>
     {{ end}}
-    {{ .Date.Format "Monday, January 2" }}
+    {{ with .Date }}{{ .Format "Monday, January 2" }}{{ end }}
     {{ with $pages.Prev . }}
       <a href ="{{ .RelPermalink }}">Next <span class="f4">⤖</span></a>
     {{ else }}
