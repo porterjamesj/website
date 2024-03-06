@@ -5,13 +5,13 @@
 <div class="article">
   <div class="ba b--silver br2 pa2 flex justify-between">
     {{ with $pages.Next . }}
-      <a href ="{{ .RelPermalink }}"><span class="f4">⬻</span> Prev</a>
+      <a href="{{ .RelPermalink }}" class="no-underline"><span class="f4">⬻</span> Prev</a>
     {{ else }}
       <div style="width: 2em;"></div>
     {{ end}}
     {{ with .Date }}{{ .Format "Monday, January 2" }}{{ end }}
     {{ with $pages.Prev . }}
-      <a href ="{{ .RelPermalink }}">Next <span class="f4">⤖</span></a>
+      <a href="{{ .RelPermalink }}" class="no-underline">Next <span class="f4">⤖</span></a>
     {{ else }}
       <div style="width: 2em;"></div>
     {{ end }}
@@ -32,12 +32,12 @@
 
   <div class="ba b--silver br2 pa2 mt3 flex justify-between">
   {{ with $pages.Next . }}
-    <a href ="{{ .RelPermalink }}"><span class="f4">⬻</span> Prev</a>
+    <a href="{{ .RelPermalink }}" class="no-underline"><span class="f4">⬻</span> Prev</a>
   {{ else }}
     <div style="width: 2em;"></div>
   {{ end }}
   {{ with $pages.Prev . }}
-    <a href ="{{ .RelPermalink }}">Next <span class="f4">⤖</span></a>
+    <a href="{{ .RelPermalink }}" class="no-underline">Next <span class="f4">⤖</span></a>
   {{ else }}
     <div style="width: 2em;"></div>
   {{ end }}
