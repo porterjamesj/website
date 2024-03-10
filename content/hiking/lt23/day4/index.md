@@ -35,7 +35,7 @@ While we eat lunch we're caught up by the aptly named Flash. Extremely skinny gu
     src3="images/trail_into_woods.jpg" caption3="The trail heading north from the peak."
 >}}
 
-We set off down the trail and it's an easy three miles to Stratton Pond, with the rain having cleared up to boot. Stratton Pond is a pretty popular spot for local backpackers and day hikers since it's beautiful and easily accessible. We meet a local couple and two other long-distances hikers, Qubit and Bugbait, at the shelter. Qubit's an older fellow hiking home to Maine on the AT. Bugbait's and LT thru-hiker in his 20s, lives in Massachusetts and works at REI, so he knows a lot about gear.
+We set off down the trail and it's an easy three miles to Stratton Pond, with the rain having cleared up to boot. Stratton Pond is a pretty popular spot for local backpackers and day hikers since it's beautiful and easily accessible. We meet a local couple and two other long-distances hikers, Qubit and Bugbait, at the shelter. Qubit's an older fellow hiking home to Maine on the AT. Bugbait's an LT thru-hiker in his 20s, lives in Massachusetts and works at REI, so he knows a lot about gear.
 
 We rest and chat briefly and Particle decides to push on to William Douglas Shelter, five more miles. I'm feeling energized by how much easier than expected the day has been, so I decide to join her. I head down the side-trail to the pond itself, just to check it out before I leave and, well, it changes my mind. It's so beautiful that I decide to stay the night here. I'm hiking to enjoy stuff like this, not just chew up miles.
 
