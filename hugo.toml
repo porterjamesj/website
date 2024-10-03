@@ -13,9 +13,13 @@ disableKinds = ['taxonomy', 'term']
     pageRef = '/'
     weight = 10
 [[menu.main]]
+    name = 'hire'
+    pageRef = '/hire'
+    weight = 20
+[[menu.main]]
     name = 'email'
     url = 'mailto:james@jamesporter.me'
-    weight = 20
+    weight = 30
 
 [markup]
   [markup.highlight]
