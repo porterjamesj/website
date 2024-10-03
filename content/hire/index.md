@@ -12,8 +12,8 @@ experience with Ruby, Python, JavaScript, and Postgres, but I've used
 everything from C to Haskell to Neo4j over the years. I'm very good at
 learning new technology as needed; choice of languages and tools will
 not be an obstacle to our work together. I can debug complex systems
-issues and am equally comfortable on greenfield projects or a gnarly
-legacy codebase. My past work has also involved community management,
+and am equally comfortable on greenfield projects or a gnarly legacy
+codebase. My past work has also involved community management,
 coaching, hiring, business strategy, etc. in addition to programming,
 and as a result I'm very adaptable and can see and manage the human
 factors that play into a project's success. More details on my
