@@ -1,5 +1,5 @@
 ---
-title: "MAZE: Solving \"the World\'s Most Challenging Puzzle\" with Python"
+title: "MAZE: Solving \"the World's Most Challenging Puzzle\" with Python"
 date: 2019-11-09
 slug: maze
 summary: Applying graph analysis to a beloved book from childhood

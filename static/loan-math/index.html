@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mortgage ownership calculator</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="mode-monthly">
+  <header>
+    <h1>Mortgage ownership calculator</h1>
+    <p class="subtitle">Model ownership shares from down payments and monthly budgets</p>
+  </header>
+
+  <section class="global-params">
+    <h2>Global parameters</h2>
+    <div class="mode-toggle">
+      <label class="mode-option"><input type="radio" name="mode" value="monthly" checked> Monthly payment</label>
+      <label class="mode-option"><input type="radio" name="mode" value="income"> Income</label>
+    </div>
+    <div class="param-grid">
+      <label>
+        <span>Total purchase price</span>
+        <input type="number" id="purchase-price" min="0" step="10000" value="1500000">
+      </label>
+      <label>
+        <span>Interest rate (annual %)</span>
+        <input type="number" id="interest-rate" min="0" max="20" step="0.125" value="7">
+      </label>
+      <label>
+        <span>Overhead (% of property value)</span>
+        <input type="number" id="overhead-pct" min="0" max="10" step="0.25" value="2.5">
+      </label>
+    </div>
+  </section>
+
+  <div id="warning" class="warning hidden"></div>
+
+  <section class="ownership-summary">
+    <h2>Ownership summary</h2>
+    <div id="ownership-bars" class="ownership-bars"></div>
+    <p id="ownership-labels" class="ownership-labels"></p>
+  </section>
+
+  <section class="people">
+    <article class="person-card" data-person="james">
+      <h3>James</h3>
+      <div class="person-inputs">
+        <label>
+          <span>Down payment</span>
+          <input type="number" id="james-down" min="0" step="1000" value="75000">
+        </label>
+        <div class="input-group input-group-monthly">
+          <label>
+            <span>Monthly payment (total)</span>
+            <input type="number" id="james-monthly" min="0" step="50" value="2000">
+          </label>
+        </div>
+        <div class="input-group input-group-income">
+          <label>
+            <span>Annual income</span>
+            <input type="number" id="james-annual-income" min="0" step="1000" value="120000" placeholder="—">
+          </label>
+          <label>
+            <span>Housing cost (% of income)</span>
+            <input type="number" id="james-housing-pct" min="0" max="100" step="1" value="20">
+          </label>
+        </div>
+      </div>
+      <div class="person-outputs">
+        <p><strong>Ownership:</strong> <span id="james-share">—</span></p>
+        <p><strong>Contribution:</strong> <span id="james-contribution">—</span> <span class="detail">(down <span id="james-down-val">—</span> + loan <span id="james-loan-val">—</span>)</span></p>
+        <p><strong>Monthly:</strong> <span id="james-monthly-total">—</span> <span class="detail">(P&I <span id="james-pi">—</span> + overhead <span id="james-overhead">—</span>)</span></p>
+      </div>
+    </article>
+
+    <article class="person-card" data-person="rui">
+      <h3>Rui</h3>
+      <div class="person-inputs">
+        <label>
+          <span>Down payment</span>
+          <input type="number" id="rui-down" min="0" step="1000" value="75000">
+        </label>
+        <div class="input-group input-group-monthly">
+          <label>
+            <span>Monthly payment (total)</span>
+            <input type="number" id="rui-monthly" min="0" step="50" value="2000">
+          </label>
+        </div>
+        <div class="input-group input-group-income">
+          <label>
+            <span>Annual income</span>
+            <input type="number" id="rui-annual-income" min="0" step="1000" value="120000" placeholder="—">
+          </label>
+          <label>
+            <span>Housing cost (% of income)</span>
+            <input type="number" id="rui-housing-pct" min="0" max="100" step="1" value="20">
+          </label>
+        </div>
+      </div>
+      <div class="person-outputs">
+        <p><strong>Ownership:</strong> <span id="rui-share">—</span></p>
+        <p><strong>Contribution:</strong> <span id="rui-contribution">—</span> <span class="detail">(down <span id="rui-down-val">—</span> + loan <span id="rui-loan-val">—</span>)</span></p>
+        <p><strong>Monthly:</strong> <span id="rui-monthly-total">—</span> <span class="detail">(P&I <span id="rui-pi">—</span> + overhead <span id="rui-overhead">—</span>)</span></p>
+      </div>
+    </article>
+
+    <article class="person-card" data-person="john">
+      <h3>John</h3>
+      <div class="person-inputs">
+        <label>
+          <span>Down payment</span>
+          <input type="number" id="john-down" min="0" step="1000" value="75000">
+        </label>
+        <div class="input-group input-group-monthly">
+          <label>
+            <span>Monthly payment (total)</span>
+            <input type="number" id="john-monthly" min="0" step="50" value="2000">
+          </label>
+        </div>
+        <div class="input-group input-group-income">
+          <label>
+            <span>Annual income</span>
+            <input type="number" id="john-annual-income" min="0" step="1000" value="120000" placeholder="—">
+          </label>
+          <label>
+            <span>Housing cost (% of income)</span>
+            <input type="number" id="john-housing-pct" min="0" max="100" step="1" value="20">
+          </label>
+        </div>
+      </div>
+      <div class="person-outputs">
+        <p><strong>Ownership:</strong> <span id="john-share">—</span></p>
+        <p><strong>Contribution:</strong> <span id="john-contribution">—</span> <span class="detail">(down <span id="john-down-val">—</span> + loan <span id="john-loan-val">—</span>)</span></p>
+        <p><strong>Monthly:</strong> <span id="john-monthly-total">—</span> <span class="detail">(P&I <span id="john-pi">—</span> + overhead <span id="john-overhead">—</span>)</span></p>
+      </div>
+    </article>
+
+    <article class="person-card" data-person="emily">
+      <h3>Emily</h3>
+      <div class="person-inputs">
+        <label>
+          <span>Down payment</span>
+          <input type="number" id="emily-down" min="0" step="1000" value="75000">
+        </label>
+        <div class="input-group input-group-monthly">
+          <label>
+            <span>Monthly payment (total)</span>
+            <input type="number" id="emily-monthly" min="0" step="50" value="2000">
+          </label>
+        </div>
+        <div class="input-group input-group-income">
+          <label>
+            <span>Annual income</span>
+            <input type="number" id="emily-annual-income" min="0" step="1000" value="120000" placeholder="—">
+          </label>
+          <label>
+            <span>Housing cost (% of income)</span>
+            <input type="number" id="emily-housing-pct" min="0" max="100" step="1" value="20">
+          </label>
+        </div>
+      </div>
+      <div class="person-outputs">
+        <p><strong>Ownership:</strong> <span id="emily-share">—</span></p>
+        <p><strong>Contribution:</strong> <span id="emily-contribution">—</span> <span class="detail">(down <span id="emily-down-val">—</span> + loan <span id="emily-loan-val">—</span>)</span></p>
+        <p><strong>Monthly:</strong> <span id="emily-monthly-total">—</span> <span class="detail">(P&I <span id="emily-pi">—</span> + overhead <span id="emily-overhead">—</span>)</span></p>
+      </div>
+    </article>
+
+    <article class="person-card" data-person="chace">
+      <h3>Chace</h3>
+      <p class="person-note">Pays cash (no loan). Contribution = purchase price minus others’ contributions.</p>
+      <div class="person-outputs">
+        <p><strong>Contribution:</strong> <span id="chace-contribution">—</span></p>
+        <p><strong>Ownership:</strong> <span id="chace-share">—</span></p>
+        <p><strong>Monthly cost:</strong> <span id="chace-monthly">—</span> <span class="detail">(overhead only)</span></p>
+        <p><strong>Total needed liquidity to make loans:</strong> <span id="chace-total-liquidity">—</span></p>
+        <p class="detail" id="chace-liquidity-breakdown">—</p>
+      </div>
+    </article>
+  </section>
+
+  <script src="app.js"></script>
+</body>
+</html>
