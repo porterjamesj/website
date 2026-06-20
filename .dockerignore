@@ -1,0 +1,5 @@
+public/
+.git
+.hugo_build.lock
+resources/
+.DS_Store
