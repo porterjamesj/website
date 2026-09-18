@@ -17,6 +17,7 @@
     <div class="mode-toggle">
       <label class="mode-option"><input type="radio" name="mode" value="monthly" checked> Monthly payment</label>
       <label class="mode-option"><input type="radio" name="mode" value="income"> Income</label>
+      <label class="mode-option"><input type="radio" name="mode" value="percentage"> Ownership percentage</label>
     </div>
     <div class="param-grid">
       <label>
@@ -66,6 +67,12 @@
             <input type="number" id="james-housing-pct" min="0" max="100" step="1" value="20">
           </label>
         </div>
+        <div class="input-group input-group-percentage">
+          <label>
+            <span>Ownership (% of property)</span>
+            <input type="number" id="james-ownership-pct" min="0" max="100" step="1" value="10">
+          </label>
+        </div>
       </div>
       <div class="person-outputs">
         <p><strong>Ownership:</strong> <span id="james-share">—</span></p>
@@ -95,6 +102,12 @@
           <label>
             <span>Housing cost (% of income)</span>
             <input type="number" id="rui-housing-pct" min="0" max="100" step="1" value="20">
+          </label>
+        </div>
+        <div class="input-group input-group-percentage">
+          <label>
+            <span>Ownership (% of property)</span>
+            <input type="number" id="rui-ownership-pct" min="0" max="100" step="1" value="10">
           </label>
         </div>
       </div>
@@ -128,6 +141,12 @@
             <input type="number" id="john-housing-pct" min="0" max="100" step="1" value="20">
           </label>
         </div>
+        <div class="input-group input-group-percentage">
+          <label>
+            <span>Ownership (% of property)</span>
+            <input type="number" id="john-ownership-pct" min="0" max="100" step="1" value="10">
+          </label>
+        </div>
       </div>
       <div class="person-outputs">
         <p><strong>Ownership:</strong> <span id="john-share">—</span></p>
@@ -157,6 +176,12 @@
           <label>
             <span>Housing cost (% of income)</span>
             <input type="number" id="emily-housing-pct" min="0" max="100" step="1" value="20">
+          </label>
+        </div>
+        <div class="input-group input-group-percentage">
+          <label>
+            <span>Ownership (% of property)</span>
+            <input type="number" id="emily-ownership-pct" min="0" max="100" step="1" value="10">
           </label>
         </div>
       </div>

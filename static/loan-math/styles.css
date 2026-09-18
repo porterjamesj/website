@@ -54,19 +54,16 @@ h2 {
   margin: 0;
 }
 
-body.mode-income .input-group-monthly {
+.input-group {
   display: none;
-}
-
-body.mode-monthly .input-group-income {
-  display: none;
-}
-
-.input-group-monthly,
-.input-group-income {
-  display: flex;
   flex-direction: column;
   gap: 0.5rem;
+}
+
+body.mode-monthly .input-group-monthly,
+body.mode-income .input-group-income,
+body.mode-percentage .input-group-percentage {
+  display: flex;
 }
 
 .param-grid {

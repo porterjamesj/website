@@ -9,6 +9,10 @@
     emily: '#dc2626'
   };
 
+  function titleCase(name) {
+    return name.charAt(0).toUpperCase() + name.slice(1);
+  }
+
   function formatCurrency(n) {
     if (n == null || isNaN(n)) return '—';
     return new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', maximumFractionDigits: 0 }).format(n);
@@ -29,6 +33,13 @@
     const n = termYears * 12;
     const k = annuityFactor(r, n);
     return monthlyPI * k;
+  }
+
+  function piFromLoan(loanAmount, annualRatePct, termYears) {
+    const r = (annualRatePct / 100) / 12;
+    const n = termYears * 12;
+    const k = annuityFactor(r, n);
+    return k > 0 ? loanAmount / k : 0;
   }
 
   function piFromMonthlyAndDown(totalMonthly, downPayment, annualRatePct, termYears, overheadPct) {
@@ -52,10 +63,13 @@
 
     const down = {};
     const monthly = {};
+    const ownershipPct = {};
     LOAN_TAKERS.forEach(name => {
       down[name] = Number(document.getElementById(`${name}-down`).value) || 0;
       if (mode === 'monthly') {
         monthly[name] = Number(document.getElementById(`${name}-monthly`).value) || 0;
+      } else if (mode === 'percentage') {
+        ownershipPct[name] = Number(document.getElementById(`${name}-ownership-pct`).value) || 0;
       } else {
         const annualIncome = Number(document.getElementById(`${name}-annual-income`).value) || 0;
         const housingPct = Number(document.getElementById(`${name}-housing-pct`).value) || 0;
@@ -63,21 +77,29 @@
       }
     });
 
-    return { purchasePrice, interestRate, overheadPct, down, monthly };
+    return { mode, purchasePrice, interestRate, overheadPct, down, monthly, ownershipPct };
   }
 
   function compute(inputs) {
-    const { purchasePrice, interestRate, overheadPct, down, monthly } = inputs;
+    const { mode, purchasePrice, interestRate, overheadPct, down, monthly, ownershipPct } = inputs;
     const loanTerm = LOAN_TERM_YEARS;
     const contribution = {};
     const pi = {};
     const loan = {};
     const monthlyOverhead = {};
+    const overFunded = [];
 
     LOAN_TAKERS.forEach(name => {
-      const piVal = Math.max(0, piFromMonthlyAndDown(monthly[name], down[name], interestRate, loanTerm, overheadPct));
-      pi[name] = piVal;
-      loan[name] = loanFromPI(piVal, interestRate, loanTerm);
+      if (mode === 'percentage') {
+        const target = purchasePrice * (ownershipPct[name] / 100);
+        if (down[name] > target) overFunded.push(name);
+        loan[name] = Math.max(0, target - down[name]);
+        pi[name] = piFromLoan(loan[name], interestRate, loanTerm);
+      } else {
+        const piVal = Math.max(0, piFromMonthlyAndDown(monthly[name], down[name], interestRate, loanTerm, overheadPct));
+        pi[name] = piVal;
+        loan[name] = loanFromPI(piVal, interestRate, loanTerm);
+      }
       contribution[name] = down[name] + loan[name];
     });
 
@@ -98,20 +120,25 @@
       loan,
       monthlyOverhead,
       othersTotal,
-      purchasePrice
+      purchasePrice,
+      overFunded
     };
   }
 
   function render(state) {
-    const { contribution, share, pi, loan, monthlyOverhead, othersTotal, purchasePrice } = state;
+    const { contribution, share, pi, loan, monthlyOverhead, othersTotal, purchasePrice, overFunded } = state;
 
-    const warningEl = document.getElementById('warning');
+    const warnings = [];
     if (contribution.chace < 0) {
-      warningEl.textContent = 'Others\' contributions exceed purchase price. Increase purchase price or reduce others\' down payments or monthly payments.';
-      warningEl.classList.remove('hidden');
-    } else {
-      warningEl.classList.add('hidden');
+      warnings.push('Others\' contributions exceed purchase price. Increase purchase price or reduce others\' down payments or monthly payments.');
     }
+    if (overFunded.length > 0) {
+      const who = overFunded.map(titleCase).join(', ');
+      warnings.push(who + ': down payment exceeds the requested ownership share, so no loan is needed and the actual share is larger than requested.');
+    }
+    const warningEl = document.getElementById('warning');
+    warningEl.textContent = warnings.join(' ');
+    warningEl.classList.toggle('hidden', warnings.length === 0);
 
     document.getElementById('chace-contribution').textContent = formatCurrency(contribution.chace);
     document.getElementById('chace-share').textContent = formatPct(share.chace);
@@ -120,7 +147,7 @@
     const totalLiquidity = contribution.chace + LOAN_TAKERS.reduce((sum, name) => sum + loan[name], 0);
     document.getElementById('chace-total-liquidity').textContent = formatCurrency(totalLiquidity);
     const liquidityParts = ['Chace ' + formatCurrency(contribution.chace)].concat(
-      LOAN_TAKERS.map(name => name.charAt(0).toUpperCase() + name.slice(1) + ' ' + formatCurrency(loan[name]))
+      LOAN_TAKERS.map(name => titleCase(name) + ' ' + formatCurrency(loan[name]))
     );
     document.getElementById('chace-liquidity-breakdown').textContent = '(' + liquidityParts.join(' + ') + ')';
 
@@ -149,7 +176,7 @@
 
     const labelsEl = document.getElementById('ownership-labels');
     labelsEl.innerHTML = NAMES.map(n => {
-      const label = `${n.charAt(0).toUpperCase() + n.slice(1)} ${formatPct(share[n])}`;
+      const label = `${titleCase(n)} ${formatPct(share[n])}`;
       return `<span style="color: ${BAR_COLORS[n]}">${label}</span>`;
     }).join('  ·  ');
 
@@ -179,7 +206,8 @@
     'purchase-price', 'interest-rate', 'overhead-pct',
     ...LOAN_TAKERS.flatMap(n => [
       `${n}-down`, `${n}-monthly`,
-      `${n}-annual-income`, `${n}-housing-pct`
+      `${n}-annual-income`, `${n}-housing-pct`,
+      `${n}-ownership-pct`
     ])
   ];
 
